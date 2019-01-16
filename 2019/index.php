@@ -1,5 +1,5 @@
 <?php
-	include("../2019/update1.php");
+	include("update1.php");
 ?>
 
 <html>
