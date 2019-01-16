@@ -1,0 +1,3 @@
+* * * * * wget -q -O /dev/null http://homerunderby2k16theshow.com/cron.php
+00 10 * * * wget -q -O /dev/null http://homerunderby2k16theshow.com/saveTime.php
+00 12 * * * wget -q -O /dev/null http://homerunderby2k16theshow.com/cron2.php

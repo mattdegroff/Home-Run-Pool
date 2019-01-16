@@ -1,0 +1,12 @@
+* * * * * wget -q -O /dev/null http://hrderby2k17.com/cron/cronA.php
+* * * * * wget -q -O /dev/null http://hrderby2k17.com/cron/cronB.php
+* * * * * wget -q -O /dev/null http://hrderby2k17.com/cron/cronC.php
+* * * * * wget -q -O /dev/null http://hrderby2k17.com/cron/cronD.php
+* * * * * wget -q -O /dev/null http://hrderby2k17.com/cron/cronGroups.php
+* * * * * wget -q -O /dev/null http://hrderby2k17.com/cron/cronStandings.php
+* * * * * wget -q -O /dev/null http://hrderby2k17.com/cron/cronRabbit.php
+* * * * * wget -q -O /dev/null http://hrderby2k17.com/cron/cronTodayA.php
+* * * * * wget -q -O /dev/null http://hrderby2k17.com/cron/cronTodayB.php
+* * * * * wget -q -O /dev/null http://hrderby2k17.com/cron/cronTodayC.php
+* * * * * wget -q -O /dev/null http://hrderby2k17.com/cron/cronTodayD.php
+00 12 * * * wget -q -O /dev/null http://hrderby2k17.com/cron/cronClearToday.php

@@ -1,0 +1,21 @@
+insert into zippy (id, player) values (1, "");
+insert into zippy (id, player) values (2, "");
+insert into zippy (id, player) values (3, "");
+insert into zippy (id, player) values (4, "");
+insert into zippy (id, player) values (5, "");
+insert into zippy (id, player) values (6, "");
+insert into zippy (id, player) values (7, "");
+insert into zippy (id, player) values (8, "");
+//insert into groupD (firstName, lastName, team, link) values ("", "", "", "http://espn.go.com/mlb/player/_/id/");
+update zippy, groupA set zippy.pid = groupA.id, zippy.homeRuns = groupA.homeRuns where groupA.player = zippy.player and zippy.id = 1;
+update zippy, groupB set zippy.pid = groupB.id, zippy.homeRuns = groupB.homeRuns where groupB.player = zippy.player and zippy.id = 2;
+update zippy, groupC set zippy.pid = groupC.id, zippy.homeRuns = groupC.homeRuns where groupC.player = zippy.player and zippy.id = 3;
+update zippy, groupC set zippy.pid = groupC.id, zippy.homeRuns = groupC.homeRuns where groupC.player = zippy.player and zippy.id = 4;
+update zippy, groupD set zippy.pid = groupD.id, zippy.homeRuns = groupD.homeRuns where concat(groupD.firstName, ' ', groupD.lastName) = zippy.player and zippy.id = 5;
+update zippy, groupD set zippy.pid = groupD.id, zippy.homeRuns = groupD.homeRuns where concat(groupD.firstName, ' ', groupD.lastName) = zippy.player and zippy.id = 6;
+update zippy, groupD set zippy.pid = groupD.id, zippy.homeRuns = groupD.homeRuns where concat(groupD.firstName, ' ', groupD.lastName) = zippy.player and zippy.id = 7;
+update zippy, groupD set zippy.pid = groupD.id, zippy.homeRuns = groupD.homeRuns where concat(groupD.firstName, ' ', groupD.lastName) = zippy.player and zippy.id = 8;
+
+insert into standings (color, name, font, `code`, paid, pass) values (, "", , "", 0, "");
+
+create table lark (id int(11), pid int(11), player varchar(32), homeRuns int(11));

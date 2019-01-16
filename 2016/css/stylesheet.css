@@ -1,0 +1,94 @@
+.picks, .picks.dark, .picks.yellow {
+	font-family: Arial;
+	border-radius: 5px;	
+	height: 260px;
+	width: 200px;
+}
+#vinC {
+	background-color: red;
+}
+#degroff {
+	background-color: purple;
+}
+#ferg {
+	background-color: silver;
+}
+#grup {
+	background-color: #85bb65;
+}
+#mistron {
+	background-color: purple;
+}
+#davevonte {
+	background-color: black;
+}
+#vinS {
+	background-color: purple;
+}
+#par {
+	background-color: purple;
+}
+#scott {
+	background-color: purple;
+}
+#kev {
+	background-color: purple;
+}
+#tom {
+	background-color: purple;
+}
+#ant {
+	background-color: purple;
+}
+#julia {
+	background-color: purple;
+}
+#nestor {
+	background-color: purple;
+}
+#ariel {
+	background-color: purple;
+}
+#lively {
+	background-color: purple;
+}
+#rebekah {
+	background-color: purple;
+}
+#zo {
+	background-color: purple;
+}
+#mark {
+	background-color: purple;
+}
+#kyle {
+	background-color: purple;
+}
+#steve {
+	background-color: purple;
+}
+#zip {
+	background-color: purple;
+}
+#pedowitz {
+	background-color: purple;
+}
+.picks.dark, .dark {
+	color: white;
+}
+.picks.yellow, .yellow {
+	color: yellow;
+}
+div h2 {
+	padding-top: 5px;
+	margin-bottom: 5px;
+}
+div table {
+	margin: 0 auto;
+}
+.active {
+	background-color: yellow;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+	color: black;
+}
