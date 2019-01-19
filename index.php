@@ -213,6 +213,6 @@
   		<div class="tab-pane fade container text-center" id="2015picks">Loading...</div>
 		</div>
 
-		<!--<section class="footer text-center" style="padding: 25px; margin-top: 10px; background-color: #eeeeee;">Created by Matt DeGroff</section>-->
+		<section class="footer text-center" style="padding: 25px; margin-top: 10px; background-color: #eeeeee;">Created by Matt DeGroff</section>
 	</body>
 </html>
