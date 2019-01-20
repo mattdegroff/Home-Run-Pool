@@ -185,7 +185,7 @@
 			      </div>
 			    </li>
 		      	<li>
-		       		<a class="nav-link" href="http://espn.com/mlb" target="_blank"><img src="img/espn.png" alt="espnLogo" style="width:100px;height:25px;"></a>
+		       		<a class="nav-link" href="http://espn.com/mlb" target="_blank"><img src="../<?php echo $year ?>/img/espn.png" alt="espnLogo" style="width:100px;height:25px;"></a>
 		      	</li>
 		      </ul>
 		      <ul class="navbar-nav">
