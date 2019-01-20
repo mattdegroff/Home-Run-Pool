@@ -138,7 +138,7 @@
 
 	<nav class="navbar navbar-expand-md navbar-light">
   		<!-- Brand -->
-  		<a class="navbar-brand" href="#">Dinger Derby '18</a>
+  		<a class="navbar-brand" href="#">Dinger Derby '19</a>
 
 		<!-- Toggler/collapsibe Button -->
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -147,7 +147,7 @@
 
 		<!-- Navbar links -->
 		<div class="collapse navbar-collapse" id="collapsibleNavbar">
-			<ul class="nav navbar mr-auto">
+			<ul class="navbar-nav mr-auto">
 				<li class="nav-item dropdown">
 			      <a class="nav-link dropdown-toggle active" href="#" id="navbardrop" data-toggle="dropdown">
 			        2018
