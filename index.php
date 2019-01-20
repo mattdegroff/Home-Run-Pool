@@ -41,7 +41,7 @@
 							document.getElementById(id).innerHTML = xmlhttp.responseText;
 						}
 					};
-					xmlhttp.open("GET","dataPicks.php?id="+id,true);
+					xmlhttp.open("GET","../2019/dataPicks.php?id="+id,true);
 					xmlhttp.send();
 				}
 			}
