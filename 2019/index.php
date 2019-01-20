@@ -201,7 +201,7 @@
 		</div>
 	</nav>
 
-		<div class="tab-content">
+	<!--	<div class="tab-content">
 	  	<div class="tab-pane fade show container active text-center" id="2018totals">Loading...</div>
 			<div class="tab-pane fade container text-center" id="2018picks">Loading...</div>
 	  	<div class="tab-pane fade container text-center" id="2017totals">Loading...</div>
@@ -210,8 +210,8 @@
   		<div class="tab-pane fade container text-center" id="2016picks">Loading...</div>
   		<div class="tab-pane fade container text-center" id="2015totals">Loading...</div>
   		<div class="tab-pane fade container text-center" id="2015picks">Loading...</div>
-		</div>
+		</div>-->
 
-		<!--<section class="footer text-center" style="padding: 25px; margin-top: 10px; background-color: #eeeeee;">Created by Matt DeGroff</section>-->
+		<section class="footer text-center" style="padding: 25px; margin-top: 10px; background-color: #eeeeee;">Created by Matt DeGroff</section>
 	</body>
 </html>
