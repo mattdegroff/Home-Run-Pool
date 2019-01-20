@@ -33,7 +33,7 @@
 							document.getElementById(id).innerHTML = xmlhttp.responseText;
 						}
 					};
-					xmlhttp.open("GET","data.php?id="+id,true);
+					xmlhttp.open("GET","../2019/data.php?id="+id,true);
 					xmlhttp.send();
 				} else {
 					xmlhttp.onreadystatechange = function() {
