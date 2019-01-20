@@ -53,7 +53,7 @@
 				//setInterval(update("2018totals"), 750);
 			//}
 			//else {
-				update("2018totals");
+				//update("2018totals");
 			//}
 		</script>
 	</head>
