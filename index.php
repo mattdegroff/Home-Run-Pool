@@ -13,48 +13,14 @@
 	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="../<?php echo $year; ?>/js/clock.js"></script>
 		<script>
-			var xmlhttp;
-
-			if (window.XMLHttpRequest) {
-				// code for IE7+, Firefox, Chrome, Opera, Safari
-				xmlhttp = new XMLHttpRequest();
+			if(typeof(EventSource) !== "undefined") {
+				var source = new EventSource("data.php");
+				source.onmessage = function(event) {
+					document.getElementById("main").innerHTML += event.data;
+				};
 			} else {
-				// code for IE6, IE5
-				xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+				document.getElementById("main").innerHTML = "Sorry, your browser does not support server-sent events...";
 			}
-
-			var id1 = "2018totals";
-
-			function update(id) {
-				id1=id;
-				if (id.substring(4, id.length) ==="totals"){
-				 	xmlhttp.onreadystatechange = function() {
-						if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-							document.getElementById(id).innerHTML = xmlhttp.responseText;
-						}
-					};
-					xmlhttp.open("GET","../2019/data.php?id="+id,true);
-					xmlhttp.send();
-				} else {
-					xmlhttp.onreadystatechange = function() {
-						if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-							document.getElementById(id).innerHTML = xmlhttp.responseText;
-						}
-					};
-					xmlhttp.open("GET","../2019/dataPicks.php?id="+id,true);
-					xmlhttp.send();
-				}
-			}
-
-			//var dead = new Date("2018-03-29T12:40:00");
-			//var now = new Date();
-
-			//if (now > dead) {
-				//setInterval(update("2018totals"), 750);
-			//}
-			//else {
-				update("2018totals");
-			//}
 		</script>
 	</head>
 	<body onload="updateClock(); setInterval('updateClock()', 1000 )">
@@ -203,20 +169,9 @@
 		</div>
 	</nav>
 
-	<div class="main">
-			<?php  include("data.php?id=2018totals"); ?>
-	</div>
+	<div class="main" id="main" >
 
-		<!--<div class="tab-content">
-	  	<div class="tab-pane fade show container active text-center" id="2018totals">Loading...</div>
-			<div class="tab-pane fade container text-center" id="2018picks">Loading...</div>
-	  	<div class="tab-pane fade container text-center" id="2017totals">Loading...</div>
-	  	<div class="tab-pane fade container text-center" id="2017picks">Loading...</div>
-  		<div class="tab-pane fade container text-center" id="2016totals">Loading...</div>
-  		<div class="tab-pane fade container text-center" id="2016picks">Loading...</div>
-  		<div class="tab-pane fade container text-center" id="2015totals">Loading...</div>
-  		<div class="tab-pane fade container text-center" id="2015picks">Loading...</div>
-		</div>-->
+	</div>
 
 		<section class="footer text-center" style="padding: 25px; margin-top: 10px; background-color: #eeeeee;">Created by Matt DeGroff</section>
 	</body>
