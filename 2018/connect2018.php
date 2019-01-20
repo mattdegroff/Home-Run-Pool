@@ -1,8 +1,8 @@
 <?php
-	$host_name  = "166.62.75.228";
-	$database   = "2018";
-	$user_name  = "mh37tmo638xn";
-	$password   = "#UVMI3Kr4";
+	$host_name  = "enqhzd10cxh7hv2e.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
+	$database   = "hd40ir7zt9aw3ei4";
+	$user_name  = "ywtwzhpn97kj2re7";
+	$password   = "nlsjdvv2agb27hsn";
 
 	$conn = mysqli_connect($host_name, $user_name, $password, $database);
 	
