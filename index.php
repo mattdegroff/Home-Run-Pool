@@ -204,7 +204,7 @@
 	</nav>
 
 	<?php
-	if (substr($_GET["id"],0,4) == "2015"){
+	/*if (substr($_GET["id"],0,4) == "2015"){
 		include_once("connect2015.php");
 		$colorA = 'red';
 		$colorB = '#1e90ff';
@@ -243,7 +243,7 @@
 	}
 
 		include "update1.php";
-
+*/
 	?>
 	<style>
 	<?php if (new DateTime() > $deadline) {
