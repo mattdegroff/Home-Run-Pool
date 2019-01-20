@@ -1,6 +1,6 @@
 <?php
-	include('year.php');s
-	include('../'.$year.'/update1.php');
+	include('year.php');
+	//include('../'.$year.'/update1.php');
 ?>
 
 <html>
@@ -189,15 +189,16 @@
 		      	</li>
 		      </ul>
 		      <ul class="navbar-nav">
-				<li class="nav-link">
-					<div><span id="clock">&nbsp;</span></div>
-				</li>
-				<li class="nav-link">
-		<?php
-			date_default_timezone_set("America/New_York");
-			$date = date("F j, Y");
-			echo $date
-		?></li>
+						<li class="nav-link">
+							<div><span id="clock">&nbsp;</span></div>
+						</li>
+						<li class="nav-link">
+						<?php
+							date_default_timezone_set("America/New_York");
+							$date = date("F j, Y");
+							echo $date
+						?>
+					</li>
 			  </ul>
 		</div>
 	</nav>
