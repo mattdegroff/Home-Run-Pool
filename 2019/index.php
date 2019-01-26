@@ -157,7 +157,7 @@
 			      </div>
 			  	</li>
 					<li class="nav-item dropdown">
-			      <a class="nav-link dropdown-toggle active" href="#" id="navbardrop" data-toggle="dropdown">
+			      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
 			        2018
 			      </a>
 			      <div class="dropdown-menu">
