@@ -161,8 +161,8 @@
 			        2018
 			      </a>
 			      <div class="dropdown-menu">
-			        <a class="dropdown-item" data-toggle="pill" href="#2018totals" onclick="update('2018totals')">Totals</a>
-			        <a class="dropdown-item" data-toggle="pill" href="#2018picks" onclick="update('2018picks')">Pick %</a>
+			        <a class="dropdown-item" href="#2018totals" onclick="update('2018totals')">Totals</a>
+			        <a class="dropdown-item" href="#2018picks" onclick="update('2018picks')">Pick %</a>
 			      </div>
 			  	</li>
 			  	<li class="nav-item dropdown">
@@ -170,8 +170,8 @@
 			        2017
 			      </a>
 			      <div class="dropdown-menu">
-			        <a class="dropdown-item"  data-toggle="pill" href="#2017totals" onclick="update('2017totals')">Totals</a>
-			        <a class="dropdown-item"  data-toggle="pill" href="#2017picks" onclick="update('2017picks')">Pick %</a>
+			        <a class="dropdown-item" href="#2017totals" onclick="update('2017totals')">Totals</a>
+			        <a class="dropdown-item" href="#2017picks" onclick="update('2017picks')">Pick %</a>
 			      </div>
 			    </li>
 			    <li class="nav-item dropdown">
@@ -179,8 +179,8 @@
 			        2016
 			      </a>
 			      <div class="dropdown-menu">
-			        <a class="dropdown-item" data-toggle="pill" href="#2016totals" onclick="update('2016totals')">Totals</a>
-			        <a class="dropdown-item" data-toggle="pill" href="#2016picks" onclick="update('2016picks')">Pick %</a>
+			        <a class="dropdown-item" href="#2016totals" onclick="update('2016totals')">Totals</a>
+			        <a class="dropdown-item" href="#2016picks" onclick="update('2016picks')">Pick %</a>
 			      </div>
 			    </li>
 			    <li class="nav-item dropdown">
@@ -188,8 +188,8 @@
 			        2015
 			      </a>
 			      <div class="dropdown-menu">
-			        <a class="dropdown-item" data-toggle="pill" href="#2015totals" onclick="update('2015totals')">Totals</a>
-			        <a class="dropdown-item" data-toggle="pill" href="#2015picks" onclick="update('2015picks')">Pick %</a>
+			        <a class="dropdown-item" href="#2015totals" onclick="update('2015totals')">Totals</a>
+			        <a class="dropdown-item" href="#2015picks" onclick="update('2015picks')">Pick %</a>
 			      </div>
 			    </li>
 		      	<li>
