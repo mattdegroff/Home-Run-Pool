@@ -135,7 +135,7 @@
 		?>
 		</style>
 
-	<nav class="navbar navbar-expand-md navbar-light">
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
   		<!-- Brand -->
   		<a class="navbar-brand" href="#">Dinger Derby '18</a>
 
@@ -146,7 +146,7 @@
 
 		<!-- Navbar links -->
 		<div class="collapse navbar-collapse" id="collapsibleNavbar">
-			<ul class="nav navbar">
+			<ul class="navbar-nav">
 					<li class="nav-item dropdown">
 			      <a class="nav-link dropdown-toggle active" href="#" id="navbardrop" data-toggle="dropdown">
 			        2019
