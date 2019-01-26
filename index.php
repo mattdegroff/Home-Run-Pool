@@ -1,4 +1,4 @@
 <?php
-    $version = 2.2;
-    echo "header('Location: v".$version."/index.php);";
+    $version = 2019;
+    echo "header('Location: 2019/index.php);";
 ?>
