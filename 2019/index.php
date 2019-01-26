@@ -196,12 +196,11 @@
 		       		<a class="nav-link" href="http://espn.com/mlb" target="_blank"><img src="img/espn.png" alt="espnLogo" style="width:100px;height:25px;"></a>
 		      	</li>
 		      </ul>
-					<pre>
 					<span id="clock" class="navbar-text">&nbsp;</span>  <span class="navbar-text"> <?php
 			date_default_timezone_set("America/New_York");
 			$date = date("F j, Y");
 			echo $date;
-		?></span></pre>
+		?></span>
 		</div>
 	</nav>
 
