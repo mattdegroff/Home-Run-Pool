@@ -152,8 +152,8 @@
 			        2019
 			      </a>
 			      <div class="dropdown-menu">
-			        <a class="dropdown-item active show" data-toggle="pill" href="#2019totals" onclick="update('2019totals')">Totals</a>
-			        <a class="dropdown-item disabled" data-toggle="pill" href="#2019picks" onclick="update('2019picks')">Pick %</a>
+			        <a class="dropdown-item active show" href="#2019totals" onclick="update('2019totals')">Totals</a>
+			        <a class="dropdown-item disabled" href="#2019picks" onclick="update('2019picks')">Pick %</a>
 			      </div>
 			  	</li>
 					<li class="nav-item dropdown">
