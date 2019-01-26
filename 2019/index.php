@@ -135,9 +135,9 @@
 		?>
 		</style>
 
-	<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+	<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-primary">
   		<!-- Brand -->
-  		<a class="navbar-brand" href="#">Dinger Derby '18</a>
+  		<a class="navbar-brand" href="#">Dinger Derby '19</a>
 
 		<!-- Toggler/collapsibe Button -->
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
