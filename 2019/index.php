@@ -199,7 +199,7 @@
 					<span id="clock" class="navbar-text">&nbsp;</span><span class="navbar-text"> <?php
 			date_default_timezone_set("America/New_York");
 			$date = date("F j, Y");
-			echo $date
+			echo " ".$date;
 		?></span>
 		</div>
 	</nav>
