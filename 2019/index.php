@@ -135,7 +135,7 @@
 		?>
 		</style>
 
-	<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-primary">
+	<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary justify-content-between">
   		<!-- Brand -->
   		<a class="navbar-brand" href="#">Dinger Derby '19</a>
 
