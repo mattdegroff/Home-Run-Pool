@@ -1,5 +1,4 @@
 <?php
-
 		function Apic() {
 			global $conn;
 			$imglink = "";

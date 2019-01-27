@@ -1,14 +1,14 @@
 <?php
-    $version = 2019;
-    //header('Location: 2019/index.php');
-    $db = parse_url(getenv("HEROKU_POSTGRESQL_BLUE_URL"));
-    $db["path"] = ltrim($db["path"], "/");
+$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 
-    if ($conn = pg_connect(getenv("HEROKU_POSTGRESQL_BLUE_URL"))) {
-        echo "Connection Successful<br>"; 
-    } else {
-        echo "connection failed";
-    }
+$server = $url["host"];
+$username = $url["user"];
+$password = $url["pass"];
+$db = substr($url["path"], 1);
 
-    echo pg_version();
+if ($conn = new mysqli($server, $username, $password, $db)) {
+    echo "success";
+} else {
+    echo "failed";
+}
 ?>
