@@ -4,7 +4,7 @@
 
 <html>
 	<head>
-		<title>YABO '18</title>
+		<title>YABO '19</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="css/bootstrap.css">
 	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
