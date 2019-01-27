@@ -146,14 +146,14 @@
 
 		<!-- Navbar links -->
 		<div class="collapse navbar-collapse" id="collapsibleNavbar">
-			<ul class="navbar-nav nav-tabs">
+			<ul class="navbar-nav ">
 					<li class="nav-item dropdown">
 			      <a class="nav-link dropdown-toggle active" href="#" id="navbardrop" data-toggle="dropdown">
 			        2019
 			      </a>
 			      <div class="dropdown-menu">
-			        <a class="dropdown-item active show" href="#2019totals" onclick="update('2019totals')">Totals</a>
-			        <a class="dropdown-item disabled" href="#2019picks" onclick="update('2019picks')">Pick %</a>
+			        <a class="dropdown-item active show" data-toggle="pill" href="#2019totals" onclick="update('2019totals')">Totals</a>
+			        <a class="dropdown-item disabled" data-toggle="pill" href="#2019picks" onclick="update('2019picks')">Pick %</a>
 			      </div>
 			  	</li>
 					<li class="nav-item dropdown">
@@ -161,8 +161,8 @@
 			        2018
 			      </a>
 			      <div class="dropdown-menu">
-			        <a class="dropdown-item" href="#2018totals" onclick="update('2018totals')">Totals</a>
-			        <a class="dropdown-item" href="#2018picks" onclick="update('2018picks')">Pick %</a>
+			        <a class="dropdown-item" data-toggle="pill" href="#2018totals" onclick="update('2018totals')">Totals</a>
+			        <a class="dropdown-item" data-toggle="pill" href="#2018picks" onclick="update('2018picks')">Pick %</a>
 			      </div>
 			  	</li>
 			  	<li class="nav-item dropdown">
@@ -170,8 +170,8 @@
 			        2017
 			      </a>
 			      <div class="dropdown-menu">
-			        <a class="dropdown-item" href="#2017totals" onclick="update('2017totals')">Totals</a>
-			        <a class="dropdown-item" href="#2017picks" onclick="update('2017picks')">Pick %</a>
+			        <a class="dropdown-item" data-toggle="pill" href="#2017totals" onclick="update('2017totals')">Totals</a>
+			        <a class="dropdown-item" data-toggle="pill" href="#2017picks" onclick="update('2017picks')">Pick %</a>
 			      </div>
 			    </li>
 			    <li class="nav-item dropdown">
@@ -179,8 +179,8 @@
 			        2016
 			      </a>
 			      <div class="dropdown-menu">
-			        <a class="dropdown-item" href="#2016totals" onclick="update('2016totals')">Totals</a>
-			        <a class="dropdown-item" href="#2016picks" onclick="update('2016picks')">Pick %</a>
+			        <a class="dropdown-item" data-toggle="pill" href="#2016totals" onclick="update('2016totals')">Totals</a>
+			        <a class="dropdown-item" data-toggle="pill" href="#2016picks" onclick="update('2016picks')">Pick %</a>
 			      </div>
 			    </li>
 			    <li class="nav-item dropdown">
