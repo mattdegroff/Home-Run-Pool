@@ -10,5 +10,5 @@
         echo "connection failed";
     }
 
-    echo pg_connection_status();
+    echo pg_connection_status($conn);
 ?>
