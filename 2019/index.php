@@ -52,7 +52,7 @@
 				//setInterval(update("2018totals"), 750);
 			//}
 			//else {
-				update("2019totals");
+				update("2015totals");
 			//}
 		</script>
 	</head>
