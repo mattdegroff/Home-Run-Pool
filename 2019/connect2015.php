@@ -1,11 +1,12 @@
 <?php
-	$host_name  = "166.62.75.228";
-	$database   = "2015";
-	$user_name  = "mh37tmo638xn";
-	$password   = "#UVMI3Kr4";
+$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 
-	$conn = mysqli_connect($host_name, $user_name, $password, $database);
+$server = $url["host"];
+$username = $url["user"];
+$password = $url["pass"];
+$db = substr($url["path"], 1);
 
+$conn = new mysqli($server, $username, $password, $db);
 	if ($conn->connect_error) {
 		echo '<script>console.log("Connection failed: "' . $conn->connect_error . '");</script>';
 	}
