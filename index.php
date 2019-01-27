@@ -9,4 +9,6 @@
     } else {
         echo "connection failed";
     }
+
+    echo pg_dbname();
 ?>
