@@ -146,7 +146,7 @@
 
 		<!-- Navbar links -->
 		<div class="collapse navbar-collapse" id="collapsibleNavbar">
-			<ul class="navbar-nav">
+			<ul class="navbar-nav nav-tabs">
 					<li class="nav-item dropdown">
 			      <a class="nav-link dropdown-toggle active" href="#" id="navbardrop" data-toggle="dropdown">
 			        2019
