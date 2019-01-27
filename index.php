@@ -5,7 +5,7 @@
     $db["path"] = ltrim($db["path"], "/");
 
     if ($conn = pg_connect(getenv("DATABASE_URL"))) {
-        echo "Connection Successful"; 
+        echo "Connection Successful<br>"; 
     } else {
         echo "connection failed";
     }
