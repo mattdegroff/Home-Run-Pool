@@ -148,11 +148,11 @@
 		<div class="collapse navbar-collapse" id="collapsibleNavbar">
 			<ul class="navbar-nav ">
 					<li class="nav-item dropdown">
-			      <a class="nav-link dropdown-toggle active" href="#" id="navbardrop" data-toggle="dropdown">
+			      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
 			        2019
 			      </a>
 			      <div class="dropdown-menu">
-			        <a class="dropdown-item active show" data-toggle="pill" href="#2019totals" onclick="update('2019totals')">Totals</a>
+			        <a class="dropdown-item" data-toggle="pill" href="#2019totals" onclick="update('2019totals')">Totals</a>
 			        <a class="dropdown-item disabled" data-toggle="pill" href="#2019picks" onclick="update('2019picks')">Pick %</a>
 			      </div>
 			  	</li>
@@ -184,11 +184,11 @@
 			      </div>
 			    </li>
 			    <li class="nav-item dropdown">
-			      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+			      <a class="nav-link dropdown-toggle active" href="#" id="navbardrop" data-toggle="dropdown">
 			        2015
 			      </a>
 			      <div class="dropdown-menu">
-			        <a class="dropdown-item" href="#2015totals" onclick="update('2015totals')">Totals</a>
+			        <a class="dropdown-item active show" href="#2015totals" onclick="update('2015totals')">Totals</a>
 			        <a class="dropdown-item" href="#2015picks" onclick="update('2015picks')">Pick %</a>
 			      </div>
 			    </li>
