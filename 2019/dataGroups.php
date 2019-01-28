@@ -51,9 +51,9 @@
 	<?php
 		if (new DateTime() < $deadline) {
 			if (new DateTime() < $groupDead) {
-				echo '<div class="alert alert-success alert-dismissable text-center fade show"><button type="button" class="close" data-dismiss="alert">&times;</button>Groups will be released on <strong>'.$groupDead->format('Y-m-d H:i:s').'</strong></div>';
+				echo '<div class="alert alert-success alert-dismissable text-center fade show"><button type="button" class="close" data-dismiss="alert">&times;</button>Groups will be released on <strong>'.$groupDead->format('F j, Y H:i A').'</strong></div>';
 			} else {
-				echo '<div class="alert alert-success alert-dismissable text-center fade show"><button type="button" class="close" data-dismiss="alert">&times;</button>Teams lock <strong>'.$deadline->format('Y-m-d H:i:s').'</strong></div>';
+				echo '<div class="alert alert-success alert-dismissable text-center fade show"><button type="button" class="close" data-dismiss="alert">&times;</button>Teams lock <strong>'.$deadline->format('F j, Y H:i A').'</strong></div>';
 			}
 		}
 	?>
