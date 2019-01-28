@@ -23,10 +23,7 @@
 				xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
 			}
 
-			var id1 = "2019totals";
-
 			function update(id) {
-				id1=id;
 				xmlhttp.onreadystatechange = function() {
 					if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
 						document.getElementById("main").innerHTML = xmlhttp.responseText;
@@ -48,7 +45,7 @@
 				//setInterval(update("2018totals"), 750);
 			//}
 			//else {
-				update("2018totals");
+				update("2015totals");
 			//}
 		</script>
 	</head>
