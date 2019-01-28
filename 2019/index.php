@@ -34,7 +34,6 @@
 				} else {
 					xmlhttp.open("POST","dataPicks.php",true);
 				}
-				xmlhttp.send();
 				xmlhttp.send(id);
 			}
 
