@@ -1,5 +1,6 @@
 <?php
 	include("update1.php");
+	session_start();
 ?>
 
 <html>
@@ -26,21 +27,16 @@
 
 			function update(id) {
 				id1=id;
+				xmlhttp.onreadystatechange = function() {
+					if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+						document.getElementById("main").innerHTML = xmlhttp.responseText;
+					}
+				};
 				if (id.substring(4, id.length) ==="totals"){
-				 	xmlhttp.onreadystatechange = function() {
-						if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-							document.getElementById(id).innerHTML = xmlhttp.responseText;
-						}
-					};
-					xmlhttp.open("GET","dataGroups.php?id="+id,true);
+					xmlhttp.open("POST","dataGroups.php?id="+id,true);
 					xmlhttp.send();
 				} else {
-					xmlhttp.onreadystatechange = function() {
-						if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-							document.getElementById(id).innerHTML = xmlhttp.responseText;
-						}
-					};
-					xmlhttp.open("GET","dataPicks.php?id="+id,true);
+					xmlhttp.open("POST","dataPicks.php?id="+id,true);
 					xmlhttp.send();
 				}
 			}
@@ -52,7 +48,7 @@
 				//setInterval(update("2018totals"), 750);
 			//}
 			//else {
-				update("2015totals");
+				update("2018totals");
 			//}
 		</script>
 	</head>
@@ -203,20 +199,9 @@
 		?></span>
 		</div>
 	</nav>
-
-		<div class="tab-content">
-			<div class="tab-pane fade show container active text-center" id="2019totals">Loading...</div>
-			<div class="tab-pane fade container text-center" id="2019picks">Loading...</div>
-	  	<div class="tab-pane fade container text-center" id="2018totals">Loading...</div>
-			<div class="tab-pane fade container text-center" id="2018picks">Loading...</div>
-	  	<div class="tab-pane fade container text-center" id="2017totals">Loading...</div>
-	  	<div class="tab-pane fade container text-center" id="2017picks">Loading...</div>
-  		<div class="tab-pane fade container text-center" id="2016totals">Loading...</div>
-  		<div class="tab-pane fade container text-center" id="2016picks">Loading...</div>
-  		<div class="tab-pane fade container text-center" id="2015totals">Loading...</div>
-  		<div class="tab-pane fade container text-center" id="2015picks">Loading...</div>
+		<div id="main" class="main">
+				Loading...
 		</div>
-
 		<section class="footer text-center" style="padding: 25px; margin-top: 10px; background-color: #eeeeee;">Matt DeGroff &copy; Copyright <?php echo date("Y"); ?>
 
 </section>
