@@ -36,16 +36,7 @@
 				}
 				xmlhttp.send();
 			}
-
-			//var dead = new Date("2018-03-29T12:40:00");
-			//var now = new Date();
-
-			//if (now > dead) {
-				//setInterval(update("2018totals"), 750);
-			//}
-			//else {
 				update("2015totals");
-			//}
 		</script>
 	</head>
 	<body onload="updateClock(); setInterval('updateClock()', 1000 )">
