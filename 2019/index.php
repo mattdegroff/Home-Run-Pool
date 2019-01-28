@@ -198,8 +198,6 @@
 		<div id="main" class="main">
 				Loading...
 		</div>
-		<section class="footer text-center" style="padding: 25px; margin-top: 10px; background-color: #eeeeee;">Matt DeGroff &copy; Copyright <?php echo date("Y"); ?>
-
-</section>
+		<section class="footer text-center" style="padding: 25px; margin-top: 10px; background-color: #eeeeee;">Matt DeGroff &copy; Copyright <?php echo date("Y"); ?></section>
 	</body>
 </html>
