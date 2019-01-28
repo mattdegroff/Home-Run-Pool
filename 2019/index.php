@@ -30,9 +30,9 @@
 					}
 				};
 				if (id.substring(4, id.length) ==="totals"){
-					xmlhttp.open("POST","dataGroups.php?id="+id,true);
+					xmlhttp.open("POST","dataGroups.php?",true);
 				} else {
-					xmlhttp.open("POST","dataPicks.php?id="+id,true);
+					xmlhttp.open("POST","dataPicks.php?",true);
 				}
 				xmlhttp.send();
 				xmlhttp.send(id);
