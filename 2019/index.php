@@ -111,7 +111,7 @@
 		}
 }
 #main {
-	margin-top: 25px;
+	margin-top: 40px;
 }
 		<?php
 		if (new DateTime() > $deadline) {
