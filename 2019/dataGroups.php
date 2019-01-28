@@ -104,7 +104,7 @@
 		}
 	?>
 
-	<h1 class="text-center"><?php echo substr($_GET["id"],0,4); ?></h1>
+	<h1 class="text-center"><?php echo substr($_POST["id"],0,4); ?></h1>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-4 col-lg-4 col-xl-4">
