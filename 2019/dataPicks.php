@@ -24,7 +24,6 @@
 			margin: auto;
 		}
 	</style>
-	<div class="container">
 	<h1 class="text-center"><?php echo substr($_GET["id"],0,4); ?></h1>
 	<div class="card-group">
 		<div class="card" style=<?php echo '"background-color: ' . $colorA . '"'; ?>>
@@ -220,5 +219,4 @@
 						?>
 			</div>
 		</div>
-	</div>
 	</div>
