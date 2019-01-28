@@ -31,11 +31,11 @@
 				};
 				if (id.substring(4, id.length) ==="totals"){
 					xmlhttp.open("POST","dataGroups.php?id="+id,true);
-					xmlhttp.send();
 				} else {
 					xmlhttp.open("POST","dataPicks.php?id="+id,true);
-					xmlhttp.send();
 				}
+				xmlhttp.send();
+				xmlhttp.send(id);
 			}
 
 			//var dead = new Date("2018-03-29T12:40:00");
