@@ -110,9 +110,7 @@
 			font-size: 2.25vh;
 		}
 }
-#main {
-	margin-top: 75px;
-}
+
 		<?php
 		if (new DateTime() > $deadline) {
 				echo ".navbar { margin-bottom: 20px; }";
@@ -120,7 +118,7 @@
 		?>
 		</style>
 
-	<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light justify-content-between">
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
   		<!-- Brand -->
   		<a class="navbar-brand" href="#">Dinger Derby '19</a>
 
