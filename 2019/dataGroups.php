@@ -52,9 +52,9 @@
 		if (new DateTime() < $deadline) {
 			if (new DateTime() < $groupDead) {
 				echo '<div class="alert alert-success alert-dismissable text-center fade show"><button type="button" class="close" data-dismiss="alert">&times;</button>Groups will be released on <strong>'.$groupDead->format('F j, Y g:i A').'</strong></div>';
-			} //else {
+			} else {
 				echo '<div class="alert alert-success alert-dismissable text-center fade show"><button type="button" class="close" data-dismiss="alert">&times;</button>Teams lock <strong>'.$deadline->format('F j, Y g:i A').'</strong></div>';
-			//}
+			}
 		}
 	?>
 
