@@ -48,6 +48,7 @@
 }
 	</style>
 
+<div class="container">
 	<h1 class="text-center"><?php echo substr($_GET["id"],0,4); ?></h1>
 	<?php
 		if (new DateTime() < $deadline) {
@@ -58,7 +59,6 @@
 			}
 		}
 	?>
-	<div class="container">
 		<div class="row">
 			<div class="col-md-4 col-lg-4 col-xl-4">
 					<div class="card cardStandings">
