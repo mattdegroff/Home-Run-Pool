@@ -57,7 +57,7 @@
 		}
 	?>
 
-	<h1 class="text-center"><?php echo substr($_POST["id"],0,4); ?></h1>
+	<h1 class="text-center"><?php echo substr($_GET["id"],0,4); ?></h1>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-4 col-lg-4 col-xl-4">
@@ -87,22 +87,22 @@
 								<h5>Groups</h5>
 								<ul class="nav nav-pills card-header-pills nav-fill">
 									<li class="nav-item">
-										<a class="nav-link active" data-toggle="pill" href=<?php echo "#A".substr($_POST["id"],0,4)?>>A</a>
+										<a class="nav-link active" data-toggle="pill" href=<?php echo "#A".substr($_GET["id"],0,4)?>>A</a>
 									</li>
 									<li class="nav-item">
-										<a class="nav-link" data-toggle="pill" href=<?php echo "#B".substr($_POST["id"],0,4)?>>B</a>
+										<a class="nav-link" data-toggle="pill" href=<?php echo "#B".substr($_GET["id"],0,4)?>>B</a>
 									</li>
 									<li class="nav-item">
-										<a class="nav-link" data-toggle="pill" href=<?php echo "#C".substr($_POST["id"],0,4)?>>C</a>
+										<a class="nav-link" data-toggle="pill" href=<?php echo "#C".substr($_GET["id"],0,4)?>>C</a>
 									</li>
 									<li class="nav-item">
-										<a class="nav-link" data-toggle="pill" href=<?php echo "#D".substr($_POST["id"],0,4)?>>D</a>
+										<a class="nav-link" data-toggle="pill" href=<?php echo "#D".substr($_GET["id"],0,4)?>>D</a>
 									</li>
 								</ul>
 							</div>
 							<div class="card-block cardGroups">
 								<div class="tab-content">
-								<div class="tab-pane active fade show" id=<?php echo "A".substr($_POST["id"],0,4)?> style=<?php echo '"background-color: ' . $colorA . '"'; ?>>
+								<div class="tab-pane active fade show" id=<?php echo "A".substr($_GET["id"],0,4)?> style=<?php echo '"background-color: ' . $colorA . '"'; ?>>
 									<?php if (new DateTime() > $deadline) { echo '<img class="card-img-top img-fluid" src='.Apic().' alt="Card image">'; }?>
 										<div class="card-body">
 											<!--<h4 class="card-title text-center">A</h4>-->
@@ -149,7 +149,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="tab-pane fade" id=<?php echo "B".substr($_POST["id"],0,4)?> style=<?php echo '"background-color: ' . $colorB . '"'; ?>>
+								<div class="tab-pane fade" id=<?php echo "B".substr($_GET["id"],0,4)?> style=<?php echo '"background-color: ' . $colorB . '"'; ?>>
 									<?php if (new DateTime() > $deadline) { echo '<img class="card-img-top img-fluid" src='.Bpic().' alt="Card image">'; }?>
 										<div class="card-body">
 										<!--<h4 class="card-title text-center">B</h4>-->
@@ -196,7 +196,7 @@
 									</div>
 								</div>
 								</div>
-								<div class="tab-pane fade" id=<?php echo "C".substr($_POST["id"],0,4)?> style=<?php echo '"background-color: ' . $colorC . '"'; ?>>
+								<div class="tab-pane fade" id=<?php echo "C".substr($_GET["id"],0,4)?> style=<?php echo '"background-color: ' . $colorC . '"'; ?>>
 								<?php if (new DateTime() > $deadline) { echo '<img class="card-img-top img-fluid" src='.Cpic().' alt="Card image">'; }?>
 										<div class="card-body">
 										<!--<h4 class="card-title text-center">C</h4>-->
@@ -242,7 +242,7 @@
 									</div>
 								</div>
 								</div>
-								<div class="tab-pane fade" id=<?php echo "D".substr($_POST["id"],0,4)?> style=<?php echo '"background-color: ' . $colorD . '"'; ?>>
+								<div class="tab-pane fade" id=<?php echo "D".substr($_GET["id"],0,4)?> style=<?php echo '"background-color: ' . $colorD . '"'; ?>>
 									<?php if (new DateTime() > $deadline) { echo '<img class="card-img-top img-fluid" src='.Dpic().' alt="Card image">'; }?>
 									<div class="card-body">
 										<!--<h4 class="card-title text-center">D</h4>-->

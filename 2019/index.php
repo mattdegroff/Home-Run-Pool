@@ -30,11 +30,11 @@
 					}
 				};
 				if (id.substring(4, id.length) ==="totals"){
-					xmlhttp.open("POST","dataGroups.php",true);
+					xmlhttp.open("GET","dataGroups.php?id="+id,true);
 				} else {
-					xmlhttp.open("POST","dataPicks.php",true);
+					xmlhttp.open("GET","dataPicks.php?id="+id,true);
 				}
-				xmlhttp.send(id);
+				xmlhttp.send();
 			}
 
 			//var dead = new Date("2018-03-29T12:40:00");
