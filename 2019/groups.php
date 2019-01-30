@@ -43,7 +43,7 @@
 										<?php
 
 										include_once("connect2016.php");
-										include "update.php";
+										include_once("update.php");
 
 										$deadline = new DateTime("2017-02-02 13:10:00");
 										$groupDead = new DateTime("2017-02-24 12:00:00");
