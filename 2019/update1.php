@@ -481,7 +481,7 @@
 											if ($i == $max) {
 												$add = 4-($i%4);
 												for ($j=1; $j <= $add; $j++) {
-													echo '<div class="card" style="visibility: hidden;"></div>';
+													echo '<div class="card" ></div>';
 												}
 												echo "</div>";
 											}
