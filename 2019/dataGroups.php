@@ -339,10 +339,10 @@
 					</div>
 				</div>
 				<div class="row">
-					<!--<div class="col-lg-12">-->
+					<div class="container-fluid">
 			<?php
 					printGroups($deadline);
 				?>
-			<!--</div>-->
+			</div>
 			</div>
 		</div>
