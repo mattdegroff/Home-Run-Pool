@@ -5,6 +5,7 @@
 	<body>
 
 	<?php
+		include("connect2016.php");
 		include("details.php");
 		include("update1.php");
 		printGroups($deadline);
