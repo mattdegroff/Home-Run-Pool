@@ -428,7 +428,7 @@
 
 									for ($i = 1; $i <= $max; $i++) {
 										echo "<div class='col-lg-3'>";
-										$sql = "SELECT color, name, code, font, paid FROM standings where id=".$i;
+										$sql = "SELECT color, `name`, code, font, paid FROM standings where id=".$i;
 										$result = $conn->query($sql);
 										if ($result->num_rows > 0) {
 											while($row = $result->fetch_assoc()){
