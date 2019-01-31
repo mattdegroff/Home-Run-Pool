@@ -131,7 +131,7 @@
 		<div class="collapse navbar-collapse" id="collapsibleNavbar">
 			<ul class="navbar-nav ">
 					<li class="nav-item dropdown">
-			      <a class="nav-link dropdown-toggle active" href="#" id="navbardrop" data-toggle="dropdown">
+			      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
 			        2019
 			      </a>
 			      <div class="dropdown-menu">
