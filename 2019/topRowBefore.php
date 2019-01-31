@@ -147,7 +147,7 @@
 		<div class="card" style=<?php echo '"background-color: ' . $colorD . '"'; ?>>
 			<div class="card-body">
 				<div class="card-title text-center"><b>D</b></div>
-				<div class="row">
+				<div class="row text-center">
                     <h1 class="text-center">Players<br>Not<br>In<br>Groups<br>A - C</h1>
 				</div>
 				<?php
