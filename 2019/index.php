@@ -134,10 +134,16 @@
 			      <a class="nav-link dropdown-toggle active" href="#" id="navbardrop" data-toggle="dropdown">
 			        2019
 			      </a>
-			      <ul class="dropdown-menu">
-			        <li class="dropdown-item active show" onclick="update('2019totals')">Totals</li>
-			        <li class="dropdown-item disabled" onclick="update('2019picks')">Pick %</li>
-			      </ul>
+			      <div class="dropdown-menu">
+			        <a class="dropdown-item active show" onclick="update('2019totals')">Totals</a>
+							<?php
+								if (new DateTime() < $deadline) {
+									echo "<a class='dropdown-item disabled'>Pick %</a>";
+								} else {
+									echo "<a class='dropdown-item' onclick='update('2019picks');'>Pick %</a>";
+								}
+								?>
+			      </div>
 			  	</li>
 					<li class="nav-item dropdown">
 			      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
