@@ -134,10 +134,10 @@
 			      <a class="nav-link dropdown-toggle active" href="#" id="navbardrop" data-toggle="dropdown">
 			        2019
 			      </a>
-			      <div class="dropdown-menu">
-			        <a class="dropdown-item active show" onclick="update('2019totals')">Totals</a>
-			        <a class="dropdown-item disabled" onclick="update('2019picks')">Pick %</a>
-			      </div>
+			      <ul class="dropdown-menu">
+			        <li class="dropdown-item active show" onclick="update('2019totals')">Totals</li>
+			        <li class="dropdown-item disabled" onclick="update('2019picks')">Pick %</li>
+			      </ul>
 			  	</li>
 					<li class="nav-item dropdown">
 			      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
