@@ -16,7 +16,7 @@
 		$colorD = '#a4c639';
 		$deadline = new DateTime('2016-04-03T13:10:00', new DateTimeZone('America/New_York'));
 		$groupDead = new DateTime('2016-02-27T12:00:00', new DateTimeZone('America/New_York'));
-		$final = new DateTime('2018-10-02T23:59:59', new DateTimeZone('America/New_York'));
+		$final = new DateTime('2016-10-02T23:59:59', new DateTimeZone('America/New_York'));
 	} else if (substr($_GET["id"],0,4) == "2017"){
 		include_once("connect2017.php");
 		$colorA = '#d10000';
