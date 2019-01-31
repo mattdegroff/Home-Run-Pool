@@ -148,7 +148,7 @@
 			<div class="card-body">
 				<div class="card-title text-center"><b>D</b></div>
 				<div class="row">
-                    <h1>Players<br>Not<br>In<br>Groups<br>A - C</h1>
+                    <h1 class="text-center">Players<br>Not<br>In<br>Groups<br>A - C</h1>
 				</div>
 				<?php
 				/*$player = '';
