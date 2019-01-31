@@ -463,7 +463,7 @@
 											</div>';
 									printGroup($row['code']);
 
-								echo '</div></div></div></div>';
+								echo '</div></div></div>';
 								} else {
 									echo "</div>";
 								}
