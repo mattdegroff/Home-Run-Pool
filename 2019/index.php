@@ -30,7 +30,7 @@
 					}
 				};
 				if (id.substring(4, id.length) ==="totals"){
-					xmlhttp.open("GET","dataGroups.1.php?id="+id,true);
+					xmlhttp.open("GET","dataGroups.php?id="+id,true);
 				} else {
 					xmlhttp.open("GET","dataPicks.php?id="+id,true);
 				}
