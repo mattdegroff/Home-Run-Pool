@@ -50,6 +50,7 @@
 
 <div class="container">
 	<h1 class="text-center"><?php echo substr($_GET["id"],0,4); ?></h1>
+	<div class="row">
 	<?php
 		if (new DateTime() < $deadline) {
 			if (new DateTime() < $groupDead) {
@@ -65,6 +66,7 @@
 			include("topRowAfter.php");
 		}
 	?>
+	</div>
 	<div class="row">
 		<div class="container-fluid">
 			<?php
