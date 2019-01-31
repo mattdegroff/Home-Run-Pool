@@ -58,13 +58,14 @@
 				echo '<div class="alert alert-success alert-dismissable text-center fade show"><button type="button" class="close" data-dismiss="alert">&times;</button>Teams lock at<br><strong>'.$deadline->format('g:i A').'</strong> on <strong>'.$deadline->format('F j, Y').'</strong></div>';
 			}
 		}
-		echo '<div class="row">';
+		
 		if (new DateTime() < $deadline && new DateTime() > $groupDead) {
 			include("topRowBefore.php");
 		} else if (new DateTime() > $deadline) {
+			echo '<div class="row">';
 			include("topRowAfter.php");
+			echo '</div>';
 		}
-		echo '</div>';
 	?>
 	<div class="row">
 		<div class="container-fluid">
