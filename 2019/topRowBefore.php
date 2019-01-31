@@ -145,15 +145,13 @@
 			</div>
 		</div>
 		<div class="card" style=<?php echo '"background-color: ' . $colorD . '"'; ?>>
-			<img class="card-img-top img-fluid" src="<?php echo Dpic(); ?>" alt="Card image">
 			<div class="card-body">
 				<div class="card-title text-center"><b>D</b></div>
 				<div class="row">
-					<div class="col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9 text-center">Player</div>
-					<div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 text-center">%</div>
+                    <h1>Players<br>Not<br>In<br>Groups<br>A - C</h1>
 				</div>
 				<?php
-				$player = '';
+				/*$player = '';
 				$sql = "SELECT firstName, lastName FROM groupD ORDER BY homeRuns DESC LIMIT 1";
 						$result = $conn->query($sql);
 						if ($result->num_rows > 0) {
@@ -180,15 +178,7 @@
 							}
 
 					}
-				}
-
-				$sql = "select sum(picks) from groupD";
-			$result = $conn->query($sql);
-			if ($result->num_rows > 0) {
-				while($row = $result->fetch_assoc()){
-					echo '<div class="row"><div class="col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9 text-center"></div><div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 text-center"><b>'.$row['sum(picks)']."</b></div></div>";
-				}
-			}
+                }*/
 						?>
 			</div>
 		</div>
