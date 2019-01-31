@@ -135,7 +135,7 @@
 			        2019
 			      </a>
 			      <div class="dropdown-menu">
-			        <a class="dropdown-item active show" onclick="update('2019totals')">Totals</a>
+			        <a class="dropdown-item" onclick="update('2019totals')">Totals</a>
 							<?php
 								if (new DateTime() < $deadline) {
 									echo "<a class='dropdown-item disabled'>Pick %</a>";
