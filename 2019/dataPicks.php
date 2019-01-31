@@ -2,28 +2,6 @@
 		include_once("details.php");
 		include("update1.php");
 	?>
-	<style>
-		.color {
-			<?php
-			$sql = "select font from standings order by homeRuns desc, name limit 1";
-			$result = $conn->query($sql);
-			if ($result->num_rows > 0) {
-				while ($row = $result->fetch_assoc()) {
-					if ($row['font'] == 1) {
-						echo "color: white;";
-					}
-					else if ($row['font'] == 2) {
-						echo "color: yellow;";
-					}
-					else {
-						echo "color: black;";
-					}
-				}
-			}
-			?>
-			margin: auto;
-		}
-	</style>
 	<h1 class="text-center"><?php echo substr($_GET["id"],0,4); ?></h1>
 	<div class="card-group">
 		<div class="card" style=<?php echo '"background-color: ' . $colorA . '"'; ?>>
