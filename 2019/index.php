@@ -1,8 +1,3 @@
-<?php
-	require_once("update1.php");
-	require_once("details.php");
-?>
-
 <html>
 	<head>
 		<title>YABO '19</title>
