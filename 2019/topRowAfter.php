@@ -1,4 +1,3 @@
-<?php include_once("details.php"); ?>
 <div class="col-md-6 col-lg-4 col-xl-4">
 					<div class="card cardStandings">
 						<div class="card-header text-center">
