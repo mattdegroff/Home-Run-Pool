@@ -48,7 +48,7 @@
 }
 	</style>
 
-<div class="container">
+<div class="container-fluid">
 	<h1 class="text-center"><?php echo substr($_GET["id"],0,4); ?></h1>
 	<?php
 		if (new DateTime() < $deadline) {
