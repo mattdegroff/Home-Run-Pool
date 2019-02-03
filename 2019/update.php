@@ -5,12 +5,12 @@
 	$colorC = '#00cc66';
 	$colorD = '#d9d9d9';
 	$countA = 6;
-	$countB = 11;
+	$countB = 6;
 	$countC = 16;
-	if (new DateTime() > new DateTime("2018-03-29 12:40:00")) {
-		$year = "2018";
+	if (new DateTime() > new DateTime("2019-03-28 13:05:00")) {
+		$year = "2019";
 	} else {
-		$year = "2017";
+		$year = "2018";
 	}
 
 			function sum($table) {
@@ -167,7 +167,7 @@
 							$link = $row['link'];
 						}
 					}
-
+					echo $link;
 					$str = file_get_contents($link);
 
 					$scan = "<p>". $year . " Season</p>";
