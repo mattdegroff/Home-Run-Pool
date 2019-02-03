@@ -33,9 +33,7 @@ function playerSearch($player) {
 }
 }
 ?>
-<script>
 <form action="playersearch.php" method="post">
 <input type="text" name="player"><br>
 <input type="submit" value="Submit">
 </form>
-</div>
