@@ -42,7 +42,7 @@
 								<tbody>
 										<?php
 
-										include_once("connect2016.php");
+										include_once("connect.php");
 										include_once("update1.php");
 
 										$deadline = new DateTime("2017-02-02 13:10:00");
