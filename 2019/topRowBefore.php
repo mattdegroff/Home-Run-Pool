@@ -14,7 +14,7 @@
 					while($row = $result->fetch_assoc()){
 						echo '<div class="row">
 									<div class="col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9 text-center">
-									<a href="'.$row['link'].'" style="color:black" target="_blank">'.htmlentities($row['player'])
+									<a href="'.$row['link'].'" style="color:black" target="_blank">'.$row['player']
 									.' ('.$row['team'].')</a>
 									</div>
 									<div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 text-center">'.$row['homeRuns'].'</div></div>';
@@ -67,7 +67,7 @@
 					while($row = $result->fetch_assoc()){
 						echo '<div class="row">
 									<div class="col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9 text-center">
-									<a href="'.$row['link'].'" style="color:black" target="_blank">'.htmlentities($row['player'])
+									<a href="'.$row['link'].'" style="color:black" target="_blank">'.$row['player']
 									.' ('.$row['team'].')</a>
 									</div>
 									<div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 text-center">'.$row['homeRuns'].'</div></div>';
@@ -119,7 +119,7 @@
 					while($row = $result->fetch_assoc()){
 						echo '<div class="row">
 									<div class="col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9 text-center">
-									<a href="'.$row['link'].'" style="color:black" target="_blank">'.htmlentities($row['player'])
+									<a href="'.$row['link'].'" style="color:black" target="_blank">'.$row['player']
 									.' ('.$row['team'].')</a>
 									</div>
 									<div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 text-center">'.$row['homeRuns'].'</div></div>';
