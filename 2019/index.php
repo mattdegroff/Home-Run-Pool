@@ -122,7 +122,7 @@
 			font-size: 1.75vh;
 		}
 		.cardGroups {
-			font-size: 1.5vh;
+			font-size: .5vh;
 		}
 }
 @media (max-width: 1200px) {
