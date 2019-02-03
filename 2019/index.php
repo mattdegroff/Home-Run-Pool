@@ -108,7 +108,7 @@
 			font-size: 1.75vh;
 		}
 		.cardGroups {
-			font-size: 1.5vh;
+			font-size: 1vh;
 		}
 }
 @media (min-width: 992px) {
@@ -122,7 +122,7 @@
 			font-size: 1.75vh;
 		}
 		.cardGroups {
-			font-size: 1vh;
+			font-size: 1.75vh;
 		}
 }
 
