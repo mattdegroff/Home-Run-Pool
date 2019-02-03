@@ -99,7 +99,7 @@
 }
 @media (min-width: 768px) {
 		.cardStandings {
-			font-size: 1vw;
+			font-size: .75vw;
 		}
 		.cardGOAT {
 			font-size: 1.75vw;
