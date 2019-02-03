@@ -145,7 +145,7 @@
 								?>
 			      </div>
 			  	</li>
-					<li class="nav-item dropdown">
+					<!--<li class="nav-item dropdown">
 			      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
 			        2018
 			      </a>
@@ -180,7 +180,7 @@
 			        <a class="dropdown-item" onclick="update('2015totals')">Totals</a>
 			        <a class="dropdown-item" onclick="update('2015picks')">Pick %</a>
 			      </div>
-			    </li>
+			    </li>-->
 		      	<li>
 		       		<a class="nav-link" href="http://espn.com/mlb" target="_blank"><img src="img/espn.png" alt="espnLogo" style="width:100px;height:25px;"></a>
 		      	</li>
