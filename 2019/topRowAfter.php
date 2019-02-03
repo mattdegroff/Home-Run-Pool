@@ -1,5 +1,5 @@
 <?php include_once("details.php"); ?>
-<div class="col-md-4 col-lg-4 col-xl-4">
+<div class="col-md-6 col-lg-4 col-xl-4">
 					<div class="card cardStandings">
 						<div class="card-header text-center">
 							<h5>Standings</h5>
@@ -17,7 +17,7 @@
 						</div>
 					</div>
 			</div>
-			<div class="col-md-4 col-lg-4 col-xl-4">
+			<div class="col-md-6 col-lg-4 col-xl-4">
 				<!--<div class="card-group" style="background-color: #eeeeee;">
 					<div class="card-body text-center">-->
 						<!--<div class="card-group">-->
