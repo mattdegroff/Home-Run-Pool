@@ -82,7 +82,22 @@
 		.card {
 			margin-top: 10px;
 		}
-@media (min-width: 576px) {
+
+@media (max-width: 576px) {
+		.cardStandings {
+			font-size: 2vh;
+		}
+		.cardGOAT {
+			font-size: 2vh;
+		}
+		.cardPart {
+			font-size: 2.25vh;
+		}
+		.cardGroups {
+			font-size: 2.25vh;
+		}
+}
+@media (max-width: 768px) {
 		.cardStandings {
 			font-size: 1.5vh;
 		}
@@ -96,18 +111,32 @@
 			font-size: 2vh;
 		}
 }
-@media (max-width: 576px) {
+@media (max-width: 992px) {
 		.cardStandings {
-			font-size: 2vh;
+			font-size: 1.5vh;
 		}
 		.cardGOAT {
-			font-size: 2vh;
+			font-size: 1.75vh;
 		}
 		.cardPart {
-			font-size: 2.25vh;
+			font-size: 1.75vh;
 		}
 		.cardGroups {
-			font-size: 2.25vh;
+			font-size: 1.5vh;
+		}
+}
+@media (max-width: 1200px) {
+		.cardStandings {
+			font-size: 1.5vh;
+		}
+		.cardGOAT {
+			font-size: 1.75vh;
+		}
+		.cardPart {
+			font-size: 1.75vh;
+		}
+		.cardGroups {
+			font-size: 2vh;
 		}
 }
 
