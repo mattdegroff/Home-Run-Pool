@@ -6,7 +6,7 @@
 	$colorD = '#d9d9d9';
 	$countA = 6;
 	$countB = 6;
-	$countC = 16;
+	$countC = 11;
 	if (new DateTime() > new DateTime("2019-03-28 13:05:00")) {
 		$year = "2019";
 	} else {
