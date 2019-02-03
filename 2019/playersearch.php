@@ -28,5 +28,11 @@ function playerSearch($player) {
   return null;
 }
 }
-
 ?>
+<script>
+function search() {
+
+}
+</script>
+<input type="text" onkeyup="search();">
+</div>
