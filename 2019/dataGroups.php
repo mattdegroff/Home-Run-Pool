@@ -1,5 +1,5 @@
 <?php
-		include_once("details.php");
+		include("details.php");
 		include("update1.php");
 	?>
 	<style>
