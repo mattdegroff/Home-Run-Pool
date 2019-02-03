@@ -83,7 +83,7 @@
 			margin-top: 10px;
 		}
 
-@media (max-width: 576px) {
+@media (min-width: 576px) {
 		.cardStandings {
 			font-size: 2vh;
 		}
@@ -108,7 +108,7 @@
 			font-size: 1.75vh;
 		}
 		.cardGroups {
-			font-size: .5vh;
+			font-size: 1.5vh;
 		}
 }
 @media (min-width: 992px) {
@@ -122,7 +122,7 @@
 			font-size: 1.75vh;
 		}
 		.cardGroups {
-			font-size: .5vh;
+			font-size: 1vh;
 		}
 }
 
