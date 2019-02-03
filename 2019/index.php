@@ -1,6 +1,6 @@
 <?php
-	include("update1.php");
-	include_once("details.php");
+	require_once("update1.php");
+	require_once("details.php");
 ?>
 
 <html>
