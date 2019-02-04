@@ -1,3 +1,7 @@
+<?php
+	session_start();
+?>
+
 <html>
 	<head>
 		<title>YABO '19</title>
@@ -31,7 +35,7 @@
 				}
 				xmlhttp.send();
 			}
-				//update("2019totals");
+				update("2019totals");
 		</script>
 	</head>
 	<body onload="updateClock(); setInterval('updateClock()', 1000 )">
