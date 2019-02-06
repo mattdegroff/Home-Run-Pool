@@ -11,32 +11,7 @@
 	  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="js/clock.js"></script>
-		<script>
-			var xmlhttp;
-
-			if (window.XMLHttpRequest) {
-				// code for IE7+, Firefox, Chrome, Opera, Safari
-				xmlhttp = new XMLHttpRequest();
-			} else {
-				// code for IE6, IE5
-				xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-			}
-
-			function update(id) {
-				xmlhttp.onreadystatechange = function() {
-					if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-						document.getElementById("main").innerHTML = xmlhttp.responseText;
-					}
-				};
-				if (id.substring(4, id.length) ==="totals"){
-					xmlhttp.open("GET","dataGroups.php?id="+id,true);
-				} else {
-					xmlhttp.open("GET","dataPicks.php?id="+id,true);
-				}
-				xmlhttp.send();
-			}
-				update("2019totals");
-		</script>
+		
 	</head>
 	<body onload="updateClock(); setInterval('updateClock()', 1000 )">
 		<style>
@@ -144,21 +119,23 @@
 		<!-- Navbar links -->
 		<div class="collapse navbar-collapse" id="collapsibleNavbar">
 			<ul class="navbar-nav ">
-					<li class="nav-item dropdown">
+					<li><a href="/totals">Totals</a></li>
+					<li><a href="/picks">Pick %</a></li>
+					<!--<li class="nav-item dropdown">
 			      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
 			        2019
 			      </a>
 			      <div class="dropdown-menu">
 			        <a class="dropdown-item" onclick="update('2019totals')">Totals</a>
-							<?php
-								if (new DateTime() < $deadline) {
+							
+								/*if (new DateTime() < $deadline) {
 									echo "<a class='dropdown-item disabled'>Pick %</a>";
 								} else {
 									echo "<a class='dropdown-item' onclick='update('2019picks');'>Pick %</a>";
 								}
 								?>
 			      </div>
-			  	</li>
+			  	</li>-->
 					<!--<li class="nav-item dropdown">
 			      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
 			        2018
