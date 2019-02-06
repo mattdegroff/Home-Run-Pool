@@ -177,8 +177,8 @@
 		      	</li>
 						</ul>
 						<ul class="navbar-nav navbar-right">
-					<li class="nav-item"><a href="#" class="navbar-item"><span id="clock">&nbsp;</span></a></li>
-					<li class="nav-item"><a href="#" class="navbar-item"><span class="navbar-item"> <?php
+					<li class="nav-item"><a href="#" class="nav-link"><span id="clock">&nbsp;</span></a></li>
+					<li class="nav-item"><a href="#" class="nav-link"><span class="navbar-item"> <?php
 			date_default_timezone_set("America/New_York");
 			$date = date("F j, Y");
 			echo $date;
