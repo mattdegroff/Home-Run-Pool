@@ -176,7 +176,7 @@
 		       		<a class="nav-link" href="http://espn.com/mlb" target="_blank"><img src="img/espn.png" alt="espnLogo" style="width:100px;height:25px;"></a>
 		      	</li>
 						</ul>
-						<ul class="nav navbar-nav navbar-right">
+						<ul class="navbar-nav navbar-right">
 					<li class="nav-item"><a href="#" class="navbar-item"><span id="clock">&nbsp;</span></a></li>
 					<li class="nav-item"><a href="#" class="navbar-item"><span class="navbar-item"> <?php
 			date_default_timezone_set("America/New_York");
