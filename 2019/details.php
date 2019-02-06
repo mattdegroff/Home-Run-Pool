@@ -1,6 +1,7 @@
 <?php
+
     if (substr($_GET["id"],0,4) == "2015"){
-		include_once("connect2015.php");
+		include_once("connect.php?year=2015");
 		$colorA = 'red';
 		$colorB = '#1e90ff';
 		$colorC = 'yellow';
@@ -9,7 +10,7 @@
 		$groupDead = new DateTime('2015-03-03T12:00:00', new DateTimeZone('America/New_York'));
 		$final = new DateTime('2015-10-04T23:59:59', new DateTimeZone('America/New_York'));
 	} else if (substr($_GET["id"],0,4) == "2016"){
-		include_once("connect2016.php");
+		nclude_once("connect.php?year=2016");
 		$colorA = '#ffd700';
 		$colorB = 'silver';
 		$colorC = '#cd7f32';
@@ -18,7 +19,7 @@
 		$groupDead = new DateTime('2016-02-27T12:00:00', new DateTimeZone('America/New_York'));
 		$final = new DateTime('2016-10-02T23:59:59', new DateTimeZone('America/New_York'));
 	} else if (substr($_GET["id"],0,4) == "2017"){
-		include_once("connect2017.php");
+		nclude_once("connect.php?year=2017");
 		$colorA = '#d10000';
 		$colorB = '#ff7171';
 		$colorC = '#ffafaf';
@@ -27,7 +28,7 @@
 		$groupDead = new DateTime('2017-03-01T12:00:00', new DateTimeZone('America/New_York'));
 		$final = new DateTime('2017-10-01T23:59:59', new DateTimeZone('America/New_York'));
 	} else if (substr($_GET["id"],0,4) == "2018"){
-		include_once("connect2018.php");
+		nclude_once("connect.php?year=2018");
 		$colorA = '#00cc66';
 		$colorB = '#d9d9d9';
 		$colorC = '#00cc66';
@@ -36,7 +37,7 @@
 		$groupDead = new DateTime('2018-02-12T12:00:00', new DateTimeZone('America/New_York'));
 		$final = new DateTime('2018-09-30T23:59:59', new DateTimeZone('America/New_York'));
 	} else {
-		include_once("connect.php");
+		include_once("connect.php?year=2019");
 		$colorA = '#92d050';
 		$colorB = '#00b0f0';
 		$colorC = '#ffd966';
