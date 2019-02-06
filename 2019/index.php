@@ -119,8 +119,8 @@
 		<!-- Navbar links -->
 		<div class="collapse navbar-collapse" id="collapsibleNavbar">
 			<ul class="navbar-nav ">
-					<li class="nav-item"><a href="../totals">Totals</a></li>
-					<li class="nav-item"><a href="../picks">Pick %</a></li>
+					<li class="nav-item"><a class="nav-link" href="../totals">Totals</a></li>
+					<li class="nav-item"><a class="nav-link" href="../picks">Pick %</a></li>
 					<!--<li class="nav-item dropdown">
 			      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
 			        2019
