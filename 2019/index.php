@@ -107,7 +107,7 @@
 		?>
 		</style>
 
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<nav class="navbar navbar-expand-sm navbar-light bg-light">
   		<!-- Brand -->
   		<a class="navbar-brand" href="#">Dinger Derby '19</a>
 
