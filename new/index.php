@@ -192,7 +192,7 @@
 		</div>
 	</nav>
 		<div id="main" class="container">
-			<?php include('totals.php?id='.$_SESSION['year'].$_SESSION['page']);?>
+			<?php include('totals.php');?>
 		</div>
 		<section class="footer text-center" style="padding: 25px; margin-top: 10px; background-color: #eee;">Matt DeGroff &copy; <?php echo date("Y"); ?></section>
 	</body>
