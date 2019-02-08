@@ -2,7 +2,7 @@
 		function Apic() {
 			global $conn;
 			$imglink = "";
-			$sql = "SELECT link FROM groupA ORDER BY homeRuns DESC LIMIT 1";
+			$sql = "select link FROM groupA ORDER BY homeRuns DESC LIMIT 1";
 		$result = $conn->query($sql);
 		if ($result->num_rows > 0) {
 			while($row = $result->fetch_assoc()){
@@ -26,7 +26,7 @@
 	function Bpic() {
 			global $conn;
 			$imglink = "";
-			$sql = "SELECT link FROM groupB ORDER BY homeRuns DESC LIMIT 1";
+			$sql = "select link FROM groupB ORDER BY homeRuns DESC LIMIT 1";
 		$result = $conn->query($sql);
 		if ($result->num_rows > 0) {
 			while($row = $result->fetch_assoc()){
@@ -50,7 +50,7 @@
 	function Cpic() {
 			global $conn;
 			$imglink = "";
-			$sql = "SELECT link FROM groupC ORDER BY homeRuns DESC LIMIT 1";
+			$sql = "select link FROM groupC ORDER BY homeRuns DESC LIMIT 1";
 		$result = $conn->query($sql);
 		if ($result->num_rows > 0) {
 			while($row = $result->fetch_assoc()){
@@ -74,7 +74,7 @@
 	function Dpic() {
 			global $conn;
 			$imglink = "";
-			$sql = "SELECT link FROM groupD ORDER BY homeRuns DESC LIMIT 1";
+			$sql = "select link FROM groupD ORDER BY homeRuns DESC LIMIT 1";
 		$result = $conn->query($sql);
 		if ($result->num_rows > 0) {
 			while($row = $result->fetch_assoc()){
@@ -414,7 +414,7 @@
 
 			function printGroups($deadline) {
 				global $conn;
-				$sql = "SELECT max(id) FROM standings";
+				$sql = "select max(id) FROM standings";
 				$result = $conn->query($sql);
 				if ($result->num_rows > 0) {
 					while($row = $result->fetch_assoc()){
@@ -425,7 +425,7 @@
 
 					for ($i = 1; $i <= $max; $i++) {
 						echo "<div class='col-lg-3'>";
-						$sql = "SELECT color, name, code, font, paid FROM standings where id=".$i;
+						$sql = "select color, name, code, font, paid FROM standings where id=".$i;
 						$result = $conn->query($sql);
 						if ($result->num_rows > 0) {
 							while($row = $result->fetch_assoc()){
