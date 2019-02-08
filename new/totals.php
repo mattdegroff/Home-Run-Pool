@@ -1,5 +1,6 @@
-<?php
-	session_start();
+	<?php
+		session_start();
+		print_r($_SESSION);
 		include("details.php");
 		include_once("update1.php");
 	?>
@@ -50,7 +51,7 @@
 	</style>
 
 <div class="container-fluid">
-	<h1 class="text-center"><?php echo substr($_GET["id"],0,4); ?></h1>
+	<h1 class="text-center"><?php echo $_SESSION['year']; ?></h1>
 	<?php
 		if (new DateTime() < $deadline) {
 			if (new DateTime() < $groupDead) {
