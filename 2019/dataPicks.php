@@ -1,6 +1,6 @@
 <?php
-	include "details.php";
-	include "update1.php";
+	include("details.php");
+	include("update1.php");
 	?>
 	<style>
 		.color {
