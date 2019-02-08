@@ -1,6 +1,8 @@
 <?php
-		include_once("details.php");
-		include("update1.php");
+		session_start();
+		print_r($_SESSION);
+		include("details.php");
+		include_once("update1.php");
 	?>
 	<h1 class="text-center"><?php echo substr($_GET["id"],0,4); ?></h1>
 	<div class="card-group">
