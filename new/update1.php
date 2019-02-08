@@ -327,10 +327,9 @@
 					}
 				}
 
-				$sql = "select id, player, homeRuns, gr, color from rabbit";
-				$result = $conn->query($sql);
-
 				if (new DateTime() > $deadline) {
+					$sql = "select id, player, homeRuns, gr, color from rabbit";
+					$result = $conn->query($sql);
 					if ($result->num_rows > 0) {
 						while($row = $result->fetch_assoc()){
 							if ($pid === $row['id']) {
