@@ -1,4 +1,4 @@
 <?php
-    $version = 2019;
+    $version = 'new';
     header('Location: '.$version);
 ?>
