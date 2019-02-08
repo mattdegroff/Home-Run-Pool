@@ -6,6 +6,7 @@
 
 	<?php
 		session_start();
+		print_r($_SESSION);
 		include("connect.php");
 		include("details.php");
 		include("update1.php");
