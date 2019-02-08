@@ -1,6 +1,5 @@
 	<?php
 		session_start();
-		print_r($_SESSION);
 		include("details.php");
 		include_once("update1.php");
 	?>
