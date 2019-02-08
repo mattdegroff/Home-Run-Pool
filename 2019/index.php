@@ -23,6 +23,8 @@
 				
 			}
 		}
+
+		update('2019totals');
 		</script>
 	</head>
 	<body onload="updateClock(); setInterval('updateClock()', 1000 )">
