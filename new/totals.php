@@ -1,7 +1,7 @@
 	<?php
 		session_start();
 		include("details.php");
-		include_once("update1.php");
+		include("update1.php");
 	?>
 	<style>
 	<?php if (new DateTime() > $deadline) {
