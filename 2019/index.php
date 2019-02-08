@@ -22,7 +22,7 @@
 				xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
 			}
 
-			var id1 = "2018totals";
+			var id1 = "2019totals";
 
 			function update(id) {
 				id1=id;
