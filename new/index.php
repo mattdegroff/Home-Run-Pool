@@ -183,11 +183,11 @@
 						</ul>
 						<ul class="navbar-nav mr-auto">
 					<li class="nav-item"><a href="#" class="nav-link"><span id="clock">&nbsp;</span></a></li>
-					<li class="nav-item"><a href="#" class="nav-link"><span class="navbar-item"> <?php
+					<li class="nav-item"><a href="#" class="nav-link"><?php
 			date_default_timezone_set("America/New_York");
 			$date = date("F j, Y");
 			echo $date;
-		?></span></a></li>
+		?></a></li>
 			</ul>
 		</div>
 	</nav>
