@@ -5,11 +5,10 @@
 	<body>
 
 	<?php
-		include("connect2016.php");
-		include("details.php");
-		include("update1.php");
-		printGroups($deadline);
+
+	// The value of the variable name is found
+	echo "<h1>Hello " . $_GET["id"] . "</h1>";
 	?>
-	
+
 	</body>
 	</html>

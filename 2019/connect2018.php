@@ -1,5 +1,5 @@
 <?php
-	$link = "CLEARDB_JADE_URL";
+	$link = "CLEARDB_ORANGE_URL";
 
 	$url = parse_url(getenv($link));
 

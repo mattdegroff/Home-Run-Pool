@@ -1,17 +1,60 @@
 <?php
-	session_start();
+	include("update1.php");
 ?>
 
 <html>
 	<head>
-		<title>YABO '19</title>
+		<title>YABO '18</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="css/bootstrap.css">
 	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="js/clock.js"></script>
-		
+		<script>
+			var xmlhttp;
+
+			if (window.XMLHttpRequest) {
+				// code for IE7+, Firefox, Chrome, Opera, Safari
+				xmlhttp = new XMLHttpRequest();
+			} else {
+				// code for IE6, IE5
+				xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+			}
+
+			var id1 = "2018totals";
+
+			function update(id) {
+				id1=id;
+				if (id.substring(4, id.length) ==="totals"){
+				 	xmlhttp.onreadystatechange = function() {
+						if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+							document.getElementById(id).innerHTML = xmlhttp.responseText;
+						}
+					};
+					xmlhttp.open("GET","data.php?id="+id,true);
+					xmlhttp.send();
+				} else {
+					xmlhttp.onreadystatechange = function() {
+						if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+							document.getElementById(id).innerHTML = xmlhttp.responseText;
+						}
+					};
+					xmlhttp.open("GET","dataPicks.php?id="+id,true);
+					xmlhttp.send();
+				}
+			}
+
+			//var dead = new Date("2018-03-29T12:40:00");
+			//var now = new Date();
+
+			//if (now > dead) {
+				//setInterval(update("2018totals"), 750);
+			//}
+			//else {
+				update("2018totals");
+			//}
+		</script>
 	</head>
 	<body onload="updateClock(); setInterval('updateClock()', 1000 )">
 		<style>
@@ -56,47 +99,32 @@
 		.card {
 			margin-top: 10px;
 		}
-
 @media (min-width: 576px) {
 		.cardStandings {
-			font-size: 2vw;
+			font-size: 1.5vh;
 		}
 		.cardGOAT {
-			font-size: 2vw;
+			font-size: 1.75vh;
 		}
 		.cardPart {
-			font-size: 2.25vw;
+			font-size: 1.75vh;
 		}
 		.cardGroups {
-			font-size: 2.25vw;
+			font-size: 2vh;
 		}
 }
-@media (min-width: 768px) {
+@media (max-width: 576px) {
 		.cardStandings {
-			font-size: 1.5vw;
+			font-size: 2vh;
 		}
 		.cardGOAT {
-			font-size: 1.75vw;
+			font-size: 2vh;
 		}
 		.cardPart {
-			font-size: 1.75vw;
+			font-size: 2.25vh;
 		}
 		.cardGroups {
-			font-size: 1.4vw;
-		}
-}
-@media (min-width: 992px) {
-		.cardStandings {
-			font-size: 1vw;
-		}
-		.cardGOAT {
-			font-size: 1vw;
-		}
-		.cardPart {
-			font-size: 1vw;
-		}
-		.cardGroups {
-			font-size: 1vw;
+			font-size: 2.25vh;
 		}
 }
 
@@ -107,9 +135,9 @@
 		?>
 		</style>
 
-	<nav class="navbar navbar-expand-sm navbar-light bg-light">
+	<nav class="navbar navbar-expand-md navbar-light">
   		<!-- Brand -->
-  		<a class="navbar-brand" href="#">Dinger Derby '19</a>
+  		<a class="navbar-brand" href="#">Dinger Derby '18</a>
 
 		<!-- Toggler/collapsibe Button -->
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -118,31 +146,14 @@
 
 		<!-- Navbar links -->
 		<div class="collapse navbar-collapse" id="collapsibleNavbar">
-			<ul class="navbar-nav ">
-					<li class="nav-item"><a class="nav-link" href="/totals">Totals</a></li>
-					<li class="nav-item"><a class="nav-link" href="/picks">Pick %</a></li>
-					<!--<li class="nav-item dropdown">
-			      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-			        2019
-			      </a>
-			      <div class="dropdown-menu">
-			        <a class="dropdown-item" onclick="update('2019totals')">Totals</a>
-							
-								/*if (new DateTime() < $deadline) {
-									echo "<a class='dropdown-item disabled'>Pick %</a>";
-								} else {
-									echo "<a class='dropdown-item' onclick='update('2019picks');'>Pick %</a>";
-								}
-								?>
-			      </div>
-			  	</li>-->
-					<!--<li class="nav-item dropdown">
-			      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+			<ul class="nav nav-pills mr-auto">
+				<li class="nav-item dropdown">
+			      <a class="nav-link dropdown-toggle active" href="#" id="navbardrop" data-toggle="dropdown">
 			        2018
 			      </a>
 			      <div class="dropdown-menu">
-			        <a class="dropdown-item" onclick="update('2018totals')">Totals</a>
-			        <a class="dropdown-item" onclick="update('2018picks')">Pick %</a>
+			        <a class="dropdown-item active show" data-toggle="pill" href="#2018totals" onclick="update('2018totals')">Totals</a>
+			        <a class="dropdown-item" data-toggle="pill" href="#2018picks" onclick="update('2018picks')">Pick %</a>
 			      </div>
 			  	</li>
 			  	<li class="nav-item dropdown">
@@ -150,8 +161,8 @@
 			        2017
 			      </a>
 			      <div class="dropdown-menu">
-			        <a class="dropdown-item" onclick="update('2017totals')">Totals</a>
-			        <a class="dropdown-item" onclick="update('2017picks')">Pick %</a>
+			        <a class="dropdown-item"  data-toggle="pill" href="#2017totals" onclick="update('2017totals')">Totals</a>
+			        <a class="dropdown-item"  data-toggle="pill" href="#2017picks" onclick="update('2017picks')">Pick %</a>
 			      </div>
 			    </li>
 			    <li class="nav-item dropdown">
@@ -159,8 +170,8 @@
 			        2016
 			      </a>
 			      <div class="dropdown-menu">
-			        <a class="dropdown-item" onclick="update('2016totals')">Totals</a>
-			        <a class="dropdown-item" onclick="update('2016picks')">Pick %</a>
+			        <a class="dropdown-item" data-toggle="pill" href="#2016totals" onclick="update('2016totals')">Totals</a>
+			        <a class="dropdown-item" data-toggle="pill" href="#2016picks" onclick="update('2016picks')">Pick %</a>
 			      </div>
 			    </li>
 			    <li class="nav-item dropdown">
@@ -168,27 +179,39 @@
 			        2015
 			      </a>
 			      <div class="dropdown-menu">
-			        <a class="dropdown-item" onclick="update('2015totals')">Totals</a>
-			        <a class="dropdown-item" onclick="update('2015picks')">Pick %</a>
+			        <a class="dropdown-item" data-toggle="pill" href="#2015totals" onclick="update('2015totals')">Totals</a>
+			        <a class="dropdown-item" data-toggle="pill" href="#2015picks" onclick="update('2015picks')">Pick %</a>
 			      </div>
-			    </li>-->
+			    </li>
 		      	<li>
 		       		<a class="nav-link" href="http://espn.com/mlb" target="_blank"><img src="img/espn.png" alt="espnLogo" style="width:100px;height:25px;"></a>
 		      	</li>
-						</ul>
-						<ul class="navbar-nav mr-auto">
-					<li class="nav-item"><a href="#" class="nav-link"><span id="clock">&nbsp;</span></a></li>
-					<li class="nav-item"><a href="#" class="nav-link"><span class="navbar-item"> <?php
+		      </ul>
+		      <ul class="navbar-nav">
+				<li class="nav-link">
+					<div><span id="clock">&nbsp;</span></div>
+				</li>
+				<li class="nav-link">
+		<?php
 			date_default_timezone_set("America/New_York");
 			$date = date("F j, Y");
-			echo $date;
-		?></span></a></li>
-			</ul>
+			echo $date
+		?></li>
+			  </ul>
 		</div>
 	</nav>
-		<div id="main" class="container">
-			Loading...
+
+		<div class="tab-content">
+	  	<div class="tab-pane fade show container active text-center" id="2018totals">Loading...</div>
+			<div class="tab-pane fade container text-center" id="2018picks">Loading...</div>
+	  	<div class="tab-pane fade container text-center" id="2017totals">Loading...</div>
+	  	<div class="tab-pane fade container text-center" id="2017picks">Loading...</div>
+  		<div class="tab-pane fade container text-center" id="2016totals">Loading...</div>
+  		<div class="tab-pane fade container text-center" id="2016picks">Loading...</div>
+  		<div class="tab-pane fade container text-center" id="2015totals">Loading...</div>
+  		<div class="tab-pane fade container text-center" id="2015picks">Loading...</div>
 		</div>
-		<section class="footer text-center" style="padding: 25px; margin-top: 10px; background-color: #eee;">Matt DeGroff &copy; <?php echo date("Y"); ?></section>
+
+		<!--<section class="footer text-center" style="padding: 25px; margin-top: 10px; background-color: #eeeeee;">Created by Matt DeGroff</section>-->
 	</body>
 </html>

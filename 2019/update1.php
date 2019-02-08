@@ -1,4 +1,5 @@
 <?php
+
 		function Apic() {
 			global $conn;
 			$imglink = "";
@@ -401,9 +402,6 @@
 					$result = $conn->query($sql);
 					if ($result->num_rows > 0) {
 						while($row = $result->fetch_assoc()){
-							echo $row['id'];
-							echo $row['player'];
-							echo $row['homeruns'];
 							if ($pid === $row['id']) {
 								echo '<div class="row"><div id="drop" class="col-8 text-center">'.$row['player'].'</div><div id="drop" class="col-4 text-center">'.$row['homeRuns']."</div></div>";
 							} else {
@@ -418,76 +416,76 @@
 
 			function printGroups($deadline) {
 				global $conn;
-				$sql = "SELECT max(id) FROM standings";
-				$result = $conn->query($sql);
-				if ($result->num_rows > 0) {
-					while($row = $result->fetch_assoc()){
-						$max = $row['max(id)'];
-					}
-				}
-					echo '<div class="row">';
-
-					for ($i = 1; $i <= $max; $i++) {
-						echo "<div class='col-lg-3'>";
-						$sql = "SELECT color, name, code, font, paid FROM standings where id=".$i;
-						$result = $conn->query($sql);
-						if ($result->num_rows > 0) {
-							while($row = $result->fetch_assoc()){
-								if ($row['color'] == 'white') {
-									echo '<div class="card" style="border-color: 1px solid rgba(0, 0, 0, 0.2)">';
-								} else {
-									echo '<div class="card" style="border-color: '.$row['color'].'">';
-								}
-								if ($row['font'] == 1) {
-									echo '<div class="card-header text-center" id="dark" style="background-color: '.$row['color'].'">';
-								} else if ($row['font'] == 2) {
-									echo '<div class="card-header text-center" id="yellow" style="background-color: '.$row['color'].'">';
-								} else if ($row['font'] == 3) {
-									echo '<div class="card-header text-center" id="red" style="background-color: '.$row['color'].'">';
-								} else {
-									if ($row['color'] == 'white') {
-										echo '<div class="card-header text-center" style="background-color: white; border-bottom: 1px solid rgba(0, 0, 0, 0.2);">';
-									} else {
-										echo '<div class="card-header text-center" style="background-color: '.$row['color'].'">';
+									$sql = "SELECT max(id) FROM standings";
+									$result = $conn->query($sql);
+									if ($result->num_rows > 0) {
+										while($row = $result->fetch_assoc()){
+											$max = $row['max(id)'];
+										}
 									}
-								}
-								if ($row['paid'] == 1) {
-									echo '<h5>'.$row['name'].'</h5></div>';
-								} else {
-									echo '<h5>*'.$row['name'].'*</h5></div>';
-								}
-								if (new DateTime() > $deadline) {
-								echo '<div class="card-text cardPart text-center">
-										<div class="container-fluid">
-											<div class="row">
-												<div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8"><b>Player</b></div>
-												<div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4"><b>HR</b></div>
-											</div>';
-									printGroup($row['code']);
+									echo '<div class="row">';
 
-								echo '</div></div></div>';
-								} else {
-									echo "</div>";
-								}
-									echo "</div>";
-							}
-						}
+									for ($i = 1; $i <= $max; $i++) {
+										echo "<div class='col-lg-3'>";
+										$sql = "SELECT color, name, code, font, paid FROM standings where id=".$i;
+										$result = $conn->query($sql);
+										if ($result->num_rows > 0) {
+											while($row = $result->fetch_assoc()){
+												if ($row['color'] == 'white') {
+													echo '<div class="card" style="border-color: 1px solid rgba(0, 0, 0, 0.2)">';
+												} else {
+													echo '<div class="card" style="border-color: '.$row['color'].'">';
+												}
+												if ($row['font'] == 1) {
+													echo '<div class="card-header text-center" id="dark" style="background-color: '.$row['color'].'">';
+												} else if ($row['font'] == 2) {
+													echo '<div class="card-header text-center" id="yellow" style="background-color: '.$row['color'].'">';
+												} else if ($row['font'] == 3) {
+													echo '<div class="card-header text-center" id="red" style="background-color: '.$row['color'].'">';
+												} else {
+													if ($row['color'] == 'white') {
+														echo '<div class="card-header text-center" style="background-color: white; border-bottom: 1px solid rgba(0, 0, 0, 0.2);">';
+													} else {
+														echo '<div class="card-header text-center" style="background-color: '.$row['color'].'">';
+													}
+												}
+												if ($row['paid'] == 1) {
+													echo '<h5>'.$row['name'].'</h5></div>';
+												} else {
+													echo '<h5>*'.$row['name'].'*</h5></div>';
+												}
+												if (new DateTime() > $deadline) {
+				  								echo '<div  class="card-text cardPart text-center">
+														<div class="container-fluid">
+						  									<div class="row">
+												  				<div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8"><b>Player</b></div>
+												  				<div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4"><b>HR</b></div>
+												  			</div>';
+											  		printGroup($row['code']);
 
-						if ($i % 4 == 0) {
-							if ($i == $max) {
-								echo "</div>";
-							} else {
-								echo '</div><div class="row">';
-							}
-						} else {
-							if ($i == $max) {
-								$add = 4-($i%4);
-								for ($j=1; $j <= $add; $j++) {
-									echo '<div class="card" style="visibility: hidden;"></div>';
-								}
-								echo "</div>";
-							}
-						}
-					}
-				}
+											  	echo '</div></div></div>';
+											  	} else {
+											  		echo "</div>";
+											  	}
+													echo "</div>";
+											}
+										}
+
+										if ($i % 4 == 0) {
+											if ($i == $max) {
+												echo "</div>";
+											} else {
+												echo '</div><div class="row">';
+											}
+										} else {
+											if ($i == $max) {
+												$add = 4-($i%4);
+												for ($j=1; $j <= $add; $j++) {
+													echo '<div class="card" style="visibility: hidden;"></div>';
+												}
+												echo "</div>";
+											}
+										}
+									}
+									}
 ?>

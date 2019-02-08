@@ -42,11 +42,11 @@
 								<tbody>
 										<?php
 
-										include_once("connect2018.php");
-										include "update.php";
+										include_once("details.php?id=2016");
+										include_once("update1.php");
 
-										$deadline = new DateTime("2017-02-02 13:10:00");
-										$groupDead = new DateTime("2017-02-24 12:00:00");
+										$deadline = new DateTime("2016-02-02 13:10:00");
+										$groupDead = new DateTime("2016-02-24 12:00:00");
 
 
 											echo "<tr>";
