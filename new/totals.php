@@ -50,7 +50,7 @@
 }
 	</style>
 
-<div class="container-fluid">
+<div class="container">
 	<h1 class="text-center"><?php echo $_SESSION['year']; ?></h1>
 	<?php
 		if (new DateTime() < $deadline) {

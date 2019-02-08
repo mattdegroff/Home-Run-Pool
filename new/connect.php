@@ -16,7 +16,6 @@ if ($year == 2015) {
 	$link = "CLEARDB_JADE_URL";
 }
 
-echo $link;
 $url = parse_url(getenv($link));
 
 $server = $url["host"];
