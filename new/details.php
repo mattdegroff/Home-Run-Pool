@@ -2,8 +2,7 @@
 	session_start();
 	print_r($_SESSION);
 	include("connect.php");
-    if (substr($_GET["id"],0,4) == "2015"){
-		include_once("connect.php?year=2015");
+    if ($_SESSION['year'] == 2015){
 		$colorA = 'red';
 		$colorB = '#1e90ff';
 		$colorC = 'yellow';
@@ -11,8 +10,7 @@
 		$deadline = new DateTime('2015-04-05T13:10:00', new DateTimeZone('America/New_York'));
 		$groupDead = new DateTime('2015-03-03T12:00:00', new DateTimeZone('America/New_York'));
 		$final = new DateTime('2015-10-04T23:59:59', new DateTimeZone('America/New_York'));
-	} else if (substr($_GET["id"],0,4) == "2016"){
-		nclude_once("connect.php?year=2016");
+	} else if ($_SESSION['year'] == 2016){
 		$colorA = '#ffd700';
 		$colorB = 'silver';
 		$colorC = '#cd7f32';
@@ -20,8 +18,7 @@
 		$deadline = new DateTime('2016-04-03T13:10:00', new DateTimeZone('America/New_York'));
 		$groupDead = new DateTime('2016-02-27T12:00:00', new DateTimeZone('America/New_York'));
 		$final = new DateTime('2016-10-02T23:59:59', new DateTimeZone('America/New_York'));
-	} else if (substr($_GET["id"],0,4) == "2017"){
-		nclude_once("connect.php?year=2017");
+	} else if ($_SESSION['year'] == 2017){
 		$colorA = '#d10000';
 		$colorB = '#ff7171';
 		$colorC = '#ffafaf';
@@ -29,8 +26,7 @@
 		$deadline = new DateTime('2017-04-02T13:10:00', new DateTimeZone('America/New_York'));
 		$groupDead = new DateTime('2017-03-01T12:00:00', new DateTimeZone('America/New_York'));
 		$final = new DateTime('2017-10-01T23:59:59', new DateTimeZone('America/New_York'));
-	} else if (substr($_GET["id"],0,4) == "2018"){
-		nclude_once("connect.php?year=2018");
+	} else if ($_SESSION['year'] == 2018){
 		$colorA = '#00cc66';
 		$colorB = '#d9d9d9';
 		$colorC = '#00cc66';
@@ -46,6 +42,5 @@
 		$deadline = new DateTime('2018-03-28T13:05:00', new DateTimeZone('America/New_York'));
 		$groupDead = new DateTime('2018-02-21T12:00:00', new DateTimeZone('America/New_York'));
 		$final = new DateTime('2019-09-29T23:59:59', new DateTimeZone('America/New_York'));
-		echo $colorA;
 	}
 ?>
