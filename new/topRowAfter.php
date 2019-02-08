@@ -195,7 +195,7 @@
 
 													if (new DateTime() > $deadline) {
 														$player = '';
-														$sql = "SELECT firstName, lastName FROM groupD ORDER BY homeRuns DESC LIMIT 1";
+														$sql = "select firstName, lastName FROM groupD ORDER BY homeRuns DESC LIMIT 1";
 																$result = $conn->query($sql);
 																if ($result->num_rows > 0) {
 																	while($row = $result->fetch_assoc()){
@@ -203,7 +203,7 @@
 																	}
 																}
 
-															$sql = "select firstName, lastName, team, homeRuns, link from groupD order by lastName";
+														$sql = "select firstName, lastName, team, homeRuns, link from groupD order by lastName";
 														$result = $conn->query($sql);
 														if ($result->num_rows > 0) {
 															while($row = $result->fetch_assoc()){
@@ -221,6 +221,8 @@
 																	}
 
 															}
+														} else {
+															echo "no rows";
 														}
 													} else {
 														echo '<div class="row"><div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center"><h1>Players not in <br>Groups A - C</h1></div></div>';
