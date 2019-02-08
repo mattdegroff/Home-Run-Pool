@@ -4,18 +4,18 @@ session_start();
 $year = $_SESSION['year'];
 
 if ($year == 2015) {
-	$link = "CLEARDB_DATABASE_URL";
+	$connect_url = "CLEARDB_DATABASE_URL";
 } else if ($year == 2016) {
-	$link = "CLEARDB_CHARCOAL_URL";
+	$connect_url = "CLEARDB_CHARCOAL_URL";
 } else if ($year == 2017) {
-	$link = "CLEARDB_GOLD_URL";
+	$connect_url = "CLEARDB_GOLD_URL";
 } else if ($year == 2018) {
-	$link = "CLEARDB_ORANGE_URL";
+	$connect_url = "CLEARDB_ORANGE_URL";
 } else if ($year == 2019) {
-	$link = "CLEARDB_JADE_URL";
+	$connect_url = "CLEARDB_JADE_URL";
 }
 
-$url = parse_url(getenv($link));
+$url = parse_url(getenv($connect_url));
 
 $server = $url["host"];
 $username = $url["user"];
