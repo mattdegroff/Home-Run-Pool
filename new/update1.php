@@ -149,7 +149,8 @@
 					$prev = 0;
 					$prevHR = 0;
 					$sql = "select id, name, color, homeRuns, font, code from standings order by homeRuns desc, name";
-					$result = $conn->query($sql);
+					$result = mysqli_query($conn, $sql);
+					//$result = $conn->query($sql);
 					if ($result->num_rows > 0) {
 						while($row = $result->fetch_assoc()){
 							if ($row['id'] > 0) {
