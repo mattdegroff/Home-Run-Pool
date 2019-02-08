@@ -403,7 +403,7 @@
 						while($row = $result->fetch_assoc()){
 							echo $row['id'];
 							echo $row['player'];
-							echo $row['homeruns'];
+							echo $row['homeRuns'];
 							if ($pid === $row['id']) {
 								echo '<div class="row"><div id="drop" class="col-8 text-center">'.$row['player'].'</div><div id="drop" class="col-4 text-center">'.$row['homeRuns']."</div></div>";
 							} else {
