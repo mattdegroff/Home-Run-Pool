@@ -32,7 +32,7 @@
 							document.getElementById(id).innerHTML = xmlhttp.responseText;
 						}
 					};
-					xmlhttp.open("GET","data.php?id="+id,true);
+					xmlhttp.open("GET","dataGroups.php?id="+id,true);
 					xmlhttp.send();
 				} else {
 					xmlhttp.onreadystatechange = function() {
