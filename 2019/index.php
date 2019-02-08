@@ -4,7 +4,7 @@
 
 <html>
 	<head>
-		<title>YABO '18</title>
+		<title>YABO '19</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="css/bootstrap.css">
 	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -12,48 +12,17 @@
 	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="js/clock.js"></script>
 		<script>
-			var xmlhttp;
+		if (localStorage.getItem("year") === null) {
+			localStorage.setItem("year", "2019");
+		}
 
-			if (window.XMLHttpRequest) {
-				// code for IE7+, Firefox, Chrome, Opera, Safari
-				xmlhttp = new XMLHttpRequest();
+		function update(id) {
+			if (id.substr(4, id.length) == "totals") {
+				document.getElementById(id).innerHTML = "<?php include('dataGroups.php?id=2019'); ?>";
 			} else {
-				// code for IE6, IE5
-				xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+				
 			}
-
-			var id1 = "2019totals";
-
-			function update(id) {
-				id1=id;
-				if (id.substring(4, id.length) ==="totals"){
-				 	xmlhttp.onreadystatechange = function() {
-						if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-							document.getElementById(id).innerHTML = xmlhttp.responseText;
-						}
-					};
-					xmlhttp.open("GET","dataGroups.php?id="+id,true);
-					xmlhttp.send();
-				} else {
-					xmlhttp.onreadystatechange = function() {
-						if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-							document.getElementById(id).innerHTML = xmlhttp.responseText;
-						}
-					};
-					xmlhttp.open("GET","dataPicks.php?id="+id,true);
-					xmlhttp.send();
-				}
-			}
-
-			//var dead = new Date("2018-03-29T12:40:00");
-			//var now = new Date();
-
-			//if (now > dead) {
-				//setInterval(update("2018totals"), 750);
-			//}
-			//else {
-				update("2019totals");
-			//}
+		}
 		</script>
 	</head>
 	<body onload="updateClock(); setInterval('updateClock()', 1000 )">
