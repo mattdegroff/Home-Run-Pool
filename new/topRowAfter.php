@@ -25,7 +25,7 @@
 								<h5>Groups</h5>
 								<ul class="nav nav-pills card-header-pills nav-fill">
 									<li class="nav-item">
-										<a class="nav-link active" data-toggle="pill" href=<?php echo "#A".substr($_SESSION['year'])?>>A</a>
+										<a class="nav-link active" data-toggle="pill" href=<?php echo "#A".$_SESSION['year']?>>A</a>
 									</li>
 									<li class="nav-item">
 										<a class="nav-link" data-toggle="pill" href=<?php echo "#B".$_SESSION['year']?>>B</a>
