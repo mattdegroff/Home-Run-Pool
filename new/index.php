@@ -193,7 +193,7 @@
 	</nav>
 		<div id="main" class="container">
 			<?php 
-			if ($_SESSION == "totals") {
+			if ($_SESSION['page'] == "totals") {
 				include('totals.php');
 			} else {
 				include('picks.php');
