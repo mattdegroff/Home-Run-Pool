@@ -4,6 +4,7 @@
 		$_SESSION['year'] = 2019;
 		$_SESSION['page'] = "totals";
 	}
+	print_r($_SESSION);
 ?>
 
 <html>

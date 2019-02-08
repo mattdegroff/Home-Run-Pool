@@ -1,6 +1,6 @@
 <?php
 	session_start();
-		include("details.php?id=".$_SESSION['year'].$_SESSION['page']);
+		include("details.php");
 		include_once("update1.php");
 	?>
 	<style>
