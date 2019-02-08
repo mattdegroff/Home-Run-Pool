@@ -1,8 +1,6 @@
 <?php
 	session_start();
-	if (isset($_SESSION['year'])) {
-		echo "found";
-	}
+	print_r($_SESSION);
 	include("connect.php");
     if (substr($_GET["id"],0,4) == "2015"){
 		include_once("connect.php?year=2015");
