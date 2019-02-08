@@ -9,6 +9,7 @@
 		print_r($_SESSION);
 		include("details.php");
 		include("update1.php");
+		include("topRowAfter.php");
 		printGroups($deadline);
 	?>
 	
