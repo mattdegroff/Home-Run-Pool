@@ -6,11 +6,11 @@ include("connect.php");
     $sql = "select code from standings";
     $result = $conn->query($sql);
     while($row = $result->fetch_assoc()){
-        echo $row['code'];
-        /*$sql1 = "delete from ".$row['code'];
+        echo $row['code']."<br>";
+        $sql1 = "delete from ".$row['code'];
         if($result = $conn->query($sql1)) { 
-            echo $row['code']." success";
-        }*/
+            echo $row['code']." success<br>";
+        }
     }
     echo "delete complete";
 
