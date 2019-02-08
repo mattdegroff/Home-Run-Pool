@@ -1,5 +1,7 @@
 <?php
-$year = $_GET['year'];
+session_start();
+
+$year = $_SESSION['year'];
 
 if ($year == 2015) {
 	$link = "CLEARDB_DATABASE_URL";

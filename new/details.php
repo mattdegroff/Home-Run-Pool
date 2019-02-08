@@ -1,4 +1,6 @@
 <?php
+	session_start();
+	include("connect.php");
     if (substr($_GET["id"],0,4) == "2015"){
 		include_once("connect.php?year=2015");
 		$colorA = 'red';
@@ -35,8 +37,7 @@
 		$deadline = new DateTime('2018-03-29T12:40:00', new DateTimeZone('America/New_York'));
 		$groupDead = new DateTime('2018-02-12T12:00:00', new DateTimeZone('America/New_York'));
 		$final = new DateTime('2018-09-30T23:59:59', new DateTimeZone('America/New_York'));
-	} else if (substr($_GET["id"],0,4) == "2019"){
-		include_once("connect.php?year=2019");
+	} else if ($_SESSION['year'] == 2019) {
 		$colorA = '#92d050';
 		$colorB = '#00b0f0';
 		$colorC = '#ffd966';
@@ -44,5 +45,6 @@
 		$deadline = new DateTime('2018-03-28T13:05:00', new DateTimeZone('America/New_York'));
 		$groupDead = new DateTime('2018-02-21T12:00:00', new DateTimeZone('America/New_York'));
 		$final = new DateTime('2019-09-29T23:59:59', new DateTimeZone('America/New_York'));
+		echo $colorA;
 	}
 ?>
