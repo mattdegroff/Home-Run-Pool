@@ -82,18 +82,18 @@
 				$link = $row['link'];
 			}
 		}
+		if ($link != null) {
+			$str = file_get_contents($link);
 
-		$str = file_get_contents($link);
-
-		$scan = '<div class="main-headshot"><img src="';
-		$len = strlen($scan);
-		$pos = strpos($str, $scan);
-		$pos += $len;
-		while ($str[$pos] != '"') {
-			$imglink .= $str[$pos];
-			$pos++;
+			$scan = '<div class="main-headshot"><img src="';
+			$len = strlen($scan);
+			$pos = strpos($str, $scan);
+			$pos += $len;
+			while ($str[$pos] != '"') {
+				$imglink .= $str[$pos];
+				$pos++;
+			}
 		}
-
 		return $imglink;
 	}
 	function standings($deadline) {
