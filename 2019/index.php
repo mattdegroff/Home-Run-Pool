@@ -147,12 +147,21 @@
 		<!-- Navbar links -->
 		<div class="collapse navbar-collapse" id="collapsibleNavbar">
 			<ul class="nav nav-pills mr-auto">
-				<li class="nav-item dropdown">
+			<li class="nav-item dropdown">
 			      <a class="nav-link dropdown-toggle active" href="#" id="navbardrop" data-toggle="dropdown">
+			        2019
+			      </a>
+			      <div class="dropdown-menu">
+			        <a class="dropdown-item active show" data-toggle="pill" href="#2019totals" onclick="update('2019totals')">Totals</a>
+			        <a class="dropdown-item disabled" data-toggle="pill" href="#2019picks" onclick="update('2019picks')">Pick %</a>
+			      </div>
+			  	</li>
+				<li class="nav-item dropdown">
+			      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
 			        2018
 			      </a>
 			      <div class="dropdown-menu">
-			        <a class="dropdown-item active show" data-toggle="pill" href="#2018totals" onclick="update('2018totals')">Totals</a>
+			        <a class="dropdown-item" data-toggle="pill" href="#2018totals" onclick="update('2018totals')">Totals</a>
 			        <a class="dropdown-item" data-toggle="pill" href="#2018picks" onclick="update('2018picks')">Pick %</a>
 			      </div>
 			  	</li>
@@ -202,7 +211,9 @@
 	</nav>
 
 		<div class="tab-content">
-	  	<div class="tab-pane fade show container active text-center" id="2018totals">Loading...</div>
+			<div class="tab-pane fade show container active text-center" id="2019totals">Loading...</div>
+			<div class="tab-pane fade container text-center" id="2019picks">Loading...</div>
+	  	<div class="tab-pane fade container text-center" id="2018totals">Loading...</div>
 			<div class="tab-pane fade container text-center" id="2018picks">Loading...</div>
 	  	<div class="tab-pane fade container text-center" id="2017totals">Loading...</div>
 	  	<div class="tab-pane fade container text-center" id="2017picks">Loading...</div>
