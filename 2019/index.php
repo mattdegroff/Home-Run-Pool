@@ -1,7 +1,3 @@
-<?php
-	include("update1.php");
-?>
-
 <html>
 	<head>
 		<title>YABO '19</title>
@@ -18,13 +14,13 @@
 
 		function update(id) {
 			if (id.substr(4, id.length) == "totals") {
-				document.getElementById(id).innerHTML = "a<?php include('dataGroups.php?id=2019'); ?>";
+				document.getElementById(id).innerHTML = "<?php include('dataGroups.php?id=2019'); ?>";
 			} else {
 				
 			}
 		}
 
-		update('2019totals');
+		update("2019totals");
 		</script>
 	</head>
 	<body onload="updateClock(); setInterval('updateClock()', 1000 )">

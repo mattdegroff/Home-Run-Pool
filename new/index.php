@@ -1,5 +1,9 @@
 <?php
 	session_start();
+	if(!isset($_SESSION['year']) && !isset($_SESSION['page'])) {
+		$_SESSION['year'] = 2019;
+		$_SESSION['page'] = "totals";
+	}
 ?>
 
 <html>
@@ -187,7 +191,7 @@
 		</div>
 	</nav>
 		<div id="main" class="container">
-			Loading...
+			<?php include('dataGroups.php?id='.$_SESSION['year'].$_SESSION['page']);
 		</div>
 		<section class="footer text-center" style="padding: 25px; margin-top: 10px; background-color: #eee;">Matt DeGroff &copy; <?php echo date("Y"); ?></section>
 	</body>
