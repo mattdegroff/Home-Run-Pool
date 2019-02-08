@@ -18,7 +18,7 @@
 
 		function update(id) {
 			if (id.substr(4, id.length) == "totals") {
-				document.getElementById(id).innerHTML = "<?php include('dataGroups.php?id=2019'); ?>";
+				document.getElementById(id).innerHTML = "a<?php include('dataGroups.php?id=2019'); ?>";
 			} else {
 				
 			}
