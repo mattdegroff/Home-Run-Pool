@@ -71,7 +71,7 @@
 	<div class="row">
 		<div class="container-fluid">
 			<?php
-				printGroups($deadline);
+				/*printGroups($deadline);*/
 			?>
 		</div>
 	</div>
