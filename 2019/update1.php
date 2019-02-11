@@ -1,9 +1,8 @@
 <?php
-
 		function Apic() {
 			global $conn;
 			$imglink = "";
-			$sql = "SELECT link FROM groupA ORDER BY homeRuns DESC LIMIT 1";
+			$sql = "select link FROM groupA ORDER BY homeRuns DESC LIMIT 1";
 		$result = $conn->query($sql);
 		if ($result->num_rows > 0) {
 			while($row = $result->fetch_assoc()){
@@ -27,7 +26,7 @@
 	function Bpic() {
 			global $conn;
 			$imglink = "";
-			$sql = "SELECT link FROM groupB ORDER BY homeRuns DESC LIMIT 1";
+			$sql = "select link FROM groupB ORDER BY homeRuns DESC LIMIT 1";
 		$result = $conn->query($sql);
 		if ($result->num_rows > 0) {
 			while($row = $result->fetch_assoc()){
@@ -51,7 +50,7 @@
 	function Cpic() {
 			global $conn;
 			$imglink = "";
-			$sql = "SELECT link FROM groupC ORDER BY homeRuns DESC LIMIT 1";
+			$sql = "select link FROM groupC ORDER BY homeRuns DESC LIMIT 1";
 		$result = $conn->query($sql);
 		if ($result->num_rows > 0) {
 			while($row = $result->fetch_assoc()){
@@ -75,25 +74,25 @@
 	function Dpic() {
 			global $conn;
 			$imglink = "";
-			$sql = "SELECT link FROM groupD ORDER BY homeRuns DESC LIMIT 1";
+			$sql = "select link FROM groupD ORDER BY homeRuns DESC LIMIT 1";
 		$result = $conn->query($sql);
 		if ($result->num_rows > 0) {
 			while($row = $result->fetch_assoc()){
 				$link = $row['link'];
 			}
 		}
+		if ($link != null) {
+			$str = file_get_contents($link);
 
-		$str = file_get_contents($link);
-
-		$scan = '<div class="main-headshot"><img src="';
-		$len = strlen($scan);
-		$pos = strpos($str, $scan);
-		$pos += $len;
-		while ($str[$pos] != '"') {
-			$imglink .= $str[$pos];
-			$pos++;
+			$scan = '<div class="main-headshot"><img src="';
+			$len = strlen($scan);
+			$pos = strpos($str, $scan);
+			$pos += $len;
+			while ($str[$pos] != '"') {
+				$imglink .= $str[$pos];
+				$pos++;
+			}
 		}
-
 		return $imglink;
 	}
 	function standings($deadline) {
@@ -328,10 +327,9 @@
 					}
 				}
 
-				$sql = "select id, player, homeRuns, gr, color from rabbit";
-				$result = $conn->query($sql);
-
 				if (new DateTime() > $deadline) {
+					$sql = "select id, player, homeRuns, gr, color from rabbit";
+					$result = $conn->query($sql);
 					if ($result->num_rows > 0) {
 						while($row = $result->fetch_assoc()){
 							if ($pid === $row['id']) {
@@ -416,76 +414,76 @@
 
 			function printGroups($deadline) {
 				global $conn;
-									$sql = "SELECT max(id) FROM standings";
-									$result = $conn->query($sql);
-									if ($result->num_rows > 0) {
-										while($row = $result->fetch_assoc()){
-											$max = $row['max(id)'];
-										}
-									}
-									echo '<div class="row">';
+				$sql = "select max(id) FROM standings";
+				$result = $conn->query($sql);
+				if ($result->num_rows > 0) {
+					while($row = $result->fetch_assoc()){
+						$max = $row['max(id)'];
+					}
+				}
+					echo '<div class="row">';
 
-									for ($i = 1; $i <= $max; $i++) {
-										echo "<div class='col-lg-3'>";
-										$sql = "SELECT color, name, code, font, paid FROM standings where id=".$i;
-										$result = $conn->query($sql);
-										if ($result->num_rows > 0) {
-											while($row = $result->fetch_assoc()){
-												if ($row['color'] == 'white') {
-													echo '<div class="card" style="border-color: 1px solid rgba(0, 0, 0, 0.2)">';
-												} else {
-													echo '<div class="card" style="border-color: '.$row['color'].'">';
-												}
-												if ($row['font'] == 1) {
-													echo '<div class="card-header text-center" id="dark" style="background-color: '.$row['color'].'">';
-												} else if ($row['font'] == 2) {
-													echo '<div class="card-header text-center" id="yellow" style="background-color: '.$row['color'].'">';
-												} else if ($row['font'] == 3) {
-													echo '<div class="card-header text-center" id="red" style="background-color: '.$row['color'].'">';
-												} else {
-													if ($row['color'] == 'white') {
-														echo '<div class="card-header text-center" style="background-color: white; border-bottom: 1px solid rgba(0, 0, 0, 0.2);">';
-													} else {
-														echo '<div class="card-header text-center" style="background-color: '.$row['color'].'">';
-													}
-												}
-												if ($row['paid'] == 1) {
-													echo '<h5>'.$row['name'].'</h5></div>';
-												} else {
-													echo '<h5>*'.$row['name'].'*</h5></div>';
-												}
-												if (new DateTime() > $deadline) {
-				  								echo '<div  class="card-text cardPart text-center">
-														<div class="container-fluid">
-						  									<div class="row">
-												  				<div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8"><b>Player</b></div>
-												  				<div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4"><b>HR</b></div>
-												  			</div>';
-											  		printGroup($row['code']);
-
-											  	echo '</div></div></div>';
-											  	} else {
-											  		echo "</div>";
-											  	}
-													echo "</div>";
-											}
-										}
-
-										if ($i % 4 == 0) {
-											if ($i == $max) {
-												echo "</div>";
-											} else {
-												echo '</div><div class="row">';
-											}
-										} else {
-											if ($i == $max) {
-												$add = 4-($i%4);
-												for ($j=1; $j <= $add; $j++) {
-													echo '<div class="card" style="visibility: hidden;"></div>';
-												}
-												echo "</div>";
-											}
-										}
+					for ($i = 1; $i <= $max; $i++) {
+						echo "<div class='col-lg-3'>";
+						$sql = "select color, name, code, font, paid FROM standings where id=".$i;
+						$result = $conn->query($sql);
+						if ($result->num_rows > 0) {
+							while($row = $result->fetch_assoc()){
+								if ($row['color'] == 'white') {
+									echo '<div class="card" style="border-color: 1px solid rgba(0, 0, 0, 0.2)">';
+								} else {
+									echo '<div class="card" style="border-color: '.$row['color'].'">';
+								}
+								if ($row['font'] == 1) {
+									echo '<div class="card-header text-center" id="dark" style="background-color: '.$row['color'].'">';
+								} else if ($row['font'] == 2) {
+									echo '<div class="card-header text-center" id="yellow" style="background-color: '.$row['color'].'">';
+								} else if ($row['font'] == 3) {
+									echo '<div class="card-header text-center" id="red" style="background-color: '.$row['color'].'">';
+								} else {
+									if ($row['color'] == 'white') {
+										echo '<div class="card-header text-center" style="background-color: white; border-bottom: 1px solid rgba(0, 0, 0, 0.2);">';
+									} else {
+										echo '<div class="card-header text-center" style="background-color: '.$row['color'].'">';
 									}
-									}
+								}
+								if ($row['paid'] == 1) {
+									echo '<h5>'.$row['name'].'</h5></div>';
+								} else {
+									echo '<h5>*'.$row['name'].'*</h5></div>';
+								}
+								if (new DateTime() > $deadline) {
+								echo '<div class="card-text cardPart text-center">
+										<div class="container-fluid">
+											<div class="row">
+												<div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8"><b>Player</b></div>
+												<div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4"><b>HR</b></div>
+											</div>';
+									printGroup($row['code']);
+
+								echo '</div></div></div>';
+								} else {
+									echo "</div>";
+								}
+									echo "</div>";
+							}
+						}
+
+						if ($i % 4 == 0) {
+							if ($i == $max) {
+								echo "</div>";
+							} else {
+								echo '</div><div class="row">';
+							}
+						} else {
+							if ($i == $max) {
+								$add = 4-($i%4);
+								for ($j=1; $j <= $add; $j++) {
+									echo '<div class="card" style="visibility: hidden;"></div>';
+								}
+								echo "</div>";
+							}
+						}
+					}
+				}
 ?>

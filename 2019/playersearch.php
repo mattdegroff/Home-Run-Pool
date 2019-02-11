@@ -1,4 +1,8 @@
 <?php
+if (isset($_POST["player"])) {
+  $p = $_POST["player"];
+  echo '<p>'.playerSearch($p).'</p>';
+}
 
 function playerSearch($player) {
   $playerLink = "http://www.espn.com/mlb/player/_/id/";
@@ -28,5 +32,8 @@ function playerSearch($player) {
   return null;
 }
 }
-
 ?>
+<form action="playersearch.php" method="post">
+<input type="text" name="player"><br>
+<input type="submit" value="Submit">
+</form>

@@ -5,10 +5,14 @@
 	<body>
 
 	<?php
-
-	// The value of the variable name is found
-	echo "<h1>Hello " . $_GET["id"] . "</h1>";
+		session_start();
+$_SESSION['year'] = 2019;
+		print_r($_SESSION);
+		include("details.php");
+		include("update1.php");
+		include("topRowAfter.php");
+		printGroups($deadline);
 	?>
-
+	
 	</body>
 	</html>
