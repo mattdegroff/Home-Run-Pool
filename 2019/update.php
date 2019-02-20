@@ -167,7 +167,6 @@
 							$link = $row['link'];
 						}
 					}
-					echo $link;
 					$str = file_get_contents($link);
 
 					$scan = "<p>". $year . " Season</p>";
