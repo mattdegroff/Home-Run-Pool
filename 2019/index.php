@@ -20,7 +20,7 @@
 	<body onload="updateClock(); setInterval('updateClock()', 1000 )">
 		<style>
 		body {
-			background-color: #AAA;
+			background-color: #eee;
 			<?php
 				/*if (new DateTime() > $deadline) {
 					$sql = "select color, font from standings order by homeRuns desc, name limit 1";
