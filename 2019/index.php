@@ -20,7 +20,7 @@
 	<body onload="updateClock(); setInterval('updateClock()', 1000 )">
 		<style>
 		body {
-			background-color: #333;
+			background-color: #666;
 			<?php
 				/*if (new DateTime() > $deadline) {
 					$sql = "select color, font from standings order by homeRuns desc, name limit 1";
@@ -112,7 +112,7 @@
 		?>
 		</style>
 
-	<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+	<nav class="navbar navbar-expand-sm navbar-light bg-light">
   		<!-- Brand -->
   		<a class="navbar-brand" href="#">Dinger Derby '19</a>
 
@@ -198,7 +198,7 @@
 			}
 			?>
 		</div>
-		<section class="footer text-center" style="padding: 25px; margin-top: 10px; background-color: #222; color: #eee;">Matt DeGroff &copy; <?php echo date("Y"); ?></section>
+		<section class="footer text-center" style="padding: 25px; margin-top: 10px; background-color: #eee;">Matt DeGroff &copy; <?php echo date("Y"); ?></section>
 	</body>
 </html>
 <?php
