@@ -50,7 +50,7 @@
 	</style>
 
 <div class="container">
-	<h1 class="text-center" style="color: 222;"><?php echo $_SESSION['year']; ?></h1>
+	<h1 class="text-center" style="color: eee;"><?php echo $_SESSION['year']; ?></h1>
 	<?php
 		if (new DateTime() < $deadline) {
 			if (new DateTime() < $groupDead) {
