@@ -11,7 +11,10 @@
 			loadHR($row['code']);
 		}
 	}
-	echo "groups updated<br>";
+	$file = 'cronLog.txt';
+	echo 'groups updated<br>';
+	$date = "[ ".date('Y-m-d H:i:s')." ]";
+	file_put_contents($file, $date." groups updated\n", FILE_APPEND);
 	$end = microtime(true);
 	$time = $end-$start;
 	echo "time: ".$time;

@@ -6,8 +6,7 @@
 	$start = microtime(true);
 	$file = 'cronLog.txt';
 	A();
-	$update = "A updated";
-	echo $update.'<br>';
+	echo 'A updated<br>';
 	$date = "[ ".date('Y-m-d H:i:s')." ]";
 	file_put_contents($file, $date." A updated\n", FILE_APPEND);
 	$end = microtime(true);
