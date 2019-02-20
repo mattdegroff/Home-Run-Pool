@@ -12,7 +12,7 @@ if ($year == 2015) {
 } else if ($year == 2018) {
 	$connect_url = "CLEARDB_ORANGE_URL";
 } else if ($year == 2019) {
-	$connect_url = "CLEARDB_JADE_URL";
+	$connect_url = "CLEARDB_PINK_URL";
 }
 
 $url = parse_url(getenv($connect_url));
