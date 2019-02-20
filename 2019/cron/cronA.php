@@ -7,7 +7,7 @@
 	$file = 'cronLog.txt';
 	A();
 	echo "A updated<br>";
-	file_put_contents($file, Date()." A updated", FILE_APPEND);
+	file_put_contents($file, new DateTime()." A updated", FILE_APPEND);
 	$end = microtime(true);
 	$time = $end-$start;
 	echo "time: ".$time;
