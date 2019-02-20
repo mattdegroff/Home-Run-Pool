@@ -112,7 +112,7 @@
 		?>
 		</style>
 
-	<nav class="navbar navbar-expand-sm navbar-light bg-light">
+	<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
   		<!-- Brand -->
   		<a class="navbar-brand" href="#">Dinger Derby '19</a>
 
@@ -198,7 +198,7 @@
 			}
 			?>
 		</div>
-		<section class="footer text-center" style="padding: 25px; margin-top: 10px; background-color: #eee;">Matt DeGroff &copy; <?php echo date("Y"); ?></section>
+		<section class="footer text-center" style="padding: 25px; margin-top: 10px; background-color: #222; color: #eee;">Matt DeGroff &copy; <?php echo date("Y"); ?></section>
 	</body>
 </html>
 <?php
