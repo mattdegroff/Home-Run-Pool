@@ -50,13 +50,13 @@
 	</style>
 
 <div class="container">
-	<h1 class="text-center"><?php echo $_SESSION['year']; ?></h1>
+	<h1 class="text-center" style="color: 222;"><?php echo $_SESSION['year']; ?></h1>
 	<?php
 		if (new DateTime() < $deadline) {
 			if (new DateTime() < $groupDead) {
-				echo '<div class="alert alert-success alert-dismissable text-center fade show"><button type="button" class="close" data-dismiss="alert">&times;</button>Groups will be released at<br><strong>'.$groupDead->format('g:i A').'</strong> on <strong>'.$groupDead->format('F j, Y').'</strong></div>';
+				echo '<div class="alert alert-dark alert-dismissable text-center fade show"><button type="button" class="close" data-dismiss="alert">&times;</button>Groups will be released at<br><strong>'.$groupDead->format('g:i A').'</strong> on <strong>'.$groupDead->format('F j, Y').'</strong></div>';
 			} else {
-				echo '<div class="alert alert-success alert-dismissable text-center fade show"><button type="button" class="close" data-dismiss="alert">&times;</button>Teams lock at<br><strong>'.$deadline->format('g:i A').'</strong> on <strong>'.$deadline->format('F j, Y').'</strong></div>';
+				echo '<div class="alert alert-dark alert-dismissable text-center fade show"><button type="button" class="close" data-dismiss="alert">&times;</button>Teams lock at<br><strong>'.$deadline->format('g:i A').'</strong> on <strong>'.$deadline->format('F j, Y').'</strong></div>';
 			}
 		}
 		
