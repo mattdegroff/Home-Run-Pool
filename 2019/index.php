@@ -193,8 +193,10 @@
 			<?php 
 			if ($_SESSION['page'] == "totals") {
 				include('totals.php');
-			} else {
+			} else if ($_SESSION['page'] == "totals") {
 				include('picks.php');
+			} else {
+				echo "<h1>lease refresh the page</h1>";
 			}
 			?>
 		</div>
