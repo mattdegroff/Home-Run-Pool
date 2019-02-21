@@ -4,7 +4,7 @@
 			
 		$deadline = new DateTime("2015-04-05 13:10:00");
 		$groupDead = new DateTime("2015-02-24 12:00:00");
-		$final = new DateTime("2015-10-0 23:59:59");
+		$final = new DateTime("2015-10-03 23:59:59");
 	?>						
 	<style>
 		.color {
