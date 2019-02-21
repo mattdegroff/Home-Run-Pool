@@ -52,99 +52,99 @@
 										include_once("update1.php");
 
 										$deadline = new DateTime('2018-03-29T12:40:00', new DateTimeZone('America/New_York'));
-
 										$sql = "select color, name, font, code, paid from standings where id=1";
-												$result = $conn->query($sql);
-												if ($result->num_rows > 0) {
-													while($row = $result->fetch_assoc()){
-														$color = $row['color'];
-														$name = $row['name'];
-														$font = $row['font'];
-														$code = $row['code'];
-														$paid = $row['paid'];
-													}
-												}
+										$result = $conn->query($sql);
+										if ($result->num_rows > 0) {
+											while($row = $result->fetch_assoc()){
+												$color = $row['color'];
+												$name = $row['name'];
+												$font = $row['font'];
+												$code = $row['code'];
+												$paid = $row['paid'];
+											}
+										}
 
-												echo "<table border = 6px bgcolor=".$color.">";
-												if ($font == 1) {
-													echo '<thead id="dark">';
-												} else if ($font == 2) {
-													echo '<thead id="yellow">';
-												} else if ($font == 3) {
-													echo '<thead id="red">';
-												} else {
-													echo "<thead>";
-												}
-												if (new DateTime() > $deadline) {
-													if ($paid == 1) {
-														echo "<tr><th>".$name."</th></tr></thead>";
-													} else {
-														echo "<tr><th>*".$name."</th></tr></thead>";
-													}
-												} else {
-													if ($paid == 1) {
-														echo "<tr><th>".$name."</th></tr></thead>";
-													} else {
-														echo "<tr><th>*".$name."</th></tr></thead>";
-													}
-												}
-												if ($font == 1) {
-													if (new DateTime() > $deadline) {
-														echo '<tbody><tr><td><table id="dark"><thead><tr>
-													<th width="150">Player</th><th>HR</th>
-													</tr></thead><tbody>';
-													}
-												} else if ($font == 2) {
-													if (new DateTime() > $deadline) {
-														echo '<tbody><tr><td><table id="yellow"><thead><tr>
-													<th width="150">Player</th><th>HR</th>
-													</tr></thead><tbody>';
-													}
-												} else if ($font == 3) {
-													if (new DateTime() > $deadline) {
-														echo '<tbody><tr><td><table id="red"><thead><tr>
-													<th width="150">Player</th><th>HR</th>
-													</tr></thead><tbody>';
-													}
-												} else {
-													if (new DateTime() > $deadline) {
-														echo '<tbody><tr><td><table><thead><tr>
-													<th width="150">Player</th><th>HR</th>
-													</tr></thead><tbody>';
-													}
-												}
-												if (new DateTime() > $deadline) {
-													$sql = "select id, homeRuns from ".$code." order by homeRuns desc limit 7";
+										echo "<table border = 6px bgcolor=".$color.">";
+										if ($font == 1) {
+											echo '<thead id="dark">';
+										} else if ($font == 2) {
+											echo '<thead id="yellow">';
+										} else if ($font == 3) {
+											echo '<thead id="red">';
+										} else {
+											echo "<thead>";
+										}
+										if (new DateTime() > $deadline) {
+											if ($paid == 1) {
+												echo "<tr><th>".$name."</th></tr></thead>";
+											} else {
+												echo "<tr><th>*".$name."</th></tr></thead>";
+											}
+										} else {
+											if ($paid == 1) {
+												echo "<tr><th>".$name."</th></tr></thead>";
+											} else {
+												echo "<tr><th>*".$name."</th></tr></thead>";
+											}
+										}
+										if ($font == 1) {
+											if (new DateTime() > $deadline) {
+												echo '<tbody><tr><td><table id="dark"><thead><tr>
+											<th width="150">Player</th><th>HR</th>
+											</tr></thead><tbody>';
+											}
+										} else if ($font == 2) {
+											if (new DateTime() > $deadline) {
+												echo '<tbody><tr><td><table id="yellow"><thead><tr>
+											<th width="150">Player</th><th>HR</th>
+											</tr></thead><tbody>';
+											}
+										} else if ($font == 3) {
+											if (new DateTime() > $deadline) {
+												echo '<tbody><tr><td><table id="red"><thead><tr>
+											<th width="150">Player</th><th>HR</th>
+											</tr></thead><tbody>';
+											}
+										} else {
+											if (new DateTime() > $deadline) {
+												echo '<tbody><tr><td><table><thead><tr>
+											<th width="150">Player</th><th>HR</th>
+											</tr></thead><tbody>';
+											}
+										}
+										if (new DateTime() > $deadline) {
+											$sql = "select id, homeRuns from ".$code." order by homeRuns desc limit 7";
+											$result = $conn->query($sql);
+											if ($result->num_rows > 0) {
+												while($row3 = $result->fetch_assoc()){
+													$id = $row3['id'];
+													$sql = "select max(id) from ".$code." where homeRuns = (select min(homeRuns) from ".$code.")";
 													$result = $conn->query($sql);
 													if ($result->num_rows > 0) {
-														while($row3 = $result->fetch_assoc()){
-															$id = $row3['id'];
-															$sql = "select max(id) from ".$code." where homeRuns = (select min(homeRuns) from ".$code.")";
-															$result = $conn->query($sql);
-															if ($result->num_rows > 0) {
-																while($row4 = $result->fetch_assoc()){
-																	$pid = $row4['max(id)'];
-																}
-															}
+														while($row4 = $result->fetch_assoc()){
+															$pid = $row4['max(id)'];
 														}
 													}
-													for ($j=1; $j <=8; $j++) {
-														$sql = "select id, player, homeRuns from ".$code." where id=".$j;
-														$result = $conn->query($sql);
-														if ($result->num_rows > 0) {
-															while($row2 = $result->fetch_assoc()){
-																if ($pid === $row2['id']) {
-																	echo '<tr><td id="drop">'.$row2['player'].'</td><td id="drop">'.$row2['homeRuns']."</td></tr>";
-																} else {
-																	echo '<tr><td>'.$row2['player'].'</td><td>'.$row2['homeRuns']."</td></tr>";
-																}
-															}
+												}
+											}
+											for ($j=1; $j <=8; $j++) {
+												$sql = "select id, player, homeRuns from ".$code." where id=".$j;
+												$result = $conn->query($sql);
+												if ($result->num_rows > 0) {
+													while($row2 = $result->fetch_assoc()){
+														if ($pid === $row2['id']) {
+															echo '<tr><td id="drop">'.$row2['player'].'</td><td id="drop">'.$row2['homeRuns']."</td></tr>";
+														} else {
+															echo '<tr><td>'.$row2['player'].'</td><td>'.$row2['homeRuns']."</td></tr>";
 														}
-														$total=sum($code);
 													}
-													echo '<tr><td><b>Total</td><td>'.$total."</b></td></tr>";
-													echo "</tbody></table></td></tr></tbody></table>";
-		
+												}
+												$total=sum($code);
+											}
+											echo '<tr><td><b>Total</td><td>'.$total."</b></td></tr>";
+											echo "</tbody></table></td></tr></tbody></table>";
+										
+	/*
 											echo "<tr>";
 											$sql = "select max(id) from standings";
 											$result = $conn->query($sql);
@@ -274,7 +274,7 @@
 														}
 													}
 												}
-											}
+											}*/
 										?>
 								</tbody>
 							</table>
