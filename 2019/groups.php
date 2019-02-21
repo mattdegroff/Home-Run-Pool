@@ -61,7 +61,7 @@
 		
 	?>
 	<div class="row">
-		<div class="container">
+		<div class="container" style="margin-top: 15px;">
 			<?php
 				printGroups($deadline);
 			?>
