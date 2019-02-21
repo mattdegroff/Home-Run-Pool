@@ -1,7 +1,6 @@
 <?php
 	session_start();
 	$_SESSION['year'] = 2019;
-	print_r($_SESSION);
 ?>
 
 <html>
@@ -61,16 +60,15 @@
 	$deadline = new DateTime('2018-03-29T12:40:00', new DateTimeZone('America/New_York'));
 		
 	?>
-<div class="row">
+	<div class="row">
 		<div class="container">
 			<?php
 				printGroups($deadline);
 			?>
 		</div>
 	</div>
-				</table>
-											</body>
-										</html>
+	</body>
+</html>
 <?php
 session_destroy();
 ?>
