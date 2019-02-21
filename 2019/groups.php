@@ -53,6 +53,7 @@
 
 										$deadline = new DateTime('2018-03-29T12:40:00', new DateTimeZone('America/New_York'));
 		
+										printGroups();
 											echo "<tr>";
 											$sql = "select max(id) from standings";
 											$result = $conn->query($sql);
