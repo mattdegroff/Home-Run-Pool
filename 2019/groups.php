@@ -51,6 +51,8 @@
 										include_once("details.php");
 										include_once("update1.php");
 
+										$deadline = new DateTime('2018-03-29T12:40:00', new DateTimeZone('America/New_York'));
+		
 											echo "<tr>";
 											$sql = "select max(id) from standings";
 											$result = $conn->query($sql);
