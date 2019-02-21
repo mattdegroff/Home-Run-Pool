@@ -142,11 +142,11 @@
 					$sql = "select id, player, homeRuns from ".$code." where id=".$j;
 					$result = $conn->query($sql);
 					if ($result->num_rows > 0) {
-						while($row = $result->fetch_assoc()){
-							if ($pid === $row['id']) {
-								echo '<tr><td id="drop">'.$row['player'].'</td><td id="drop">'.$row['homeRuns']."</td></tr>";
+						while($row2 = $result->fetch_assoc()){
+							if ($pid === $row2['id']) {
+								echo '<tr><td id="drop">'.$row2['player'].'</td><td id="drop">'.$row2['homeRuns']."</td></tr>";
 							} else {
-								echo '<tr><td>'.$row['player'].'</td><td>'.$row['homeRuns']."</td></tr>";
+								echo '<tr><td>'.$row2['player'].'</td><td>'.$row2['homeRuns']."</td></tr>";
 							}
 						}
 					}
