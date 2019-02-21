@@ -8,7 +8,7 @@
 
 	$run = true;
 
-	$person = "vinnyC";
+	$person = "vinny";
 	$A = "Giancarlo Stanton";
 	$B = "Nolan Arenado";
 	$C1 = "Ronald Acu&#241;a Jr.";
