@@ -27,6 +27,13 @@
 			border-style: 6px;
 			border-color: #ff0000;
 		}
+		#drop {
+			 color: rgba(0,0,0,.3);
+		 }
+
+		.card {
+			margin-top: 10px;
+		}
 
 		* {
 			font-size: 14px;
@@ -58,7 +65,6 @@
 	include("update1.php");
 
 	$deadline = new DateTime('2018-03-29T12:40:00', new DateTimeZone('America/New_York'));
-		
 	?>
 	<div class="row">
 		<div class="container" style="margin-top: 15px;">
