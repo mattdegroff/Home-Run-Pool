@@ -107,7 +107,6 @@
 							echo '<h5>*'.$row['name'].'*</h5></div>';
 						}
 							echo "</div>";
-							echo "</div>";
 					}
 				}
 
