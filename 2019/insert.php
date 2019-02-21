@@ -6,7 +6,7 @@
 	function insert() {
 	global $conn;
 
-	$run = false;
+	$run = true;
 
 	$person = "vinnyC";
 	$A = "Giancarlo Stanton";
@@ -79,7 +79,7 @@
 	echo "<br>entered into " . $person . "<br><br>";
 
 
-	$sql = "insert into groupD (firstName, lastName, team, link) values ('Jose', 'Altuve', 'CHC', '".playerSearch($D1)."')";
+	$sql = "insert into groupD (firstName, lastName, link) values ('Jesus', 'Aguilar', '".playerSearch($D1)."')";
 	$result = $conn->query($sql);
 	if ($result == true) {
 		echo "Query sent<br>";
@@ -95,7 +95,7 @@
 		echo "query failed: " . $conn->error . "<br>";
 	}
 
-	$sql = "insert into groupD (firstName, lastName, link) values ('Mike', 'Napoli', '".playerSearch($D3)."')";
+	$sql = "insert into groupD (firstName, lastName, link) values ('Mike', 'Moustakas', '".playerSearch($D3)."')";
 	$result = $conn->query($sql);
 	if ($result == true) {
 		echo "Query sent<br>";
@@ -103,7 +103,7 @@
 		echo "query failed: " . $conn->error . "<br>";
 	}
 
-	$sql = "insert into groupD (firstName, lastName, team, link) values ('Justin', 'Turner', 'LAD', '".playerSearch($D4)."')";
+	$sql = "insert into groupD (firstName, lastName, link) values ('Yasiel', 'Puig', '".playerSearch($D4)."')";
 	$result = $conn->query($sql);
 	if ($result == true) {
 		echo "Query sent<br>";
