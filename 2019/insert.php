@@ -10,7 +10,7 @@
 
 	//next D id is 10
 
-	$person = "matt";
+	$person = "mistron";
 	$A = "Mike Trout";
 	$B = "Nolan Arenado";
 	$C1 = "Rhys Hoskins";
