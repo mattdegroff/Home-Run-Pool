@@ -125,35 +125,34 @@
 												}
 												if (new DateTime() > $deadline) {
 													$sql = "select id, homeRuns from ".$code." order by homeRuns desc limit 7";
-				$result = $conn->query($sql);
-				if ($result->num_rows > 0) {
-					while($row = $result->fetch_assoc()){
-						$id = $row['id'];
-						$sql = "select max(id) from ".$code." where homeRuns = (select min(homeRuns) from ".$code.")";
-						$result = $conn->query($sql);
-						if ($result->num_rows > 0) {
-							while($row1 = $result->fetch_assoc()){
-								$pid = $row1['max(id)'];
-							}
-						}
-					}
-				}
-				for ($j=1; $j <=8; $j++) {
-					$sql = "select id, player, homeRuns from ".$code." where id=".$j;
-					$result = $conn->query($sql);
-					if ($result->num_rows > 0) {
-						while($row2 = $result->fetch_assoc()){
-							if ($pid === $row2['id']) {
-								echo '<tr><td id="drop">'.$row2['player'].'</td><td id="drop">'.$row2['homeRuns']."</td></tr>";
-							} else {
-								echo '<tr><td>'.$row2['player'].'</td><td>'.$row2['homeRuns']."</td></tr>";
-							}
-						}
-					}
-					$total=sum($code);
-				}
-				echo '<tr><td><b>Total</td><td>'.$total."</b></td></tr>";
-			
+													$result = $conn->query($sql);
+													if ($result->num_rows > 0) {
+														while($row3 = $result->fetch_assoc()){
+															$id = $row3['id'];
+															$sql = "select max(id) from ".$code." where homeRuns = (select min(homeRuns) from ".$code.")";
+															$result = $conn->query($sql);
+															if ($result->num_rows > 0) {
+																while($row4 = $result->fetch_assoc()){
+																	$pid = $row4['max(id)'];
+																}
+															}
+														}
+													}
+													for ($j=1; $j <=8; $j++) {
+														$sql = "select id, player, homeRuns from ".$code." where id=".$j;
+														$result = $conn->query($sql);
+														if ($result->num_rows > 0) {
+															while($row2 = $result->fetch_assoc()){
+																if ($pid === $row2['id']) {
+																	echo '<tr><td id="drop">'.$row2['player'].'</td><td id="drop">'.$row2['homeRuns']."</td></tr>";
+																} else {
+																	echo '<tr><td>'.$row2['player'].'</td><td>'.$row2['homeRuns']."</td></tr>";
+																}
+															}
+														}
+														$total=sum($code);
+													}
+													echo '<tr><td><b>Total</td><td>'.$total."</b></td></tr>";
 													echo "</tbody></table></td></tr></tbody></table></td>";
 												} else {
 													echo "</tbody></table></td>";
