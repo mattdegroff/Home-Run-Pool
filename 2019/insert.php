@@ -6,7 +6,7 @@
 	function insert() {
 	global $conn;
 
-	$run = true;
+	$run = false;
 
 	$person = "matt";
 	$A = "Giancarlo Stanton";
