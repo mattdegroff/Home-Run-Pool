@@ -124,7 +124,36 @@
 													}
 												}
 												if (new DateTime() > $deadline) {
-													printGroup($code);
+													$sql = "select id, homeRuns from ".$code." order by homeRuns desc limit 7";
+				$result = $conn->query($sql);
+				if ($result->num_rows > 0) {
+					while($row = $result->fetch_assoc()){
+						$id = $row['id'];
+						$sql = "select max(id) from ".$code." where homeRuns = (select min(homeRuns) from ".$table.")";
+						$result = $conn->query($sql);
+						if ($result->num_rows > 0) {
+							while($row1 = $result->fetch_assoc()){
+								$pid = $row1['max(id)'];
+							}
+						}
+					}
+				}
+				for ($i=1; $i <=8; $i++) {
+					$sql = "select id, player, homeRuns from ".$code." where id=".$i;
+					$result = $conn->query($sql);
+					if ($result->num_rows > 0) {
+						while($row = $result->fetch_assoc()){
+							if ($pid === $row['id']) {
+								echo '<tr><td id="drop">'.$row['player'].'</td><td id="drop">'.$row['homeRuns']."</td></tr>";
+							} else {
+								echo '<tr><td>'.$row['player'].'</td><td>'.$row['homeRuns']."</td></tr>";
+							}
+						}
+					}
+					$total=sum($code);
+				}
+				echo '<tr><td><b>Total</td><td>'.$total."</b></td></tr>";
+			
 													echo "</tbody></table></td></tr></tbody></table></td>";
 												} else {
 													echo "</tbody></table></td>";
