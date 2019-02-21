@@ -78,7 +78,7 @@
 
 	echo "<br>entered into " . $person . "<br><br>";
 
-
+/*
 	$sql = "insert into groupD (firstName, lastName, link) values ('Jesus', 'Aguilar', '".playerSearch($D1)."')";
 	$result = $conn->query($sql);
 	if ($result == true) {
@@ -109,7 +109,7 @@
 		echo "Query sent<br>";
 	} else {
 		echo "query failed: " . $conn->error . "<br>";
-	}
+	}*/
 
 
 	echo "<br> entered new D players<br>";
