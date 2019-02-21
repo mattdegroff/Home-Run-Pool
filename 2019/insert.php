@@ -6,18 +6,18 @@
 	function insert() {
 	global $conn;
 
-	$run = false;
+	$run = true;
 
-	//next D id is 8
+	//next D id is 10
 
 	$person = "matt";
-	$A = "Giancarlo Stanton";
-	$B = "Joey Gallo";
+	$A = "Mike Trout";
+	$B = "Nolan Arenado";
 	$C1 = "Rhys Hoskins";
-	$C2 = "Trevor Story";
-	$D1 = "Michael Conforto";
-	$D2 = "Max Muncy";
-	$D3 = "Matt Olson";
+	$C2 = "Francisco Lindor";
+	$D1 = "Charlie Blackmon";
+	$D2 = "Michael Conforto";
+	$D3 = "Anthony Rizzo";
 	$D4 = "Eugenio Suarez";
 
 	if ($run) {
@@ -80,8 +80,16 @@
 
 	echo "<br>entered into " . $person . "<br><br>";
 
+
+	$sql = "insert into groupD (id, firstName, lastName, link) values (8, 'Charlie', 'Blackmon', '".playerSearch($D1)."')";
+	$result = $conn->query($sql);
+	if ($result == true) {
+		echo "Query sent<br>";
+	} else {
+		echo "query failed: " . $conn->error . "<br>";
+	}
 /*
-	$sql = "insert into groupD (id, firstName, lastName, link) values ('Jesus', 'Aguilar', '".playerSearch($D1)."')";
+	$sql = "insert into groupD (id, firstName, lastName, link) values (8, '', 'Muncy', '".playerSearch($D2)."')";
 	$result = $conn->query($sql);
 	if ($result == true) {
 		echo "Query sent<br>";
@@ -89,22 +97,14 @@
 		echo "query failed: " . $conn->error . "<br>";
 	}
 */
-	$sql = "insert into groupD (id, firstName, lastName, link) values ( 'Max', 'Muncy', '".playerSearch($D2)."')";
+	$sql = "insert into groupD (id, firstName, lastName, link) values (9, 'Anthony', 'Rizzo', '".playerSearch($D3)."')";
 	$result = $conn->query($sql);
 	if ($result == true) {
 		echo "Query sent<br>";
 	} else {
 		echo "query failed: " . $conn->error . "<br>";
 	}
-
-	$sql = "insert into groupD (id, firstName, lastName, link) values ('Matt', 'Olson', '".playerSearch($D3)."')";
-	$result = $conn->query($sql);
-	if ($result == true) {
-		echo "Query sent<br>";
-	} else {
-		echo "query failed: " . $conn->error . "<br>";
-	}
-
+/*
 	$sql = "insert into groupD (id, firstName, lastName, link) values ('Eugenio', 'Suarez', '".playerSearch($D4)."')";
 	$result = $conn->query($sql);
 	if ($result == true) {
@@ -112,7 +112,7 @@
 	} else {
 		echo "query failed: " . $conn->error . "<br>";
 	}
-
+*/
 
 	echo "<br> entered new D players<br>";
 
