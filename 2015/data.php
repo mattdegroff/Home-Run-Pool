@@ -1,6 +1,6 @@
 	<?php	
-		include_once("connect.php");
-		include "update.php";
+		include("connect.php");
+		include("update.php");
 			
 		$deadline = new DateTime("2015-04-05 13:10:00");
 		$groupDead = new DateTime("2015-02-24 12:00:00");
@@ -9,7 +9,7 @@
 	<style>
 		.color {
 			<?php
-			$sql = "select font from standings order by homeRuns desc, name limit 1";
+			/*$sql = "select font from standings order by homeRuns desc, name limit 1";
 								$result = $conn->query($sql);
 								if ($result->num_rows > 0) {
 									while ($row = $result->fetch_assoc()) {
@@ -24,7 +24,7 @@
 										}
 									}
 								}
-								?>
+							*/?>
 			margin: auto;
 		}
 	</style>
