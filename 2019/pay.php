@@ -40,15 +40,15 @@
 			</thead>
 			<tbody>
 			<?php
-				$sql = "select name, color, paid from standings";
+				$sql = "select name, paid from standings";
 					$result = $conn->query($sql);
 				
 				if ($result->num_rows > 0) {
 						while($row = $result->fetch_assoc()){
 							if ($row['paid'] == 1) {
-								echo "<tr><td style='background-color: ".$row['color']."'>" . $row['name'] . "</td><td>yes</td></tr>";
+								echo "<tr><td>" . $row['name'] . "</td><td>yes</td></tr>";
 							} else {
-								echo "<tr><td style='background-color: ".$row['color']."'>" . $row['name'] . "</td><td>no</td></tr>";
+								echo "<tr><td>" . $row['name'] . "</td><td>no</td></tr>";
 							}
 						}
 				}
