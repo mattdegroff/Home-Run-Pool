@@ -80,7 +80,7 @@
 
 	echo "<br>entered into " . $person . "<br><br>";
 
-
+/*
 	$sql = "insert into groupD (id, firstName, lastName, link) values (8, 'Charlie', 'Blackmon', '".playerSearch($D1)."')";
 	$result = $conn->query($sql);
 	if ($result == true) {
@@ -88,7 +88,7 @@
 	} else {
 		echo "query failed: " . $conn->error . "<br>";
 	}
-/*
+
 	$sql = "insert into groupD (id, firstName, lastName, link) values (8, '', 'Muncy', '".playerSearch($D2)."')";
 	$result = $conn->query($sql);
 	if ($result == true) {
@@ -96,7 +96,7 @@
 	} else {
 		echo "query failed: " . $conn->error . "<br>";
 	}
-*/
+
 	$sql = "insert into groupD (id, firstName, lastName, link) values (9, 'Anthony', 'Rizzo', '".playerSearch($D3)."')";
 	$result = $conn->query($sql);
 	if ($result == true) {
@@ -104,7 +104,7 @@
 	} else {
 		echo "query failed: " . $conn->error . "<br>";
 	}
-/*
+
 	$sql = "insert into groupD (id, firstName, lastName, link) values ('Eugenio', 'Suarez', '".playerSearch($D4)."')";
 	$result = $conn->query($sql);
 	if ($result == true) {
