@@ -8,15 +8,15 @@
 
 	$run = false;
 
-	$person = "vinnyE";
+	$person = "vinnyC";
 	$A = "Giancarlo Stanton";
-	$B = "J.D. Martinez";
-	$C1 = "Pauk Goldschmidt";
-	$C2 = "Manny Machado";
-	$D1 = "Jake Lamb";
-	$D2 = "Andrew McCutchen";
-	$D3 = "Wil Myers";
-	$D4 = "Kyle Schwarber";
+	$B = "Nolan Arenado";
+	$C1 = "Ronald Acu&#241;a Jr.";
+	$C2 = "Paul Goldschmidt";
+	$D1 = "Jesus Aguilar";
+	$D2 = "Michael Conforto";
+	$D3 = "Mike Moustakas";
+	$D4 = "Yasiel Puig";
 
 	if ($run) {
 	$sql = "insert into " . $person . " (id, player) values (1, '" . $A . "')";
@@ -78,7 +78,7 @@
 
 	echo "<br>entered into " . $person . "<br><br>";
 
-/*
+
 	$sql = "insert into groupD (firstName, lastName, team, link) values ('Jose', 'Altuve', 'CHC', '".playerSearch($D1)."')";
 	$result = $conn->query($sql);
 	if ($result == true) {
@@ -110,7 +110,7 @@
 	} else {
 		echo "query failed: " . $conn->error . "<br>";
 	}
-*/
+
 
 	echo "<br> entered new D players<br>";
 
