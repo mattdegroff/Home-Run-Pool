@@ -195,7 +195,7 @@
 			} else if ($_SESSION['page'] == "totals") {
 				include('picks.php');
 			} else {
-				echo "<h1>lease refresh the page</h1>";
+				echo '<h1 class="text-center">please refresh the page</h1>';
 			}
 			?>
 		</div>
