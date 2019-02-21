@@ -1,3 +1,8 @@
+<?php
+	session_start();
+	print_r($_SESSION);
+?>
+
 <html>
 <body>
 <style>
@@ -42,12 +47,8 @@
 								<tbody>
 										<?php
 
-										include_once("details.php?id=2016");
+										include_once("details.php");
 										include_once("update1.php");
-
-										$deadline = new DateTime("2016-02-02 13:10:00");
-										$groupDead = new DateTime("2016-02-24 12:00:00");
-
 
 											echo "<tr>";
 											$sql = "select max(id) from standings";
