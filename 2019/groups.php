@@ -53,7 +53,6 @@
 
 										$deadline = new DateTime('2018-03-29T12:40:00', new DateTimeZone('America/New_York'));
 		
-										printGroups();
 											echo "<tr>";
 											$sql = "select max(id) from standings";
 											$result = $conn->query($sql);
@@ -139,8 +138,8 @@
 						}
 					}
 				}
-				for ($i=1; $i <=8; $i++) {
-					$sql = "select id, player, homeRuns from ".$code." where id=".$i;
+				for ($j=1; $j <=8; $j++) {
+					$sql = "select id, player, homeRuns from ".$code." where id=".$j;
 					$result = $conn->query($sql);
 					if ($result->num_rows > 0) {
 						while($row = $result->fetch_assoc()){
