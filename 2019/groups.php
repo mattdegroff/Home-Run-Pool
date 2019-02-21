@@ -48,6 +48,6 @@
 include("details.php");
 include("update1.php");
 
-printGroups();
+printGroups();?>
 											</body>
 										</html>
