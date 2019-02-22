@@ -6,19 +6,19 @@
 	function insert() {
 	global $conn;
 
-	$run = false;
+	$run = true;
 
-	//next D id is 10
+	//next D id is 11
 
-	$person = "mistron";
+	$person = "menke";
 	$A = "Mike Trout";
 	$B = "Nolan Arenado";
-	$C1 = "Rhys Hoskins";
-	$C2 = "Francisco Lindor";
+	$C1 = "Ronald Acu&#241;a Jr.";
+	$C2 = "Christian Yelich";
 	$D1 = "Charlie Blackmon";
-	$D2 = "Michael Conforto";
-	$D3 = "Anthony Rizzo";
-	$D4 = "Eugenio Suarez";
+	$D2 = "Freddie Freeman";
+	$D3 = "Max Muncy";
+	$D4 = "Matt Olson";
 
 	if ($run) {
 	$sql = "insert into " . $person . " (id, player) values (1, '" . $A . "')";
@@ -88,15 +88,15 @@
 	} else {
 		echo "query failed: " . $conn->error . "<br>";
 	}
-
-	$sql = "insert into groupD (id, firstName, lastName, link) values (8, '', 'Muncy', '".playerSearch($D2)."')";
+*/
+	$sql = "insert into groupD (id, firstName, lastName, link) values (10, 'Freddie', 'Freeman', '".playerSearch($D2)."')";
 	$result = $conn->query($sql);
 	if ($result == true) {
 		echo "Query sent<br>";
 	} else {
 		echo "query failed: " . $conn->error . "<br>";
 	}
-
+/*
 	$sql = "insert into groupD (id, firstName, lastName, link) values (9, 'Anthony', 'Rizzo', '".playerSearch($D3)."')";
 	$result = $conn->query($sql);
 	if ($result == true) {
