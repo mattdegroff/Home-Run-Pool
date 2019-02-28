@@ -5,7 +5,8 @@
 		$_SESSION['page'] = "totals";
 	}
 
-	include('/admin/cron/cron.php');
+	include('update.php');
+	update();
 ?>
 
 <html>
