@@ -4,7 +4,7 @@
 	$_SESSION['year'] = 2019;
 
 	include("../../connect.php");
-	include("../update.php");
+	include("../../update.php");
 
 	$start = microtime(true);
 	update();
