@@ -5,8 +5,6 @@
 		$_SESSION['page'] = "totals";
 	}
 
-	include('update.php');
-	update();
 ?>
 
 <html>
