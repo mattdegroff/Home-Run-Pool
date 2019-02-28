@@ -6,7 +6,6 @@
 
 	$start = microtime(true);
 	update();
-	echo "A updated<br>";
 	$end = microtime(true);
 	$time = $end-$start;
 	echo "time: ".$time;
