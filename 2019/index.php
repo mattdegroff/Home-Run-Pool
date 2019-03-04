@@ -124,21 +124,21 @@
 		<!-- Navbar links -->
 		<div class="collapse navbar-collapse" id="collapsibleNavbar">
 			<ul class="navbar-nav ">
-					<!--<li class="nav-item dropdown">
+					<li class="nav-item dropdown">
 			      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
 			        2019
 			      </a>
 			      <div class="dropdown-menu">
 			        <a class="dropdown-item" onclick="update('2019totals')">Totals</a>
-							
-								/*if (new DateTime() < $deadline) {
+							<?php
+								if (new DateTime() < $deadline) {
 									echo "<a class='dropdown-item disabled'>Pick %</a>";
 								} else {
 									echo "<a class='dropdown-item' onclick='update('2019picks');'>Pick %</a>";
 								}
 								?>
 			      </div>
-			  	</li>-->
+			  	</li>
 					<!--<li class="nav-item dropdown">
 			      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
 			        2018
