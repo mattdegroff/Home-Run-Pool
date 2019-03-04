@@ -1,7 +1,7 @@
 
 <?php
-	include_once("connect.php");
-	include_once("playersearch.php");
+	include_once("../connect.php");
+	include_once("../playersearch.php");
 
 	function insert() {
 	global $conn;
