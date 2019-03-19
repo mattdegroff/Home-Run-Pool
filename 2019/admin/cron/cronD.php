@@ -1,7 +1,7 @@
 
 <?php
 	include_once("../../connect.php");
-	include "../update.php";
+	include("../../update.php");
 	
 	$start = microtime(true);
 	$file = 'cronLog.txt';
