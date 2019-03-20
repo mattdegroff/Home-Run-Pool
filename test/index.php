@@ -2,7 +2,7 @@
 	session_start();
 	if(!isset($_SESSION['year']) && !isset($_SESSION['page'])) {
 		$_SESSION['year'] = 2019;
-		$_SESSION['page'] = "totals";
+		$_SESSION['page'] = "picks";
 	}
 
 ?>
@@ -193,7 +193,7 @@
 			<?php 
 			if ($_SESSION['page'] == "totals") {
 				include('totals.php');
-			} else if ($_SESSION['page'] == "totals") {
+			} else if ($_SESSION['page'] == "picks") {
 				include('picks.php');
 			} else {
 				echo '<h1 class="text-center">Please Refresh the Page</h1>';
