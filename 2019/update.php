@@ -406,6 +406,11 @@
 				echo "C updated<br>";
 				D();
 				echo "D updated<br>";
+				picksA();
+				picksB();
+				picksC();
+				picksD();
+				echo "pick % updated<br>";
 				$sql = "select code from standings";
 					if ($result = $conn->query($sql)) {
 						while($row = $result->fetch_assoc()){
