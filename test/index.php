@@ -129,7 +129,7 @@
 			        2019
 			      </a>
 			  	</li>
-					<<li class="nav-item">
+					<li class="nav-item">
 			      <a class="nav-link" href="/2018/">
 			        2018
 			      </a>
