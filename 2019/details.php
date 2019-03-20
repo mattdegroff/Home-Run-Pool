@@ -38,7 +38,7 @@
 		$colorB = '#00b0f0';
 		$colorC = '#ffd966';
 		$colorD = '#00b050';
-		$deadline = new DateTime('2019-03-28T13:05:00', new DateTimeZone('America/New_York'));
+		$deadline = new DateTime('2019-03-19T13:05:00', new DateTimeZone('America/New_York'));
 		$groupDead = new DateTime('2019-02-21T12:00:00', new DateTimeZone('America/New_York'));
 		$final = new DateTime('2019-09-29T23:59:59', new DateTimeZone('America/New_York'));
 	}
