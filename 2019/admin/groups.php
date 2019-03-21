@@ -61,8 +61,8 @@
 
 	</style>
 	<?php
-	include("details.php");
-	include("update1.php");
+	include("../details.php");
+	include("../update1.php");
 
 	$deadline = new DateTime('2018-03-29T12:40:00', new DateTimeZone('America/New_York'));
 	?>
