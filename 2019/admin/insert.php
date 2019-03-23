@@ -6,19 +6,19 @@
 	function insert() {
 	global $conn;
 
-	$run = false;
+	$run = true;
 
 	//next D id is 15
 
 	$person = "ant";
-	$A = "Giancarlo Stanton";
-	$B = "Joey Gallo";
-	$C1 = "Rhys Hoskins";
-	$C2 = "Manny Machado";
-	$D1 = "Jesus Aguilar";
-	$D2 = "Cody Bellinger";
-	$D3 = "Matt Olson";
-	$D4 = "Gary Sanchez";
+	$A = "Mike Trout";
+	$B = "Nolan Arenado";
+	$C1 = "Francisco Lindor";
+	$C2 = "Trevor Story";
+	$D1 = "Alex Bregman";
+	$D2 = "Michael Conforto";
+	$D3 = "Freddie Freeman";
+	$D4 = "Anthony Rizzo";
 
 	if ($run) {
 	$sql = "insert into " . $person . " (id, player) values (1, '" . $A . "')";
