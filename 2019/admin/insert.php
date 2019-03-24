@@ -6,9 +6,9 @@
 	function insert() {
 	global $conn;
 
-	$run = true;
+	$run = false;
 
-	//next D id is 19
+	//next D id is 20
 
 	$person = "scott";
 	$A = "Aaron Judge";
