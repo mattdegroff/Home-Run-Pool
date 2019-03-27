@@ -6,19 +6,19 @@
 	function insert() {
 	global $conn;
 
-	$run = false;
+	$run = true;
 
-	//next D id is 21
+	//next D id is 22
 
-	$person = "grup";
-	$A = "Giancarlo Stanton";
-	$B = "Joey Gallo";
-	$C1 = "Rhys Hoskins";
-	$C2 = "Trevor Story";
+	$person = "griesche";
+	$A = "Mike Trout";
+	$B = "Nolan Arenado";
+	$C1 = "Ronald Acu&#241;a Jr.";
+	$C2 = "Francisco Lindor";
 	$D1 = "Jesus Aguilar";
-	$D2 = "Cody Bellinger";
-	$D3 = "Mike Moustakas";
-	$D4 = "Max Muncy";
+	$D2 = "Charlie Blackmon";
+	$D3 = "Alex Bregman";
+	$D4 = "Justin Upton";
 
 	if ($run) {
 	$sql = "insert into " . $person . " (id, player) values (1, '" . $A . "')";
@@ -104,8 +104,8 @@
 	} else {
 		echo "query failed: " . $conn->error . "<br>";
 	}
-
-	$sql = "insert into groupD (id, firstName, lastName, link) values (19, 'Gleyber', 'Torres', '".playerSearch($D4)."')";
+*/
+	$sql = "insert into groupD (id, firstName, lastName, link) values (21, 'Justin', 'Upton', '".playerSearch($D4)."')";
 	$result = $conn->query($sql);
 	if ($result == true) {
 		echo "Query sent<br>";
@@ -114,7 +114,7 @@
 	}
 
 	echo "<br> entered new D players<br>";
-*/
+
 
 	$sql = "update " . $person . ", groupA set " . $person . ".pid = groupA.id, " . $person . ".homeRuns = groupA.homeRuns where groupA.player = " . $person . ".player and " . $person . ".id = 1";
 	$result = $conn->query($sql);
