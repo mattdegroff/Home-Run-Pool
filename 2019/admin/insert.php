@@ -8,7 +8,7 @@
 
 	$run = true;
 
-	//next D id is 23
+	//next D id is 24
 
 	$person = "zippy";
 	$A = "Mike Trout";
@@ -105,7 +105,7 @@
 		echo "query failed: " . $conn->error . "<br>";
 	}
 */
-	$sql = "insert into groupD (id, firstName, lastName, link) values (21, 'Justin', 'Upton', '".playerSearch($D4)."')";
+	$sql = "insert into groupD (id, firstName, lastName, link) values (23, 'Justin', 'Upton', '".playerSearch($D4)."')";
 	$result = $conn->query($sql);
 	if ($result == true) {
 		echo "Query sent<br>";
