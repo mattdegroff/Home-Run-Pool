@@ -113,7 +113,7 @@
 
 	<nav class="navbar navbar-expand-sm navbar-light bg-light">
   		<!-- Brand -->
-  		<a class="navbar-brand" href="#">Dinger Derby '19</a>
+  		<a class="navbar-brand" href="/<?php echo date("Y"); ?>/">Dinger Derby '19</a>
 
 		<!-- Toggler/collapsibe Button -->
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
