@@ -1,201 +1,190 @@
 <?php
-		session_start();
-		include("details.php");
-		include_once("update1.php");
-	?>
-	<h1 class="text-center"><?php echo substr($_GET["id"],0,4); ?></h1>
-	<div class="card-group">
-		<div class="card" style=<?php echo '"background-color: ' . $colorA . '"'; ?>>
-			<img class="card-img-top img-fluid" src="<?php echo Apic(); ?>" alt="Card image">
-			<div class="card-body">
-				<div class="card-title text-center"><b>A</b></div>
-				<div class="row">
-					<div class="col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9 text-center">Player</div>
-					<div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 text-center">%</div>
-				</div>
-				<?php
-				$sql = "SELECT player, homeRuns FROM groupA ORDER BY homeRuns DESC LIMIT 1";
-							$result = $conn->query($sql);
-							if ($result->num_rows > 0) {
-								while($row = $result->fetch_assoc()){
-									$player = $row['player'];
-								}
-							}
-					$sql = "select player, team, picks, link from groupA order by id";
-				$result = $conn->query($sql);
-				if ($result->num_rows > 0) {
-					while($row = $result->fetch_assoc()){
-						if ($row['player'] == $player && new DateTime() > $deadline) {
-							echo '<div class="row">
-									<div class="col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9 text-center"><b>
-									<a href="'.$row['link'].'" style="color:black" target="_blank">'.$row['player']
-									.' ('.$row['team'].')</a>
-									</div>
-									<div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 text-center">'.$row['picks'].'</b></div></div>';
-							} else {
-						echo '<div class="row">
-									<div class="col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9 text-center">
-									<a href="'.$row['link'].'" style="color:black" target="_blank">'.$row['player']
-									.' ('.$row['team'].')</a>
-									</div>
-									<div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 text-center">'.$row['picks'].'</div></div>';
-							}
-					}
-				}
+	session_start();
+	if(!isset($_SESSION['year']) && !isset($_SESSION['page'])) {
+		$_SESSION['year'] = 2019;
+		$_SESSION['page'] = "picks";
+	}
+?>
 
-				$sql = "select sum(picks) from groupA";
-			$result = $conn->query($sql);
-			if ($result->num_rows > 0) {
-				while($row = $result->fetch_assoc()){
-					echo '<div class="row"><div class="col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9 text-center"></div><div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 text-center"><b>'.$row['sum(picks)']."</b></div></div>";
-				}
-			}
-
-						?>
-			</div>
-		</div>
-		<div class="card" style=<?php echo '"background-color: ' . $colorB . '"'; ?>>
-			<img class="card-img-top img-fluid" src="<?php echo Bpic(); ?>" alt="Card image">
-			<div class="card-body">
-				<div class="card-title text-center"><b>B</b></div>
-				<div class="row">
-					<div class="col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9 text-center">Player</div>
-					<div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 text-center">%</div>
-				</div>
-				<?php
-				$sql = "SELECT player, homeRuns FROM groupB ORDER BY homeRuns DESC LIMIT 1";
-							$result = $conn->query($sql);
-							if ($result->num_rows > 0) {
-								while($row = $result->fetch_assoc()){
-									$player = $row['player'];
-								}
+<html>
+	<head>
+		<title>Dinger Derby <?php echo date("Y"); ?></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/bootstrap.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/clock.js"></script>
+		
+	</head>
+	<body onload="updateClock(); setInterval('updateClock()', 1000 )">
+		<style>
+		body {
+			<?php
+				/*if (new DateTime() > $deadline) {
+					$sql = "select color, font from standings order by homeRuns desc, name limit 1";
+					$result = $conn->query($sql);
+					if ($result->num_rows > 0) {
+						while ($row = $result->fetch_assoc()) {
+							echo "background-color: ".$row['color']. ";";
+							/*if ($row['font'] == 1) {
+								echo "color: white;";
 							}
-					$sql = "select player, team, picks, link from groupB order by id";
-				$result = $conn->query($sql);
-				if ($result->num_rows > 0) {
-					while($row = $result->fetch_assoc()){
-						if ($row['player'] == $player && new DateTime() > $deadline) {
-							echo '<div class="row">
-									<div class="col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9 text-center"><b>
-									<a href="'.$row['link'].'" style="color:black" target="_blank">'.$row['player']
-									.' ('.$row['team'].')</a>
-									</div>
-									<div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 text-center">'.$row['picks'].'</b></div></div>';
-							} else {
-						echo '<div class="row">
-									<div class="col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9 text-center">
-									<a href="'.$row['link'].'" style="color:black" target="_blank">'.$row['player']
-									.' ('.$row['team'].')</a>
-									</div>
-									<div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 text-center">'.$row['picks'].'</div></div>';
-							}
-					}
-				}
-
-				$sql = "select sum(picks) from groupB";
-			$result = $conn->query($sql);
-			if ($result->num_rows > 0) {
-				while($row = $result->fetch_assoc()){
-					echo '<div class="row"><div class="col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9 text-center"></div><div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 text-center"><b>'.$row['sum(picks)']."</b></div></div>";
-				}
-			}
-						?>
-			</div>
-		</div>
-		<div class="card" style=<?php echo '"background-color: ' . $colorC . '"'; ?>>
-			<img class="card-img-top img-fluid" src="<?php echo Cpic(); ?>" alt="Card image">
-			<div class="card-body">
-				<div class="card-title text-center"><b>C</b></div>
-				<div class="row">
-					<div class="col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9 text-center">Player</div>
-					<div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 text-center">%</div>
-				</div>
-				<?php
-				$sql = "SELECT player, homeRuns FROM groupC ORDER BY homeRuns DESC LIMIT 1";
-							$result = $conn->query($sql);
-							if ($result->num_rows > 0) {
-								while($row = $result->fetch_assoc()){
-									$player = $row['player'];
-								}
-							}
-					$sql = "select player, team, picks, link from groupC order by id";
-				$result = $conn->query($sql);
-				if ($result->num_rows > 0) {
-					while($row = $result->fetch_assoc()){
-						if ($row['player'] == $player && new DateTime() > $deadline) {
-							echo '<div class="row">
-									<div class="col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9 text-center"><b>
-									<a href="'.$row['link'].'" style="color:black" target="_blank">'.$row['player']
-									.' ('.$row['team'].')</a>
-									</div>
-									<div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 text-center">'.$row['picks'].'</b></div></div>';
-							} else {
-						echo '<div class="row">
-									<div class="col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9 text-center">
-									<a href="'.$row['link'].'" style="color:black" target="_blank">'.$row['player']
-									.' ('.$row['team'].')</a>
-									</div>
-									<div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 text-center">'.$row['picks'].'</div></div>';
-							}
-					}
-				}
-
-				$sql = "select sum(picks) from groupC";
-			$result = $conn->query($sql);
-			if ($result->num_rows > 0) {
-				while($row = $result->fetch_assoc()){
-					echo '<div class="row"><div class="col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9 text-center"></div><div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 text-center"><b>'.$row['sum(picks)']."</b></div></div>";
-				}
-			}
-						?>
-			</div>
-		</div>
-		<div class="card" style=<?php echo '"background-color: ' . $colorD . '"'; ?>>
-			<img class="card-img-top img-fluid" src="<?php echo Dpic(); ?>" alt="Card image">
-			<div class="card-body">
-				<div class="card-title text-center"><b>D</b></div>
-				<div class="row">
-					<div class="col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9 text-center">Player</div>
-					<div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 text-center">%</div>
-				</div>
-				<?php
-				$player = '';
-				$sql = "SELECT firstName, lastName FROM groupD ORDER BY homeRuns DESC LIMIT 1";
-						$result = $conn->query($sql);
-						if ($result->num_rows > 0) {
-							while($row = $result->fetch_assoc()){
-								$player = $row['firstName']." ".$row['lastName'];
+							 else if ($row['font'] == 2) {
+								echo "color: yellow;";
 							}
 						}
-
-					$sql = "select firstName, lastName, team, picks, link from groupD order by lastName";
-				$result = $conn->query($sql);
-				if ($result->num_rows > 0) {
-					while($row = $result->fetch_assoc()){
-						$play = $row['firstName']." ".$row['lastName'];
-						if ($play == $player) {
-						echo '<div class="row">
-									<div class="col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9 text-center">
-									<a href="'.$row['link'].'" style="color:black" target="_blank"><b>'.$row['firstName'].' ' . $row['lastName'] . ' (' .$row['team'].')</a></div>
-									<div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 text-center">'.$row['picks'].'</b></div></div>';
-							} else {
-								echo '<div class="row">
-									<div class="col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9 text-center">
-									<a href="'.$row['link'].'" style="color:black" target="_blank">'.$row['firstName'].' ' . $row['lastName'] . ' (' .$row['team'].')</a></div>
-									<div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 text-center">'.$row['picks'].'</div></div>';
-							}
-
 					}
 				}
+				else {
+					echo "background-color: white;";
+				}*/
+			?>
+		}
+		#dark {
+			color: white;
+		}
+		#yellow {
+			color: yellow;
+		}
+		#red {
+			color: red;
+		}
+		html {
+			font-size: 14px;
+		}
+		 #drop {
+			 color: rgba(0,0,0,.3);
+		 }
 
-				$sql = "select sum(picks) from groupD";
-			$result = $conn->query($sql);
-			if ($result->num_rows > 0) {
-				while($row = $result->fetch_assoc()){
-					echo '<div class="row"><div class="col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9 text-center"></div><div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 text-center"><b>'.$row['sum(picks)']."</b></div></div>";
-				}
+		.card {
+			margin-top: 10px;
+		}
+
+@media (min-width: 576px) {
+		.cardStandings {
+			font-size: 2vw;
+		}
+		.cardGOAT {
+			font-size: 2vw;
+		}
+		.cardPart {
+			font-size: 2.25vw;
+		}
+		.cardGroups {
+			font-size: 2.25vw;
+		}
+}
+@media (min-width: 768px) {
+		.cardStandings {
+			font-size: 1.5vw;
+		}
+		.cardGOAT {
+			font-size: 1.75vw;
+		}
+		.cardPart {
+			font-size: 1.75vw;
+		}
+		.cardGroups {
+			font-size: 1.4vw;
+		}
+}
+@media (min-width: 992px) {
+		.cardStandings {
+			font-size: 1vw;
+		}
+		.cardGOAT {
+			font-size: 1vw;
+		}
+		.cardPart {
+			font-size: 1vw;
+		}
+		.cardGroups {
+			font-size: 1vw;
+		}
+}
+
+		<?php
+		if (new DateTime() > $deadline) {
+				echo ".navbar { margin-bottom: 20px; }";
 			}
-						?>
-			</div>
+		?>
+		</style>
+
+	<nav class="navbar navbar-expand-sm navbar-light bg-light">
+  		<!-- Brand -->
+  		<a class="navbar-brand" href="#">Dinger Derby '19</a>
+
+		<!-- Toggler/collapsibe Button -->
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<!-- Navbar links -->
+		<div class="collapse navbar-collapse" id="collapsibleNavbar">
+			<ul class="navbar-nav ">
+					<?php
+						if (new DateTime() > $deadline) {
+							echo '<li class="nav-item">
+							<a class="nav-link" href="picks.php">
+								Pick %
+							</a>
+						</li>';
+						}
+					?>
+					<li class="nav-item">
+			      <a class="nav-link" href="/2019/">
+			        2019
+			      </a>
+			  	</li>
+					<li class="nav-item">
+			      <a class="nav-link" href="/2019/">
+			        2018
+			      </a>
+			  	</li>
+					<li class="nav-item">
+			      <a class="nav-link" href="/2017/">
+			        2017
+			      </a>
+			  	</li>
+					<li class="nav-item">
+			      <a class="nav-link" href="/2016/">
+			        2016
+			      </a>
+			  	</li>
+					<li class="nav-item">
+			      <a class="nav-link" href="/2015/">
+			        2015
+			      </a>
+			  	</li>
+		      	<li>
+		       		<a class="nav-link" href="http://espn.com/mlb" target="_blank"><img src="img/espn.png" alt="espnLogo" style="width:100px;height:25px;"></a>
+		      	</li>
+						</ul>
+						<ul class="navbar-nav mr-auto">
+					<li class="nav-item"><a href="#" class="nav-link"><span id="clock">&nbsp;</span></a></li>
+					<li class="nav-item"><a href="#" class="nav-link"><?php
+			date_default_timezone_set("America/New_York");
+			$date = date("F j, Y");
+			echo $date;
+		?></a></li>
+			</ul>
 		</div>
-	</div>
+	</nav>
+		<div id="main" class="container">
+			<?php 
+			if ($_SESSION['page'] == "totals") {
+				include('totals.php');
+			} else if ($_SESSION['page'] == "picks") {
+				include('picksData.php');
+			} else {
+				echo '<h1 class="text-center">Please Refresh the Page</h1>';
+			}
+			?>
+		</div>
+		<section class="footer text-center" style="padding: 25px; margin-top: 10px; background-color: #f8f9fa;">Matt DeGroff &copy; <?php echo date("Y"); ?></section>
+	</body>
+</html>
+<?php
+	session_destroy();
+	?>

@@ -124,6 +124,15 @@
 		<!-- Navbar links -->
 		<div class="collapse navbar-collapse" id="collapsibleNavbar">
 			<ul class="navbar-nav ">
+					<?php
+						if (new DateTime() > $deadline) {
+							echo '<li class="nav-item">
+							<a class="nav-link" href="picks.php">
+								Pick %
+							</a>
+						</li>';
+						}
+					?>
 					<li class="nav-item">
 			      <a class="nav-link" href="/2019/">
 			        2019
