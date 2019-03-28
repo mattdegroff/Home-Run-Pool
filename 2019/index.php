@@ -4,6 +4,8 @@
 		$_SESSION['year'] = 2019;
 		$_SESSION['page'] = "totals";
 	}
+
+	include("details.php");
 	include("/admin/cron/cron.php");
 ?>
 
