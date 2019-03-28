@@ -7,7 +7,7 @@
 	$countA = 6;
 	$countB = 6;
 	$countC = 11;
-	if (new DateTime() > new DateTime("2019-03-28 13:05:00")) {
+	if (new DateTime() > new DateTime("2019-03-27 13:05:00")) {
 		$year = "2019";
 	} else {
 		$year = "2018";
