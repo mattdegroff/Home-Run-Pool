@@ -105,7 +105,7 @@
 		echo "query failed: " . $conn->error . "<br>";
 	}
 */
-	$sql = "insert into groupD (id, firstName, lastName, link) values (23, 'Justin', 'Upton', '".playerSearch($D4)."')";
+	$sql = "insert into groupD (id, firstName, lastName, link) values (23, 'Eloy', 'Jimenez', '".playerSearch($D4)."')";
 	$result = $conn->query($sql);
 	if ($result == true) {
 		echo "Query sent<br>";
