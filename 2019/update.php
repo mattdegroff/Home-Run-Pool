@@ -337,7 +337,7 @@
 					$pos+=$len;
 
 					$out = hr($str, $pos);
-					echo $link;
+					echo $link." - ";
 					echo $out."<br>";
 
 					$scan1 = '<li class="last"><a href=';
