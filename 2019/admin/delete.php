@@ -3,6 +3,9 @@ session_start();
 $_SESSION['year'] = 2019;
 include("../connect.php");
 
+$run = false;
+
+if($run){}
     $sql = "select code from standings";
     $result = $conn->query($sql);
     while($row = $result->fetch_assoc()){
@@ -13,6 +16,6 @@ include("../connect.php");
         }
     }
     echo "delete complete";
-
+}
         ?>
         

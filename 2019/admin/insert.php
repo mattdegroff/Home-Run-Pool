@@ -8,7 +8,7 @@
 
 	$run = false;
 
-	//next D id is 26
+	//next D id is 1
 	//Ronald Acu&#241;a Jr.
 
 	$person = "ram";
