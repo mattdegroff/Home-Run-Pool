@@ -11,15 +11,15 @@
 	//next D id is 18
 	//Ronald Acu&#241;a Jr.
 
-	$person = "griesche";
+	$person = "menke";
 	$A = "Mike Trout";
 	$B = "Nolan Arenado";
 	$C1 = "Ronald Acu&#241;a Jr.";
 	$C2 = "Francisco Lindor";
-	$D1 = "Jesus Aguilar";
+	$D1 = "Cody Bellinger";
 	$D2 = "Charlie Blackmon";
-	$D3 = "Alex Bregman";
-	$D4 = "Justin Upton";
+	$D3 = "Freddie Freeman";
+	$D4 = "Max Muncy";
 
 	if ($run) {
 	$sql = "insert into " . $person . " (id, player) values (1, '" . $A . "')";
@@ -105,7 +105,7 @@
 	} else {
 		echo "query failed: " . $conn->error . "<br>";
 	}
-*/
+
 	$sql = "insert into groupD (id, firstName, lastName, link) values (17, 'Justin', 'Upton', '".playerSearch($D4)."')";
 	$result = $conn->query($sql);
 	if ($result == true) {
@@ -113,7 +113,7 @@
 	} else {
 		echo "query failed: " . $conn->error . "<br>";
 	}
-
+*/
 	echo "<br> entered new D players<br>";
 
 
