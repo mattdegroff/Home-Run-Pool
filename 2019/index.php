@@ -94,16 +94,16 @@
 }
 @media (min-width: 992px) {
 		.cardStandings {
-			font-size: .85vw;
+			font-size: 1vw;
 		}
 		.cardGOAT {
-			font-size: .85vw;
+			font-size: 1vw;
 		}
 		.cardPart {
-			font-size: .85vw;
+			font-size: 1vw;
 		}
 		.cardGroups {
-			font-size: .85vw;
+			font-size: 1vw;
 		}
 }
 
