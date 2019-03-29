@@ -6,7 +6,7 @@
 	function insert() {
 	global $conn;
 
-	$run = false;
+	$run = true;
 
 	//next D id is 25
 	//Ronald Acu&#241;a Jr.
