@@ -11,15 +11,15 @@
 	//next D id is 15
 	//Ronald Acu&#241;a Jr.
 
-	$person = "katie";
-	$A = "Bryce Harper";
-	$B = "Nolan Arenado";
-	$C1 = "Paul Goldschmidt";
+	$person = "grup";
+	$A = "Aaron Judge";
+	$B = "Joey Gallo";
+	$C1 = "Rhys Hoskins";
 	$C2 = "Trevor Story";
-	$D1 = "Michael Conforto";
-	$D2 = "Matt Olson";
-	$D3 = "Anthony Rizzo";
-	$D4 = "Travis Shaw";
+	$D1 = "Jesus Aguilar";
+	$D2 = "Cody Bellinger";
+	$D3 = "Mike Moustakas";
+	$D4 = "Max Muncy";
 
 	if ($run) {
 	$sql = "insert into " . $person . " (id, player) values (1, '" . $A . "')";
