@@ -8,18 +8,18 @@
 
 	$run = true;
 
-	//next D id is 23
+	//next D id is 25
 	//Ronald Acu&#241;a Jr.
 
-	$person = "par";
-	$A = "Bryce Harper";
-	$B = "Nolan Arenado";
-	$C1 = "Paul Goldschmidt";
-	$C2 = "Christian Yelich";
-	$D1 = "Michael Conforto";
-	$D2 = "Vladimir Guerrero Jr.";
-	$D3 = "Joc Pederson";
-	$D4 = "Luke Voit";
+	$person = "ram";
+	$A = "Aaron Judge";
+	$B = "Joey Gallo";
+	$C1 = "Ronald Acu&#241;a Jr.";
+	$C2 = "Kyle Schwarber";
+	$D1 = "Cody Bellinger";
+	$D2 = "Robinson Cano";
+	$D3 = "Gary Sanchez";
+	$D4 = "George Springer";
 
 	if ($run) {
 	$sql = "insert into " . $person . " (id, player) values (1, '" . $A . "')";
@@ -89,16 +89,8 @@
 	} else {
 		echo "query failed: " . $conn->error . "<br>";
 	}
-
-	$sql = "insert into groupD (id, firstName, lastName, link) values (20, 'Jason', 'Kipnis', '".playerSearch($D2)."')";
-	$result = $conn->query($sql);
-	if ($result == true) {
-		echo "Query sent<br>";
-	} else {
-		echo "query failed: " . $conn->error . "<br>";
-	}
 */
-	$sql = "insert into groupD (id, firstName, lastName, link) values (22, 'Joc', 'Pederson', '".playerSearch($D3)."')";
+	$sql = "insert into groupD (id, firstName, lastName, link) values (23, 'Robinson', 'Cano', '".playerSearch($D2)."')";
 	$result = $conn->query($sql);
 	if ($result == true) {
 		echo "Query sent<br>";
@@ -106,7 +98,7 @@
 		echo "query failed: " . $conn->error . "<br>";
 	}
 /*
-	$sql = "insert into groupD (id, firstName, lastName, link) values (21, 'Luke', 'Voit', '".playerSearch($D4)."')";
+	$sql = "insert into groupD (id, firstName, lastName, link) values (22, 'Joc', 'Pederson', '".playerSearch($D3)."')";
 	$result = $conn->query($sql);
 	if ($result == true) {
 		echo "Query sent<br>";
@@ -114,6 +106,14 @@
 		echo "query failed: " . $conn->error . "<br>";
 	}
 */
+	$sql = "insert into groupD (id, firstName, lastName, link) values (24, 'George', 'Springer', '".playerSearch($D4)."')";
+	$result = $conn->query($sql);
+	if ($result == true) {
+		echo "Query sent<br>";
+	} else {
+		echo "query failed: " . $conn->error . "<br>";
+	}
+
 	echo "<br> entered new D players<br>";
 
 
