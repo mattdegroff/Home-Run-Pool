@@ -6,20 +6,20 @@
 	function insert() {
 	global $conn;
 
-	$run = false;
+	$run = true;
 
 	//next D id is 1
 	//Ronald Acu&#241;a Jr.
 
-	$person = "ram";
-	$A = "Aaron Judge";
-	$B = "Joey Gallo";
+	$person = "vinny";
+	$A = "Giancarlo Stanton";
+	$B = "Nolan Arenado";
 	$C1 = "Ronald Acu&#241;a Jr.";
-	$C2 = "Kyle Schwarber";
-	$D1 = "Cody Bellinger";
-	$D2 = "Robinson Cano";
-	$D3 = "Gary Sanchez";
-	$D4 = "George Springer";
+	$C2 = "Paul Goldschmidt";
+	$D1 = "Jesus Aguilar";
+	$D2 = "Michael Conforto";
+	$D3 = "Mike Moustakas";
+	$D4 = "Yasiel Puig";
 
 	if ($run) {
 	$sql = "insert into " . $person . " (id, player) values (1, '" . $A . "')";
@@ -81,32 +81,32 @@
 
 	echo "<br>entered into " . $person . "<br><br>";
 
-/*
-	$sql = "insert into groupD (id, firstName, lastName, link) values (15, 'Miguel', 'Andujar', '".playerSearch($D1)."')";
+
+	$sql = "insert into groupD (id, firstName, lastName, link) values (1, 'Jesus', 'Aguilar', '".playerSearch($D1)."')";
 	$result = $conn->query($sql);
 	if ($result == true) {
 		echo "Query sent<br>";
 	} else {
 		echo "query failed: " . $conn->error . "<br>";
 	}
-*/
-	$sql = "insert into groupD (id, firstName, lastName, link) values (24, 'Robinson', 'Cano', '".playerSearch($D2)."')";
+
+	$sql = "insert into groupD (id, firstName, lastName, link) values (2, 'Michael', 'Conforto', '".playerSearch($D2)."')";
 	$result = $conn->query($sql);
 	if ($result == true) {
 		echo "Query sent<br>";
 	} else {
 		echo "query failed: " . $conn->error . "<br>";
 	}
-/*
-	$sql = "insert into groupD (id, firstName, lastName, link) values (22, 'Joc', 'Pederson', '".playerSearch($D3)."')";
+
+	$sql = "insert into groupD (id, firstName, lastName, link) values (3, 'Mike', 'Moustakas', '".playerSearch($D3)."')";
 	$result = $conn->query($sql);
 	if ($result == true) {
 		echo "Query sent<br>";
 	} else {
 		echo "query failed: " . $conn->error . "<br>";
 	}
-*/
-	$sql = "insert into groupD (id, firstName, lastName, link) values (25, 'George', 'Springer', '".playerSearch($D4)."')";
+
+	$sql = "insert into groupD (id, firstName, lastName, link) values (4, 'Yasiel', 'Puig', '".playerSearch($D4)."')";
 	$result = $conn->query($sql);
 	if ($result == true) {
 		echo "Query sent<br>";
