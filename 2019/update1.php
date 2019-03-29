@@ -10,7 +10,7 @@
 			}
 		}
 
-		$str = file_get_contents($link);
+		if ($str = file_get_contents($link)) {
 
 		$scan = '<div class="main-headshot"><img src="';
 		$len = strlen($scan);
@@ -22,6 +22,7 @@
 		}
 
 		return $imglink;
+	}
 	}
 	function Bpic() {
 			global $conn;

@@ -4,7 +4,7 @@
 -- https://tableplus.com/
 --
 -- Database: heroku_80a1a731e2f8880
--- Generation Time: 2019-03-29 11:41:11.2880
+-- Generation Time: 2019-03-29 13:13:11.0330
 -- -------------------------------------------------------------
 
 
@@ -279,6 +279,15 @@ CREATE TABLE `zippy` (
   `homeRuns` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
+INSERT INTO `ant` (`id`, `pid`, `player`, `homeRuns`) VALUES ('1', '4', 'Giancarlo Stanton', '0'),
+('2', '5', 'Joey Gallo', '0'),
+('3', '6', 'Rhys Hoskins', '1'),
+('4', '1', 'Ronald Acu&#241;a Jr.', '0'),
+('5', '1', 'Jesus Aguilar', '0'),
+('6', '5', 'Cody Bellinger', '1'),
+('7', '2', 'Michael Conforto', '0'),
+('8', '11', 'Gary Sanchez', '0');
+
 INSERT INTO `ariel` (`id`, `pid`, `player`, `homeRuns`) VALUES ('1', '4', 'Giancarlo Stanton', '0'),
 ('2', '5', 'Joey Gallo', '0'),
 ('3', '6', 'Rhys Hoskins', '1'),
@@ -307,55 +316,55 @@ INSERT INTO `griesche` (`id`, `pid`, `player`, `homeRuns`) VALUES ('1', '6', 'Mi
 ('8', '17', 'Justin Upton', '0');
 
 INSERT INTO `groupa` (`id`, `player`, `team`, `homeRuns`, `link`, `picks`) VALUES ('5', 'JD Martinez', 'BOS', '0', 'http://www.espn.com/mlb/player/_/id/31065', '5.3'),
-('1', 'Bryce Harper', 'PHI', '0', 'http://www.espn.com/mlb/player/_/id/30951', '5.3'),
-('3', 'Aaron Judge', 'NYY', '0', 'http://www.espn.com/mlb/player/_/id/33192', '15.8'),
+('1', 'Bryce Harper', 'PHI', '0', 'http://www.espn.com/mlb/player/_/id/30951', '10.5'),
+('3', 'Aaron Judge', 'NYY', '0', 'http://www.espn.com/mlb/player/_/id/33192', '26.3'),
 ('4', 'Giancarlo Stanton', 'NYY', '0', 'http://www.espn.com/mlb/player/_/id/30583', '15.8'),
 ('6', 'Mike Trout', 'LAA', '0', 'http://www.espn.com/mlb/player/_/id/30836', '26.3'),
-('2', 'Khris Davis', 'OAK', '2', 'http://www.espn.com/mlb/player/_/id/31478', '0.0');
+('2', 'Khris Davis', 'OAK', '2', 'http://www.espn.com/mlb/player/_/id/31478', '5.3');
 
-INSERT INTO `groupb` (`id`, `player`, `team`, `homeRuns`, `link`, `picks`) VALUES ('1', 'Nolan Arenado', 'COL', '0', 'http://www.espn.com/mlb/player/_/id/31261', '47.4'),
-('3', 'Kris Bryant', 'CHC', '1', 'http://www.espn.com/mlb/player/_/id/33172', '0.0'),
-('2', 'Mookie Betts', 'BOS', '0', 'http://www.espn.com/mlb/player/_/id/33039', '0.0'),
-('5', 'Joey Gallo', 'TEX', '0', 'http://www.espn.com/mlb/player/_/id/32818', '21.1'),
+INSERT INTO `groupb` (`id`, `player`, `team`, `homeRuns`, `link`, `picks`) VALUES ('1', 'Nolan Arenado', 'COL', '0', 'http://www.espn.com/mlb/player/_/id/31261', '52.6'),
+('3', 'Kris Bryant', 'CHC', '1', 'http://www.espn.com/mlb/player/_/id/33172', '5.3'),
+('2', 'Mookie Betts', 'BOS', '0', 'http://www.espn.com/mlb/player/_/id/33039', '5.3'),
+('5', 'Joey Gallo', 'TEX', '0', 'http://www.espn.com/mlb/player/_/id/32818', '26.3'),
 ('6', 'Jose Ramirez', 'CLE', '0', 'http://www.espn.com/mlb/player/_/id/32801', '0.0'),
 ('4', 'Nelson Cruz', 'MIN', '0', 'http://www.espn.com/mlb/player/_/id/6242', '0.0');
 
-INSERT INTO `groupc` (`id`, `player`, `team`, `homeRuns`, `link`, `picks`) VALUES ('1', 'Ronald Acu&#241;a Jr.', 'ATL', '0', 'http://www.espn.com/mlb/player/_/id/36185', '26.3'),
+INSERT INTO `groupc` (`id`, `player`, `team`, `homeRuns`, `link`, `picks`) VALUES ('1', 'Ronald Acu&#241;a Jr.', 'ATL', '0', 'http://www.espn.com/mlb/player/_/id/36185', '36.8'),
 ('2', 'Javier Baez', 'CHC', '2', 'http://www.espn.com/mlb/player/_/id/32127', '0.0'),
 ('3', 'Matt Carpenter', 'STL', '0', 'http://www.espn.com/mlb/player/_/id/31015', '0.0'),
-('6', 'Rhys Hoskins', 'PHI', '1', 'http://www.espn.com/mlb/player/_/id/35291', '31.6'),
+('6', 'Rhys Hoskins', 'PHI', '1', 'http://www.espn.com/mlb/player/_/id/35291', '36.8'),
 ('4', 'Edwin Encarnacion', 'SEA', '1', 'http://www.espn.com/mlb/player/_/id/5904', '0.0'),
 ('7', 'Francisco Lindor', 'ATL', '0', 'http://www.espn.com/mlb/player/_/id/32129', '26.3'),
-('11', 'Christian Yelich', 'MIL', '1', 'http://www.espn.com/mlb/player/_/id/31283', '0.0'),
+('11', 'Christian Yelich', 'MIL', '1', 'http://www.espn.com/mlb/player/_/id/31283', '10.5'),
 ('8', 'Manny Machado', 'SD', '0', 'http://www.espn.com/mlb/player/_/id/31097', '0.0'),
-('9', 'Kyle Schwarber', 'CHC', '1', 'http://www.espn.com/mlb/player/_/id/33172', '0.0'),
-('5', 'Paul Goldschmidt', 'STL', '0', 'http://www.espn.com/mlb/player/_/id/31027', '15.8'),
+('9', 'Kyle Schwarber', 'CHC', '1', 'http://www.espn.com/mlb/player/_/id/33172', '5.3'),
+('5', 'Paul Goldschmidt', 'STL', '0', 'http://www.espn.com/mlb/player/_/id/31027', '26.3'),
 ('10', 'Trevor Story', 'COL', '1', 'http://www.espn.com/mlb/player/_/id/32150', '36.8');
 
 INSERT INTO `groupd` (`id`, `firstName`, `lastName`, `team`, `homeRuns`, `link`, `picks`) VALUES ('1', 'Jesus', 'Aguilar', 'MIL', '0', 'http://www.espn.com/mlb/player/_/id/32132', '31.6'),
-('2', 'Michael', 'Conforto', 'NYM', '0', 'http://www.espn.com/mlb/player/_/id/33711', '31.6'),
+('2', 'Michael', 'Conforto', 'NYM', '0', 'http://www.espn.com/mlb/player/_/id/33711', '36.8'),
 ('3', 'Mike', 'Moustakas', 'MIL', '1', 'http://www.espn.com/mlb/player/_/id/29999', '15.8'),
 ('4', 'Yasiel', 'Puig', 'CIN', '0', 'http://www.espn.com/mlb/player/_/id/32574', '10.5'),
-('5', 'Cody', 'Bellinger', 'LAD', '1', 'http://www.espn.com/mlb/player/_/id/33912', '36.8'),
+('5', 'Cody', 'Bellinger', 'LAD', '1', 'http://www.espn.com/mlb/player/_/id/33912', '42.1'),
 ('6', 'Max', 'Muncy', 'LAD', '1', 'http://www.espn.com/mlb/player/_/id/33303', '15.8'),
 ('7', 'Eugenio', 'Suarez', 'CIN', '0', 'http://www.espn.com/mlb/player/_/id/32367', '21.1'),
-('8', 'Charlie', 'Blackmon', 'COL', '0', 'http://www.espn.com/mlb/player/_/id/31084', '21.1'),
-('9', 'Anthony', 'Rizzo', 'CHC', '0', 'http://www.espn.com/mlb/player/_/id/30782', '15.8'),
-('10', 'Miguel', 'Andujar', 'NYY', '0', 'http://www.espn.com/mlb/player/_/id/33743', '5.3'),
-('11', 'Gary', 'Sanchez', 'NYY', '0', 'http://www.espn.com/mlb/player/_/id/31095', '5.3'),
+('8', 'Charlie', 'Blackmon', 'COL', '0', 'http://www.espn.com/mlb/player/_/id/31084', '26.3'),
+('9', 'Anthony', 'Rizzo', 'CHC', '0', 'http://www.espn.com/mlb/player/_/id/30782', '21.1'),
+('10', 'Miguel', 'Andujar', 'NYY', '0', 'http://www.espn.com/mlb/player/_/id/33743', '10.5'),
+('11', 'Gary', 'Sanchez', 'NYY', '0', 'http://www.espn.com/mlb/player/_/id/31095', '10.5'),
 ('12', 'Gleyber', 'Torres', 'NYY', '0', 'http://www.espn.com/mlb/player/_/id/33804', '5.3'),
 ('13', 'Matt', 'Olson', 'OAK', '0', 'http://www.espn.com/mlb/player/_/id/32767', '10.5'),
-('14', 'Travis', 'Shaw', 'MIL', '0', 'http://www.espn.com/mlb/player/_/id/32890', '5.3'),
-('15', 'Alex', 'Bregman', 'HOU', '0', 'http://www.espn.com/mlb/player/_/id/34886', '15.8'),
-('16', 'Freddie', 'Freeman', 'ATL', '0', 'http://www.espn.com/mlb/player/_/id/30193', '10.5'),
+('14', 'Travis', 'Shaw', 'MIL', '0', 'http://www.espn.com/mlb/player/_/id/32890', '10.5'),
+('15', 'Alex', 'Bregman', 'HOU', '0', 'http://www.espn.com/mlb/player/_/id/34886', '21.1'),
+('16', 'Freddie', 'Freeman', 'ATL', '0', 'http://www.espn.com/mlb/player/_/id/30193', '15.8'),
 ('17', 'Justin', 'Upton', 'LAA', '0', 'http://www.espn.com/mlb/player/_/id/28841', '5.3'),
 ('18', 'Eloy', 'Jimenez', 'CWS', '0', 'http://www.espn.com/mlb/player/_/id/33867', '5.3'),
-('19', 'Vladimir', 'Guerrero Jr.', 'TOR', '0', 'http://www.espn.com/mlb/player/_/id/35002', '5.3'),
-('20', 'Jason', 'Kipnis', NULL, '0', 'http://www.espn.com/mlb/player/_/id/31007', '0.0'),
-('21', 'Luke', 'Voit', NULL, '0', 'http://www.espn.com/mlb/player/_/id/35201', '0.0'),
-('22', 'Joc', 'Pederson', NULL, '0', 'http://www.espn.com/mlb/player/_/id/31392', '0.0'),
-('23', 'Robinson', 'Cano', NULL, '0', 'http://www.espn.com/mlb/player/_/id/6204', '0.0'),
-('24', 'George', 'Springer', NULL, '0', 'http://www.espn.com/mlb/player/_/id/32078', '0.0');
+('19', 'Vladimir', 'Guerrero Jr.', 'TOR', '0', 'http://www.espn.com/mlb/player/_/id/35002', '10.5'),
+('20', 'Jason', 'Kipnis', 'CLE', '0', 'http://www.espn.com/mlb/player/_/id/31007', '5.3'),
+('21', 'Luke', 'Voit', 'NYY', '1', 'http://www.espn.com/mlb/player/_/id/35201', '10.5'),
+('22', 'Joc', 'Pederson', 'LAD', '2', 'http://www.espn.com/mlb/player/_/id/31392', '5.3'),
+('23', 'Robinson', 'Cano', 'NYM', '1', 'http://www.espn.com/mlb/player/_/id/6204', '5.3'),
+('24', 'George', 'Springer', 'HOU', '1', 'http://www.espn.com/mlb/player/_/id/32078', '5.3');
 
 INSERT INTO `grup` (`id`, `pid`, `player`, `homeRuns`) VALUES ('1', '3', 'Aaron Judge', '0'),
 ('2', '5', 'Joey Gallo', '0'),
@@ -382,7 +391,7 @@ INSERT INTO `kevin` (`id`, `pid`, `player`, `homeRuns`) VALUES ('1', '3', 'Aaron
 ('5', '10', 'Miguel Andujar', '0'),
 ('6', '20', 'Jason Kipnis', '0'),
 ('7', '14', 'Travis Shaw', '0'),
-('8', '21', 'Luke Voit', '0');
+('8', '21', 'Luke Voit', '1');
 
 INSERT INTO `lark` (`id`, `pid`, `player`, `homeRuns`) VALUES ('1', '3', 'Aaron Judge', '0'),
 ('2', '5', 'Joey Gallo', '0'),
@@ -426,8 +435,17 @@ INSERT INTO `par` (`id`, `pid`, `player`, `homeRuns`) VALUES ('1', '1', 'Bryce H
 ('4', '11', 'Christian Yelich', '1'),
 ('5', '2', 'Michael Conforto', '0'),
 ('6', '19', 'Vladimir Guerrero Jr.', '0'),
-('7', '22', 'Joc Pederson', '0'),
-('8', '21', 'Luke Voit', '0');
+('7', '22', 'Joc Pederson', '2'),
+('8', '21', 'Luke Voit', '1');
+
+INSERT INTO `pooch` (`id`, `pid`, `player`, `homeRuns`) VALUES ('1', '3', 'Aaron Judge', '0'),
+('2', '1', 'Nolan Arenado', '0'),
+('3', '6', 'Rhys Hoskins', '1'),
+('4', '5', 'Paul Goldschmidt', '0'),
+('5', '5', 'Cody Bellinger', '1'),
+('6', '15', 'Alex Bregman', '0'),
+('7', '11', 'Gary Sanchez', '0'),
+('8', '9', 'Anthony Rizzo', '0');
 
 INSERT INTO `rabbit` (`id`, `gr`, `color`, `player`, `homeRuns`) VALUES ('1', 'A', '#92d050', 'Khris Davis', '2'),
 ('2', 'B', '#00b0f0', 'Kris Bryant', '1'),
@@ -443,9 +461,9 @@ INSERT INTO `ram` (`id`, `pid`, `player`, `homeRuns`) VALUES ('1', '3', 'Aaron J
 ('3', '1', 'Ronald Acu&#241;a Jr.', '0'),
 ('4', '9', 'Kyle Schwarber', '1'),
 ('5', '5', 'Cody Bellinger', '1'),
-('6', '23', 'Robinson Cano', '0'),
+('6', '23', 'Robinson Cano', '1'),
 ('7', '11', 'Gary Sanchez', '0'),
-('8', '24', 'George Springer', '0');
+('8', '24', 'George Springer', '1');
 
 INSERT INTO `scott` (`id`, `pid`, `player`, `homeRuns`) VALUES ('1', '3', 'Aaron Judge', '0'),
 ('2', '1', 'Nolan Arenado', '0'),
@@ -487,11 +505,11 @@ INSERT INTO `standings` (`id`, `color`, `name`, `homeRuns`, `font`, `code`, `pai
 ('12', '#00ffdc', 'Zippy', '2', '0', 'zippy', '1'),
 ('13', '#8b4513', 'Ariel', '4', '1', 'ariel', '1'),
 ('14', '#add8e6', 'Ant', '0', '0', 'ant', '1'),
-('15', '#ae9be0', 'Kevin A', '0', '0', 'kevin', '1'),
-('16', 'black', 'Davevonte', '0', '1', 'davevonte', '1'),
+('15', '#ae9be0', 'Kevin A', '4', '0', 'kevin', '1'),
+('16', 'black', 'Davevonte', '2', '1', 'davevonte', '1'),
 ('17', 'navy', 'JP', '0', '1', 'pooch', '1'),
-('18', 'orange', 'Par', '0', '0', 'par', '0'),
-('19', 'blue', 'J-Ram', '0', '2', 'ram', '1');
+('18', 'orange', 'Par', '4', '0', 'par', '0'),
+('19', 'blue', 'J-Ram', '4', '2', 'ram', '1');
 
 INSERT INTO `steve` (`id`, `pid`, `player`, `homeRuns`) VALUES ('1', '5', 'JD Martinez', '0'),
 ('2', '1', 'Nolan Arenado', '0'),
@@ -501,24 +519,6 @@ INSERT INTO `steve` (`id`, `pid`, `player`, `homeRuns`) VALUES ('1', '5', 'JD Ma
 ('6', '5', 'Cody Bellinger', '1'),
 ('7', '8', 'Charlie Blackmon', '0'),
 ('8', '7', 'Eugenio Suarez', '0');
-
-INSERT INTO `today` (`player`, `HR`) VALUES ('Khris Davis', '1'),
-('Cody Bellinger', '1'),
-('Edwin Encarnacion', '1'),
-('George Springer', '1'),
-('Mike Moustakas', '1'),
-('Rhys Hoskins', '1'),
-('Wil Myers', '1'),
-('Andrew McCutchen', '1'),
-('Greg Bird', '1'),
-('Maikel Franco', '1'),
-('Robinson Cano', '1'),
-('Jose Altuve', '1'),
-('Kris Bryant', '1'),
-('Javier Baez', '2'),
-('Kyle Schwarber', '1'),
-('Trevor Story', '1'),
-('Christian Yelich', '1');
 
 INSERT INTO `vinny` (`id`, `pid`, `player`, `homeRuns`) VALUES ('1', '4', 'Giancarlo Stanton', '0'),
 ('2', '1', 'Nolan Arenado', '0'),
