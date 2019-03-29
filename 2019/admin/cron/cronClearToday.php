@@ -1,6 +1,6 @@
-#!/usr/bin/php -q
 
 <?php
+	session_start();
 	include_once("../../connect.php");
 	
 	$sql = "delete from today";
