@@ -89,7 +89,7 @@
 	} else {
 		echo "query failed: " . $conn->error . "<br>";
 	}
-*/
+
 	$sql = "insert into groupD (id, firstName, lastName, link) values (13, 'Matt', 'Olson', '".playerSearch($D2)."')";
 	$result = $conn->query($sql);
 	if ($result == true) {
@@ -97,7 +97,7 @@
 	} else {
 		echo "query failed: " . $conn->error . "<br>";
 	}
-/*
+
 	$sql = "insert into groupD (id, firstName, lastName, link) values (11, 'Gary', 'Sanchez', '".playerSearch($D3)."')";
 	$result = $conn->query($sql);
 	if ($result == true) {
@@ -105,7 +105,7 @@
 	} else {
 		echo "query failed: " . $conn->error . "<br>";
 	}
-*/
+
 	$sql = "insert into groupD (id, firstName, lastName, link) values (14, 'Travis', 'Shaw', '".playerSearch($D4)."')";
 	$result = $conn->query($sql);
 	if ($result == true) {
@@ -115,7 +115,7 @@
 	}
 
 	echo "<br> entered new D players<br>";
-
+*/
 
 	$sql = "update " . $person . ", groupA set " . $person . ".pid = groupA.id, " . $person . ".homeRuns = groupA.homeRuns where groupA.player = " . $person . ".player and " . $person . ".id = 1";
 	$result = $conn->query($sql);
