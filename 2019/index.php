@@ -2,7 +2,7 @@
 	session_start();
 	if(!isset($_SESSION['year']) && !isset($_SESSION['page'])) {
 		$_SESSION['year'] = 2019;
-		$_SESSION['page'] = "tot";
+		$_SESSION['page'] = "totals";
 	}
 
 	include("details.php");
@@ -181,8 +181,8 @@
 			} else if ($_SESSION['page'] == "picks") {
 				include('picks.php');
 			} else {
-				//echo '<h1 class="text-center">Please Refresh the Page</h1>';
-				echo '<h1 class="text-center">Site Broked as Fuck, Pls check not now? or something</h1>';
+				echo '<h1 class="text-center">Please Refresh the Page</h1>';
+				//echo '<h1 class="text-center">Site Broked as Fuck, Pls check not now? or something</h1>';
 			}
 			?>
 		</div>
