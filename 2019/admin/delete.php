@@ -5,7 +5,7 @@ include("../connect.php");
 
 $run = false;
 
-if($run){}
+if ( $run ) {
     $sql = "select code from standings";
     $result = $conn->query($sql);
     while($row = $result->fetch_assoc()){
