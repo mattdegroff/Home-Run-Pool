@@ -1,5 +1,5 @@
 <?php
-	include_once("connect.php");
+	include_once("../connect.php");
 	global $conn;
 	
 	if(isset($_POST['Submit'])){
