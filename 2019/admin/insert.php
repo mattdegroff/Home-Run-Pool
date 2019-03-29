@@ -8,18 +8,18 @@
 
 	$run = true;
 
-	//next D id is 15
+	//next D id is 17
 	//Ronald Acu&#241;a Jr.
 
-	$person = "grup";
-	$A = "Aaron Judge";
-	$B = "Joey Gallo";
-	$C1 = "Rhys Hoskins";
+	$person = "sorkin";
+	$A = "Mike Trout";
+	$B = "Nolan Arenado";
+	$C1 = "Francisco Lindor";
 	$C2 = "Trevor Story";
-	$D1 = "Jesus Aguilar";
-	$D2 = "Cody Bellinger";
-	$D3 = "Mike Moustakas";
-	$D4 = "Max Muncy";
+	$D1 = "Alex Bregman";
+	$D2 = "Michael Conforto";
+	$D3 = "Freddie Freeman";
+	$D4 = "Anthony Rizzo";
 
 	if ($run) {
 	$sql = "insert into " . $person . " (id, player) values (1, '" . $A . "')";
@@ -81,15 +81,15 @@
 
 	echo "<br>entered into " . $person . "<br><br>";
 
-/*
-	$sql = "insert into groupD (id, firstName, lastName, link) values (10, 'Miguel', 'Andujar', '".playerSearch($D1)."')";
+
+	$sql = "insert into groupD (id, firstName, lastName, link) values (15, 'Alex', 'Bregman', '".playerSearch($D1)."')";
 	$result = $conn->query($sql);
 	if ($result == true) {
 		echo "Query sent<br>";
 	} else {
 		echo "query failed: " . $conn->error . "<br>";
 	}
-
+/*
 	$sql = "insert into groupD (id, firstName, lastName, link) values (13, 'Matt', 'Olson', '".playerSearch($D2)."')";
 	$result = $conn->query($sql);
 	if ($result == true) {
@@ -97,25 +97,25 @@
 	} else {
 		echo "query failed: " . $conn->error . "<br>";
 	}
-
-	$sql = "insert into groupD (id, firstName, lastName, link) values (11, 'Gary', 'Sanchez', '".playerSearch($D3)."')";
-	$result = $conn->query($sql);
-	if ($result == true) {
-		echo "Query sent<br>";
-	} else {
-		echo "query failed: " . $conn->error . "<br>";
-	}
-
-	$sql = "insert into groupD (id, firstName, lastName, link) values (14, 'Travis', 'Shaw', '".playerSearch($D4)."')";
-	$result = $conn->query($sql);
-	if ($result == true) {
-		echo "Query sent<br>";
-	} else {
-		echo "query failed: " . $conn->error . "<br>";
-	}
-
-	echo "<br> entered new D players<br>";
 */
+	$sql = "insert into groupD (id, firstName, lastName, link) values (16, 'Freddie', 'Freeman', '".playerSearch($D3)."')";
+	$result = $conn->query($sql);
+	if ($result == true) {
+		echo "Query sent<br>";
+	} else {
+		echo "query failed: " . $conn->error . "<br>";
+	}
+/*
+	$sql = "insert into groupD (id, firstName, lastName, link) values (17, '', 'Shaw', '".playerSearch($D4)."')";
+	$result = $conn->query($sql);
+	if ($result == true) {
+		echo "Query sent<br>";
+	} else {
+		echo "query failed: " . $conn->error . "<br>";
+	}
+*/
+	echo "<br> entered new D players<br>";
+
 
 	$sql = "update " . $person . ", groupA set " . $person . ".pid = groupA.id, " . $person . ".homeRuns = groupA.homeRuns where groupA.player = " . $person . ".player and " . $person . ".id = 1";
 	$result = $conn->query($sql);
