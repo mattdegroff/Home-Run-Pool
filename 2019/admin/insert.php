@@ -8,18 +8,18 @@
 
 	$run = true;
 
-	//next D id is 22
+	//next D id is 23
 	//Ronald Acu&#241;a Jr.
 
-	$person = "pooch";
-	$A = "Aaron Judge";
+	$person = "par";
+	$A = "Bryce Harper";
 	$B = "Nolan Arenado";
-	$C1 = "Rhys Hoskins";
-	$C2 = "Paul Goldschmidt";
-	$D1 = "Cody Bellinger";
-	$D2 = "Alex Bregman";
-	$D3 = "Gary Sanchez";
-	$D4 = "Anthony Rizzo";
+	$C1 = "Paul Goldschmidt";
+	$C2 = "Christian Yelich";
+	$D1 = "Michael Conforto";
+	$D2 = "Vladimir Guerrero Jr.";
+	$D3 = "Joc Pederson";
+	$D4 = "Luke Voit";
 
 	if ($run) {
 	$sql = "insert into " . $person . " (id, player) values (1, '" . $A . "')";
@@ -97,15 +97,15 @@
 	} else {
 		echo "query failed: " . $conn->error . "<br>";
 	}
-
-	$sql = "insert into groupD (id, firstName, lastName, link) values (16, 'Freddie', 'Freeman', '".playerSearch($D3)."')";
+*/
+	$sql = "insert into groupD (id, firstName, lastName, link) values (22, 'Joc', 'Pederson', '".playerSearch($D3)."')";
 	$result = $conn->query($sql);
 	if ($result == true) {
 		echo "Query sent<br>";
 	} else {
 		echo "query failed: " . $conn->error . "<br>";
 	}
-
+/*
 	$sql = "insert into groupD (id, firstName, lastName, link) values (21, 'Luke', 'Voit', '".playerSearch($D4)."')";
 	$result = $conn->query($sql);
 	if ($result == true) {
