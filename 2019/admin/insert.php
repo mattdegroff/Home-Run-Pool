@@ -11,14 +11,14 @@
 	//next D id is 22
 	//Ronald Acu&#241;a Jr.
 
-	$person = "davevonte";
-	$A = "Khris Davis";
-	$B = "Mookie Betts";
-	$C1 = "Ronald Acu&#241;a Jr.";
+	$person = "pooch";
+	$A = "Aaron Judge";
+	$B = "Nolan Arenado";
+	$C1 = "Rhys Hoskins";
 	$C2 = "Paul Goldschmidt";
-	$D1 = "Charlie Blackmon";
+	$D1 = "Cody Bellinger";
 	$D2 = "Alex Bregman";
-	$D3 = "Freddie Freeman";
+	$D3 = "Gary Sanchez";
 	$D4 = "Anthony Rizzo";
 
 	if ($run) {
