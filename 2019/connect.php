@@ -13,7 +13,7 @@ if ($year == 2015) {
 	$host_name  = "50.87.144.185";
 	$database   = "mdegroff_2019";
 	$user_name  = "mdegroff_1";
-	$password   = "UVMI3Kr4";
+	$password   = "12345";
 }
 
 if( $year != 2019) {
