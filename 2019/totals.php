@@ -1,5 +1,4 @@
 	<?php
-		session_start();
 		include("details.php");
 		include("update1.php");
 	?>
