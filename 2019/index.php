@@ -6,7 +6,6 @@
 	}
 
 	include("details.php");
-	//include("/admin/cron/cron.php");
 ?>
 
 <html>
