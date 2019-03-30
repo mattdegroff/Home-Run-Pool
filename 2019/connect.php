@@ -34,8 +34,8 @@ if( $year != 2019) {
 } else {
 	$conn = mysqli_connect($host_name, $user_name, $password, $database);
 
-	if ($conn->connect_error) {
-		echo '<script>console.log("Connection failed: "' . $conn->connect_error . '");</script>';
+	if (!$conn) {
+		echo '<script>console.log("Connection failed: "' . mysqli_connect_errno() . '");</script>';
 	}
 	else {
 		echo '<script>console.log("Connection Established");</script>';
