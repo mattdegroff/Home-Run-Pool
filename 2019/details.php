@@ -1,5 +1,4 @@
 <?php
-	session_start();
 	include("connect.php");
     if ($_SESSION['year'] == 2015){
 		$colorA = 'red';

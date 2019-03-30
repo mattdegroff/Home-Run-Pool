@@ -1,5 +1,4 @@
 <?php
-session_start();
 $year = $_SESSION['year'];
 
 if ($year == 2015) {
