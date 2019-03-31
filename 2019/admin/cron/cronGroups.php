@@ -1,9 +1,10 @@
-#!/usr/bin/php -q
-
 <?php
-	include_once("../connect.php");
-	include "../update.php";
-	
+	session_start();
+	$_SESSION['year'] = 2019;
+
+	include("../../connect.php");
+	include("../../update.php");
+
 	$start = microtime(true);
 	$sql = "select code from standings";
 	if ($result = $conn->query($sql)) {
@@ -11,10 +12,7 @@
 			loadHR($row['code']);
 		}
 	}
-	$file = 'cronLog.txt';
 	echo 'groups updated<br>';
-	$date = "[ ".date('Y-m-d H:i:s')." ]";
-	file_put_contents($file, $date." groups updated\n", FILE_APPEND);
 	$end = microtime(true);
 	$time = $end-$start;
 	echo "time: ".$time;
