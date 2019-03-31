@@ -415,7 +415,7 @@
 				$sql = "select code from standings";
 					if ($result = $conn->query($sql)) {
 						while($row = $result->fetch_assoc()){
-							//loadHR($row['code']);
+							loadHR($row['code']);
 						}
 					}
 				echo "groups updated<br>";
@@ -425,10 +425,10 @@
 				echo "rabbit updated<br>";
 				//playing();
 				//echo "playing updated<br>";
-				//HRTodayA();
-				//HRTodayB();
-				//HRTodayC();
-				//HRTodayD();
+				HRTodayA();
+				HRTodayB();
+				HRTodayC();
+				HRTodayD();
 				echo "hr today updated";
 				$end = microtime(true);
 				$time = $end-$start;
