@@ -1,6 +1,5 @@
 <?php
 $year = $_SESSION['year'];
-echo $year;
 
 if ($year == 2015) {
 	$connect_url = "CLEARDB_DATABASE_URL";
