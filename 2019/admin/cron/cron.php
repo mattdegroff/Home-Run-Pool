@@ -7,5 +7,5 @@
 	include("../../connect.php");
 	include("../../update.php");
 
-	//update();
+	update();
 ?>
