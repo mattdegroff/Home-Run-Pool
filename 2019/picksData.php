@@ -7,8 +7,6 @@
 		}
 		include("details.php");
 		include_once("update1.php");
-
-		print_r($_SESSION);
 	?>
 
 <h1 class="text-center"><?php echo substr($_GET["id"],0,4); ?></h1>

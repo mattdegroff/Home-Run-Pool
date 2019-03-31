@@ -366,13 +366,13 @@
 				$char = '';
 				for($i = 1; $i <= 8; $i++) {
 					if ($i == 1) {
-						$char = 'A';
+						$char = 'a';
 					} else if ($i == 2) {
-						$char = 'B';
+						$char = 'b';
 					} else if ($i == 3 or $i == 4) {
-						$char = 'C';
+						$char = 'c';
 					} else {
-						$char = 'D';
+						$char = 'd';
 					}
 
 					$sql = "select pid from ".$table." where id=".$i;
@@ -780,7 +780,7 @@
 			function HRTodayA() {
 				global $conn;
 
-				for ($i = 1; $i <= 7; $i++) {
+				for ($i = 1; $i <= $countA; $i++) {
 					$zero = 0;
 					$sql = "select player, link from groupa where id=".$i;
 					$result = $conn->query($sql);
@@ -840,7 +840,7 @@
 			function HRTodayB() {
 				global $conn;
 
-				for ($i = 1; $i <= 11; $i++) {
+				for ($i = 1; $i <= $countB; $i++) {
 					$zero = 0;
 					$sql = "select player, link from groupb where id=".$i;
 					$result = $conn->query($sql);
@@ -900,7 +900,7 @@
 			function HRTodayC() {
 				global $conn;
 
-				for ($i = 1; $i <= 15; $i++) {
+				for ($i = 1; $i <= $countC; $i++) {
 					$zero = 0;
 					$sql = "select player, link from groupc where id=".$i;
 					$result = $conn->query($sql);

@@ -3,7 +3,6 @@
 		$_SESSION['year'] = 2019;
 		$_SESSION['page'] = "picks";
 	}
-	print_r($_SESSION);
 ?>
 
 <html>
