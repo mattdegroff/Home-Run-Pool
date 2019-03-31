@@ -51,7 +51,7 @@
 														<div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 text-center"><b>HR</b></div>
 													</div>
 												<?php
-													if (new DateTime() > $groupDead) {
+													if (new DateTime() > $groupdead) {
 														$sql = "SELECT player FROM groupa ORDER BY homeRuns DESC LIMIT 1";
 																$result = $conn->query($sql);
 																
@@ -61,7 +61,7 @@
 																	}
 																}
 
-															$sql = "select player, team, homeRuns, link from groupA order by id";
+															$sql = "select player, team, homeRuns, link from groupa order by id";
 														$result = $conn->query($sql);
 														if ($result->num_rows > 0) {
 															while($row = $result->fetch_assoc()){
@@ -99,7 +99,7 @@
 													<div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 text-center"><b>HR</b></div>
 												</div>
 											<?php
-												if (new DateTime() > $groupDead) {
+												if (new DateTime() > $groupdead) {
 													$sql = "SELECT player FROM groupb ORDER BY homeRuns DESC LIMIT 1";
 																$result = $conn->query($sql);
 																if ($result->num_rows > 0) {
@@ -108,7 +108,7 @@
 																	}
 																}
 
-														$sql = "select player, team, homeRuns, link from groupB order by id";
+														$sql = "select player, team, homeRuns, link from groupb order by id";
 													$result = $conn->query($sql);
 													if ($result->num_rows > 0) {
 														while($row = $result->fetch_assoc()){
@@ -146,7 +146,7 @@
 													<div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 text-center"><b>HR</b></div>
 												</div>
 											<?php
-												if (new DateTime() > $groupDead) {
+												if (new DateTime() > $groupdead) {
 													$sql = "SELECT player, homeRuns FROM groupc ORDER BY homeRuns DESC LIMIT 1";
 																$result = $conn->query($sql);
 																if ($result->num_rows > 0) {
@@ -154,7 +154,7 @@
 																		$player = $row['player'];
 																	}
 																}
-														$sql = "select player, team, homeRuns, link from groupC order by id";
+														$sql = "select player, team, homeRuns, link from groupc order by id";
 													$result = $conn->query($sql);
 													if ($result->num_rows > 0) {
 														while($row = $result->fetch_assoc()){
@@ -192,7 +192,7 @@
 													<div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 text-center"><b>HR</b></div>
 												</div>
 											<?php
-												if (new DateTime() > $groupDead) {
+												if (new DateTime() > $groupdead) {
 
 													if (new DateTime() > $deadline) {
 														$player = '';
@@ -204,7 +204,7 @@
 																	}
 																}
 
-														$sql = "select firstName, lastName, team, homeRuns, link from groupD order by lastName";
+														$sql = "select firstName, lastName, team, homeRuns, link from groupd order by lastName";
 														$result = $conn->query($sql);
 														if ($result->num_rows > 0) {
 															while($row = $result->fetch_assoc()){
