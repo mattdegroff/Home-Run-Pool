@@ -51,7 +51,7 @@
 														<div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 text-center"><b>HR</b></div>
 													</div>
 												<?php
-													if (new DateTime() > $groupdead) {
+													if (new DateTime() > $groupDead) {
 														$sql = "SELECT player FROM groupa ORDER BY homeRuns DESC LIMIT 1";
 																$result = $conn->query($sql);
 																
@@ -99,7 +99,7 @@
 													<div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 text-center"><b>HR</b></div>
 												</div>
 											<?php
-												if (new DateTime() > $groupdead) {
+												if (new DateTime() > $groupDead) {
 													$sql = "SELECT player FROM groupb ORDER BY homeRuns DESC LIMIT 1";
 																$result = $conn->query($sql);
 																if ($result->num_rows > 0) {
@@ -146,7 +146,7 @@
 													<div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 text-center"><b>HR</b></div>
 												</div>
 											<?php
-												if (new DateTime() > $groupdead) {
+												if (new DateTime() > $groupDead) {
 													$sql = "SELECT player, homeRuns FROM groupc ORDER BY homeRuns DESC LIMIT 1";
 																$result = $conn->query($sql);
 																if ($result->num_rows > 0) {
@@ -192,7 +192,7 @@
 													<div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 text-center"><b>HR</b></div>
 												</div>
 											<?php
-												if (new DateTime() > $groupdead) {
+												if (new DateTime() > $groupDead) {
 
 													if (new DateTime() > $deadline) {
 														$player = '';
