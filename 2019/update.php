@@ -160,7 +160,7 @@
 				global $year, $countA;
 				for ($i = 1; $i <= $countA; $i++) {
 					$zero = 0;
-					$sql = "select link from groupA where id=".$i;
+					$sql = "select link from groupa where id=".$i;
 					$result = $conn->query($sql);
 					if ($result == true) {
 						echo "Query sent<br>";
@@ -178,7 +178,7 @@
 					$len = strlen($scan)+111;
 					$pos = strpos($str, $scan);
 					if ($pos == false) {
-						$sql = "UPDATE groupA SET homeRuns=0 WHERE id=".$i;
+						$sql = "UPDATE groupa SET homeRuns=0 WHERE id=".$i;
 						$conn->query($sql);
 						echo "0";
 						continue;
@@ -203,7 +203,7 @@
 					}
 					$teamABR = convertTeam($team);
 
-					$sql = "UPDATE groupA SET homeRuns=" . $out . ", team='" . $teamABR . "' WHERE id=".$i;
+					$sql = "UPDATE groupa SET homeRuns=" . $out . ", team='" . $teamABR . "' WHERE id=".$i;
 					$conn->query($sql);
 				}
 			}
@@ -213,7 +213,7 @@
 				global $year, $countB;
 				for ($i = 1; $i <= $countB; $i++) {
 					$zero = 0;
-					$sql = "select link from groupB where id=".$i;
+					$sql = "select link from groupb where id=".$i;
 					$result = $conn->query($sql);
 					if ($result->num_rows > 0) {
 						while($row = $result->fetch_assoc()){
@@ -227,7 +227,7 @@
 					$len = strlen($scan)+111;
 					$pos = strpos($str, $scan);
 					if ($pos == false) {
-						$sql = "UPDATE groupB SET homeRuns=0 WHERE id=".$i;
+						$sql = "UPDATE groupb SET homeRuns=0 WHERE id=".$i;
 						$conn->query($sql);
 						echo "0";
 						continue;
@@ -253,7 +253,7 @@
 
 					$teamABR = convertTeam($team);
 
-					$sql = "UPDATE groupB SET homeRuns=" . $out . ", team='" . $teamABR . "' WHERE id=".$i;
+					$sql = "UPDATE groupb SET homeRuns=" . $out . ", team='" . $teamABR . "' WHERE id=".$i;
 					$conn->query($sql);
 				}
 			}
@@ -263,7 +263,7 @@
 				global $year, $countC;
 				for ($i = 1; $i <= $countC; $i++) {
 					$zero = 0;
-					$sql = "select link from groupC where id=".$i;
+					$sql = "select link from groupc where id=".$i;
 					$result = $conn->query($sql);
 					if ($result->num_rows > 0) {
 						while($row = $result->fetch_assoc()){
@@ -277,7 +277,7 @@
 					$len = strlen($scan)+111;
 					$pos = strpos($str, $scan);
 					if ($pos == false) {
-						$sql = "UPDATE groupC SET homeRuns=0 WHERE id=".$i;
+						$sql = "UPDATE groupc SET homeRuns=0 WHERE id=".$i;
 						$conn->query($sql);
 						echo "0";
 						continue;
@@ -303,7 +303,7 @@
 
 					$teamABR = convertTeam($team);
 
-					$sql = "UPDATE groupC SET homeRuns=" . $out . ", team='" . $teamABR . "' WHERE id=".$i;
+					$sql = "UPDATE groupc SET homeRuns=" . $out . ", team='" . $teamABR . "' WHERE id=".$i;
 					$conn->query($sql);
 				}
 			}
@@ -311,7 +311,7 @@
 			function D() {
 				global $conn;
 				global $year;
-				$sql = "select max(id) from groupD";
+				$sql = "select max(id) from groupd";
 				$result = $conn->query($sql);
 				if ($result->num_rows > 0) {
 					while($row = $result->fetch_assoc()){
@@ -320,7 +320,7 @@
 				}
 				for ($i = 1; $i <= $max; $i++) {
 					$zero = 0;
-					$sql = "select link from groupD where id=".$i;
+					$sql = "select link from groupd where id=".$i;
 					$result = $conn->query($sql);
 					if ($result->num_rows > 0) {
 						while($row = $result->fetch_assoc()){
@@ -334,7 +334,7 @@
 					$len = strlen($scan)+111;
 					$pos = strpos($str, $scan);
 					if ($pos == false) {
-						$sql = "UPDATE groupD SET homeRuns=0 WHERE id=".$i;
+						$sql = "UPDATE groupd SET homeRuns=0 WHERE id=".$i;
 						$conn->query($sql);
 						echo "0";
 						continue;
@@ -361,7 +361,7 @@
 
 					$teamABR = convertTeam($team);
 
-					$sql = "UPDATE groupD SET homeRuns=" . $out . ", team='" . $teamABR . "' WHERE id=".$i;
+					$sql = "UPDATE groupd SET homeRuns=" . $out . ", team='" . $teamABR . "' WHERE id=".$i;
 					$conn->query($sql);
 				}
 			}
@@ -633,7 +633,7 @@
 						print $hr;
 
 						$match = 1;
-						$sql = "select player from groupA";
+						$sql = "select player from groupa";
 						$result = $conn->query($sql);
 						if ($result->num_rows > 0) {
 							while($row = $result->fetch_assoc()){
@@ -645,7 +645,7 @@
 						}
 
 						if ($match === 1) {
-							$sql = "select player from groupB";
+							$sql = "select player from groupb";
 							$result = $conn->query($sql);
 							if ($result->num_rows > 0) {
 								while($row = $result->fetch_assoc()){
@@ -658,7 +658,7 @@
 						}
 
 						if ($match === 1) {
-							$sql = "select player from groupC";
+							$sql = "select player from groupc";
 							$result = $conn->query($sql);
 							if ($result->num_rows > 0) {
 								while($row = $result->fetch_assoc()){
@@ -692,7 +692,7 @@
 			function loadRabbit() {
 				global $conn;
 
-				$sql = "select player, homeRuns from groupA order by homeRuns desc limit 1";
+				$sql = "select player, homeRuns from groupa order by homeRuns desc limit 1";
 				$result = $conn->query($sql) or die("failed!" . $conn->error);
 				if ($result->num_rows > 0) {
 					while($row = $result->fetch_assoc()){
@@ -701,7 +701,7 @@
 					}
 				}
 
-				$sql = "select player, homeRuns from groupB order by homeRuns desc limit 1";
+				$sql = "select player, homeRuns from groupb order by homeRuns desc limit 1";
 				$result = $conn->query($sql);
 				if ($result->num_rows > 0) {
 					while($row = $result->fetch_assoc()){
@@ -710,7 +710,7 @@
 					}
 				}
 
-				$sql = "select player, homeRuns from groupC order by homeRuns desc, player limit 1";
+				$sql = "select player, homeRuns from groupc order by homeRuns desc, player limit 1";
 				$result = $conn->query($sql);
 				if ($result->num_rows > 0) {
 					while($row = $result->fetch_assoc()){
@@ -719,7 +719,7 @@
 					}
 				}
 
-				$sql = "select player, homeRuns from groupC order by homeRuns desc, player limit 1 offset 1";
+				$sql = "select player, homeRuns from groupc order by homeRuns desc, player limit 1 offset 1";
 				$result = $conn->query($sql);
 				if ($result->num_rows > 0) {
 					while($row = $result->fetch_assoc()){
@@ -787,7 +787,7 @@
 
 				for ($i = 1; $i <= 7; $i++) {
 					$zero = 0;
-					$sql = "select player, link from groupA where id=".$i;
+					$sql = "select player, link from groupa where id=".$i;
 					$result = $conn->query($sql);
 					if ($result->num_rows > 0) {
 						while($row = $result->fetch_assoc()){
@@ -847,7 +847,7 @@
 
 				for ($i = 1; $i <= 11; $i++) {
 					$zero = 0;
-					$sql = "select player, link from groupB where id=".$i;
+					$sql = "select player, link from groupb where id=".$i;
 					$result = $conn->query($sql);
 					if ($result->num_rows > 0) {
 						while($row = $result->fetch_assoc()){
@@ -907,7 +907,7 @@
 
 				for ($i = 1; $i <= 15; $i++) {
 					$zero = 0;
-					$sql = "select player, link from groupC where id=".$i;
+					$sql = "select player, link from groupc where id=".$i;
 					$result = $conn->query($sql);
 					if ($result->num_rows > 0) {
 						while($row = $result->fetch_assoc()){
@@ -965,7 +965,7 @@
 			function HRTodayD() {
 				global $conn;
 
-				$sql = "select max(id) from groupD";
+				$sql = "select max(id) from groupd";
 				$result = $conn->query($sql);
 				if ($result->num_rows > 0) {
 					while($row = $result->fetch_assoc()){
@@ -974,7 +974,7 @@
 				}
 				for ($i = 1; $i <=$max; $i++) {
 					$zero = 0;
-					$sql = "select firstName, lastName, link from groupD where id=".$i;
+					$sql = "select firstName, lastName, link from groupd where id=".$i;
 					$result = $conn->query($sql);
 					if ($result->num_rows > 0) {
 						while($row = $result->fetch_assoc()){
@@ -1038,31 +1038,31 @@
 					die('Invalid querydel: ' . mysqli_error());
 				}
 
-				$sql="update groupA set inning=''";
+				$sql="update groupa set inning=''";
 				$result = mysqli_query($conn, $sql);
 				if (!$result) {
 					die('Invalid querydel: ' . mysqli_error());
 				}
 
-				$sql="update groupB set inning=''";
+				$sql="update groupb set inning=''";
 				$result = mysqli_query($conn, $sql);
 				if (!$result) {
 					die('Invalid querydel: ' . mysqli_error());
 				}
 
-				$sql="update groupC set inning=''";
+				$sql="update groupc set inning=''";
 				$result = mysqli_query($conn, $sql);
 				if (!$result) {
 					die('Invalid querydel: ' . mysqli_error());
 				}
 
-				$sql="update groupD set inning=''";
+				$sql="update groupd set inning=''";
 				$result = mysqli_query($conn, $sql);
 				if (!$result) {
 					die('Invalid querydel: ' . mysqli_error());
 				}
 
-				$sql = "select player, link from groupA";
+				$sql = "select player, link from groupa";
 				$result = mysqli_query($conn, $sql);
 				if (!$result) {
 					die('Invalid queryA: ' . mysqli_error());
@@ -1086,7 +1086,7 @@
 					}
 				}
 
-				$sql = "select player, link from groupB";
+				$sql = "select player, link from groupb";
 				$result = mysqli_query($conn, $sql);
 				if (!$result) {
 					die('Invalid queryB: ' . mysqli_error());
@@ -1110,7 +1110,7 @@
 					}
 				}
 
-				$sql = "select player, link from groupC";
+				$sql = "select player, link from groupc";
 				$result = mysqli_query($conn, $sql);
 				if (!$result) {
 					die('Invalid queryC: ' . mysqli_error());
@@ -1134,7 +1134,7 @@
 					}
 				}
 
-				$sql = "select firstName, lastName, link from groupD";
+				$sql = "select firstName, lastName, link from groupd";
 				$result = mysqli_query($conn, $sql);
 				if (!$result) {
 					die('Invalid queryD: ' . mysqli_error());
@@ -1176,7 +1176,7 @@
 					if ($i < $a) {
 					//echo $inning[$i];
 					//echo $play[$i]."<br>";
-					$sql = "update groupA set inning='".$inning[$i]."' where player='".$play[$i]."'";
+					$sql = "update groupa set inning='".$inning[$i]."' where player='".$play[$i]."'";
 					$result = mysqli_query($conn, $sql);
 					if (!$result) {
 						die('Invalid queryA1: ' . mysqli_error());
@@ -1186,7 +1186,7 @@
 					if ($i >= $a && $i < ($a+$b)) {
 					//echo $inning[$i];
 					//echo $play[$i]."<br>";
-					$sql = "update groupB set inning='".$inning[$i]."' where player='".$play[$i]."'";
+					$sql = "update groupb set inning='".$inning[$i]."' where player='".$play[$i]."'";
 					$result = mysqli_query($conn, $sql);
 					if (!$result) {
 						die('Invalid queryB1: ' . mysqli_error());
@@ -1196,7 +1196,7 @@
 				if ($i >= ($a+$b) && $i < ($a+$b+$c)) {
 					//echo $inning[$i];
 					//echo $play[$i]."<br>";
-					$sql = "update groupC set inning='".$inning[$i]."' where player='".$play[$i]."'";
+					$sql = "update groupc set inning='".$inning[$i]."' where player='".$play[$i]."'";
 					$result = mysqli_query($conn, $sql);
 					if (!$result) {
 						die('Invalid queryC1: ' . mysqli_error());
@@ -1208,7 +1208,7 @@
 					//echo $play[$i];
 					//echo $i-($a+$b+$c);
 					//echo $D[$i-($a+$b+$c)]."<br>";
-					$sql = "update groupD set inning='".$inning[$i]."' where lastName='".$D[$i-($a+$b+$c)]."'";
+					$sql = "update groupd set inning='".$inning[$i]."' where lastName='".$D[$i-($a+$b+$c)]."'";
 					$result = mysqli_query($conn, $sql);
 					if (!$result) {
 						die('Invalid queryD1: ' . mysqli_error());
@@ -1256,7 +1256,7 @@
 			}
 		}
 
-		$sql = "select max(id) from groupA";
+		$sql = "select max(id) from groupa";
 		$result = $conn->query($sql);
 		if ($result->num_rows > 0) {
 			while($row = $result->fetch_assoc()){
@@ -1268,7 +1268,7 @@
 
 		for ($i=1; $i <= $max; $i++) {
 			$count = 0;
-			$sql = "select player from groupA where id=".$i;
+			$sql = "select player from groupa where id=".$i;
 			$result = $conn->query($sql);
 			if ($result->num_rows > 0) {
 				while($row = $result->fetch_assoc()){
@@ -1285,7 +1285,7 @@
 			}
 			$percent = round(($count/$maxGroups)*100, 1);
 
-			$sql = "update groupA set picks=".$percent." where id=".$i;
+			$sql = "update groupa set picks=".$percent." where id=".$i;
 			$result = $conn->query($sql);
 		}
 	}
@@ -1300,7 +1300,7 @@
 			}
 		}
 
-		$sql = "select max(id) from groupB";
+		$sql = "select max(id) from groupb";
 		$result = $conn->query($sql);
 		if ($result->num_rows > 0) {
 			while($row = $result->fetch_assoc()){
@@ -1311,7 +1311,7 @@
 		$union = unionKey();
 
 		for ($i=1; $i <= $max; $i++) {
-			$sql = "select player from groupB where id=".$i;
+			$sql = "select player from groupb where id=".$i;
 			$result = $conn->query($sql);
 			if ($result->num_rows > 0) {
 				while($row = $result->fetch_assoc()){
@@ -1328,7 +1328,7 @@
 			}
 			$percent = round(($count/$maxGroups)*100, 1);
 
-			$sql = "update groupB set picks=".$percent." where id=".$i;
+			$sql = "update groupb set picks=".$percent." where id=".$i;
 			$result = $conn->query($sql);
 		}
 	}
@@ -1343,7 +1343,7 @@
 			}
 		}
 
-		$sql = "select max(id) from groupC";
+		$sql = "select max(id) from groupc";
 		$result = $conn->query($sql);
 		if ($result->num_rows > 0) {
 			while($row = $result->fetch_assoc()){
@@ -1354,7 +1354,7 @@
 		$union = unionKey();
 
 		for ($i=1; $i <= $max; $i++) {
-			$sql = "select player from groupC where id=".$i;
+			$sql = "select player from groupc where id=".$i;
 			$result = $conn->query($sql);
 			if ($result->num_rows > 0) {
 				while($row = $result->fetch_assoc()){
@@ -1371,7 +1371,7 @@
 			}
 			$percent = round((($count/$maxGroups)*100), 1);
 
-			$sql = "update groupC set picks=".$percent." where id=".$i;
+			$sql = "update groupc set picks=".$percent." where id=".$i;
 			$result = $conn->query($sql);
 		}
 	}
@@ -1386,7 +1386,7 @@
 			}
 		}
 
-		$sql = "select max(id) from groupD";
+		$sql = "select max(id) from groupd";
 		$result = $conn->query($sql);
 		if ($result->num_rows > 0) {
 			while($row = $result->fetch_assoc()){
@@ -1397,7 +1397,7 @@
 		$union = unionKey();
 
 		for ($i=1; $i <= $max; $i++) {
-			$sql = "select firstName, lastName from groupD where id=".$i;
+			$sql = "select firstName, lastName from groupd where id=".$i;
 			$result = $conn->query($sql);
 			if ($result->num_rows > 0) {
 				while($row = $result->fetch_assoc()){
@@ -1414,7 +1414,7 @@
 			}
 			$percent = round((($count/$maxGroups)*100), 1);
 
-			$sql = "update groupD set picks=".$percent." where id=".$i;
+			$sql = "update groupd set picks=".$percent." where id=".$i;
 			$result = $conn->query($sql);
 		}
 	}
