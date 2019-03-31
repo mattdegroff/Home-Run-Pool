@@ -162,6 +162,11 @@
 					$zero = 0;
 					$sql = "select link from groupA where id=".$i;
 					$result = $conn->query($sql);
+					if ($result == true) {
+						echo "Query sent<br>";
+					} else {
+						echo "query failed: " . $conn->error . "<br>";
+					}
 					if ($result->num_rows > 0) {
 						while($row = $result->fetch_assoc()){
 							$link = $row['link'];
