@@ -14,14 +14,14 @@
 					<div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 text-center">%</div>
 				</div>
 				<?php
-				$sql = "SELECT player, homeRuns FROM groupA ORDER BY homeRuns DESC LIMIT 1";
+				$sql = "SELECT player, homeRuns FROM groupa ORDER BY homeRuns DESC LIMIT 1";
 							$result = $conn->query($sql);
 							if ($result->num_rows > 0) {
 								while($row = $result->fetch_assoc()){
 									$player = $row['player'];
 								}
 							}
-					$sql = "select player, team, picks, link from groupA order by id";
+					$sql = "select player, team, picks, link from groupa order by id";
 				$result = $conn->query($sql);
 				if ($result->num_rows > 0) {
 					while($row = $result->fetch_assoc()){
@@ -43,7 +43,7 @@
 					}
 				}
 
-				$sql = "select sum(picks) from groupA";
+				$sql = "select sum(picks) from groupa";
 			$result = $conn->query($sql);
 			if ($result->num_rows > 0) {
 				while($row = $result->fetch_assoc()){
@@ -63,14 +63,14 @@
 					<div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 text-center">%</div>
 				</div>
 				<?php
-				$sql = "SELECT player, homeRuns FROM groupB ORDER BY homeRuns DESC LIMIT 1";
+				$sql = "SELECT player, homeRuns FROM groupb ORDER BY homeRuns DESC LIMIT 1";
 							$result = $conn->query($sql);
 							if ($result->num_rows > 0) {
 								while($row = $result->fetch_assoc()){
 									$player = $row['player'];
 								}
 							}
-					$sql = "select player, team, picks, link from groupB order by id";
+					$sql = "select player, team, picks, link from groupb order by id";
 				$result = $conn->query($sql);
 				if ($result->num_rows > 0) {
 					while($row = $result->fetch_assoc()){
@@ -92,7 +92,7 @@
 					}
 				}
 
-				$sql = "select sum(picks) from groupB";
+				$sql = "select sum(picks) from groupb";
 			$result = $conn->query($sql);
 			if ($result->num_rows > 0) {
 				while($row = $result->fetch_assoc()){
@@ -111,14 +111,14 @@
 					<div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 text-center">%</div>
 				</div>
 				<?php
-				$sql = "SELECT player, homeRuns FROM groupC ORDER BY homeRuns DESC LIMIT 1";
+				$sql = "SELECT player, homeRuns FROM groupc ORDER BY homeRuns DESC LIMIT 1";
 							$result = $conn->query($sql);
 							if ($result->num_rows > 0) {
 								while($row = $result->fetch_assoc()){
 									$player = $row['player'];
 								}
 							}
-					$sql = "select player, team, picks, link from groupC order by id";
+					$sql = "select player, team, picks, link from groupc order by id";
 				$result = $conn->query($sql);
 				if ($result->num_rows > 0) {
 					while($row = $result->fetch_assoc()){
@@ -140,7 +140,7 @@
 					}
 				}
 
-				$sql = "select sum(picks) from groupC";
+				$sql = "select sum(picks) from groupc";
 			$result = $conn->query($sql);
 			if ($result->num_rows > 0) {
 				while($row = $result->fetch_assoc()){
@@ -160,7 +160,7 @@
 				</div>
 				<?php
 				$player = '';
-				$sql = "SELECT firstName, lastName FROM groupD ORDER BY homeRuns DESC LIMIT 1";
+				$sql = "SELECT firstName, lastName FROM groupd ORDER BY homeRuns DESC LIMIT 1";
 						$result = $conn->query($sql);
 						if ($result->num_rows > 0) {
 							while($row = $result->fetch_assoc()){
@@ -168,7 +168,7 @@
 							}
 						}
 
-					$sql = "select firstName, lastName, team, picks, link from groupD order by lastName";
+					$sql = "select firstName, lastName, team, picks, link from groupd order by lastName";
 				$result = $conn->query($sql);
 				if ($result->num_rows > 0) {
 					while($row = $result->fetch_assoc()){
@@ -188,7 +188,7 @@
 					}
 				}
 
-				$sql = "select sum(picks) from groupD";
+				$sql = "select sum(picks) from groupd";
 			$result = $conn->query($sql);
 			if ($result->num_rows > 0) {
 				while($row = $result->fetch_assoc()){
