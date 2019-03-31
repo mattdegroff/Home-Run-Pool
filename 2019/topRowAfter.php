@@ -52,8 +52,9 @@
 													</div>
 												<?php
 													if (new DateTime() > $groupDead) {
-														$sql = "SELECT player FROM groupA ORDER BY homeRuns DESC LIMIT 1";
+														$sql = "SELECT player FROM groupa ORDER BY homeRuns DESC LIMIT 1";
 																$result = $conn->query($sql);
+																
 																if ($result->num_rows > 0) {
 																	while($row = $result->fetch_assoc()){
 																		$player = $row['player'];
@@ -99,7 +100,7 @@
 												</div>
 											<?php
 												if (new DateTime() > $groupDead) {
-													$sql = "SELECT player FROM groupB ORDER BY homeRuns DESC LIMIT 1";
+													$sql = "SELECT player FROM groupb ORDER BY homeRuns DESC LIMIT 1";
 																$result = $conn->query($sql);
 																if ($result->num_rows > 0) {
 																	while($row = $result->fetch_assoc()){
@@ -146,7 +147,7 @@
 												</div>
 											<?php
 												if (new DateTime() > $groupDead) {
-													$sql = "SELECT player, homeRuns FROM groupC ORDER BY homeRuns DESC LIMIT 1";
+													$sql = "SELECT player, homeRuns FROM groupc ORDER BY homeRuns DESC LIMIT 1";
 																$result = $conn->query($sql);
 																if ($result->num_rows > 0) {
 																	while($row = $result->fetch_assoc()){
@@ -195,7 +196,7 @@
 
 													if (new DateTime() > $deadline) {
 														$player = '';
-														$sql = "select firstName, lastName FROM groupD ORDER BY homeRuns DESC LIMIT 1";
+														$sql = "select firstName, lastName FROM groupd ORDER BY homeRuns DESC LIMIT 1";
 																$result = $conn->query($sql);
 																if ($result->num_rows > 0) {
 																	while($row = $result->fetch_assoc()){
