@@ -415,7 +415,7 @@
 				$sql = "select code from standings";
 					if ($result = $conn->query($sql)) {
 						while($row = $result->fetch_assoc()){
-							loadHR($row['code']);
+							//loadHR($row['code']);
 						}
 					}
 				echo "groups updated<br>";
