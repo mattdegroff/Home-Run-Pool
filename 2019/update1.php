@@ -2,7 +2,7 @@
 		function Apic() {
 			global $conn;
 			$imglink = "";
-			$sql = "select link FROM groupA ORDER BY homeRuns DESC LIMIT 1";
+			$sql = "select link FROM groupa ORDER BY homeRuns DESC LIMIT 1";
 		$result = $conn->query($sql);
 		if ($result->num_rows > 0) {
 			while($row = $result->fetch_assoc()){
@@ -27,7 +27,7 @@
 	function Bpic() {
 			global $conn;
 			$imglink = "";
-			$sql = "select link FROM groupB ORDER BY homeRuns DESC LIMIT 1";
+			$sql = "select link FROM groupb ORDER BY homeRuns DESC LIMIT 1";
 		$result = $conn->query($sql);
 		if ($result->num_rows > 0) {
 			while($row = $result->fetch_assoc()){
@@ -51,7 +51,7 @@
 	function Cpic() {
 			global $conn;
 			$imglink = "";
-			$sql = "select link FROM groupC ORDER BY homeRuns DESC LIMIT 1";
+			$sql = "select link FROM groupc ORDER BY homeRuns DESC LIMIT 1";
 		$result = $conn->query($sql);
 		if ($result->num_rows > 0) {
 			while($row = $result->fetch_assoc()){
@@ -75,7 +75,7 @@
 	function Dpic() {
 			global $conn;
 			$imglink = "";
-			$sql = "select link FROM groupD ORDER BY homeRuns DESC LIMIT 1";
+			$sql = "select link FROM groupd ORDER BY homeRuns DESC LIMIT 1";
 		$result = $conn->query($sql);
 		if ($result->num_rows > 0) {
 			while($row = $result->fetch_assoc()){
