@@ -10,10 +10,10 @@ if ($year == 2015) {
 } else if ($year == 2018) {
 	$connect_url = "CLEARDB_ORANGE_URL";
 } else if ($year == 2019) {
-	$host_name  = "50.87.144.185";
-	$database   = "mdegroff_2019";
-	$user_name  = "mdegroff_1";
-	$password   = "12345";
+	$host_name  = "sql181.main-hosting.eu";
+	$database   = "u993717719_2019";
+	$user_name  = "u993717719_admin";
+	$password   = "12345678";
 }
 
 if( $year != 2019) {
