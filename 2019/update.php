@@ -425,10 +425,10 @@
 				echo "rabbit updated<br>";
 				//playing();
 				//echo "playing updated<br>";
-				HRTodayA();
-				HRTodayB();
-				HRTodayC();
-				HRTodayD();
+				//HRTodayA();
+				//HRTodayB();
+				//HRTodayC();
+				//HRTodayD();
 				echo "hr today updated";
 				$end = microtime(true);
 				$time = $end-$start;
